@@ -1,27 +1,28 @@
+
 [![NuGet](https://img.shields.io/nuget/v/Reloaded.SolverFoundation.svg)](https://www.nuget.org/packages/Reloaded.SolverFoundation/)
 
-# MicrosoftSolverFoundationReloaded
-Last version of Microsoft Solver Foundation Express Edition decompiled and ported to .NET 2.0 Standard
+# Microsoft.SolverFoundation for NET. Standard 2.0 / NET. Core
+Last version of Microsoft Solver Foundation Express Edition ported to .NET Standard 2.0.
 
-Latest legacy version taken from: https://www.nuget.org/packages/Microsoft.Solver.Foundation and decompiled via ILSpy.
+## Overview
+- Latest legacy version was taken from [Nuget package "Microsoft.Solver.Foundation"](https://www.nuget.org/packages/Microsoft.Solver.Foundation)  and decompiled via ILSpy
+- The code were just changed to be compilable as .NET Standard 2.0 class library.
+- There is no unit test coverage as these tests were not included in the original library.
+- There is just a functionality test with my custom scenario to verify that the original .NET Framework version produce the same output as the ported .NET 2.0 Standard library one.
 
-### Important
-- The code were just changed to be compilable as .NET 2.0 Standrd class library.
-- There is no unit test coverage as these tests are not included in the original library.
-- There is just a functionality test with my custom scenario to verify that the original .NET Framework version and the ported .NET 2.0 Standard library produce the same output.
-
-### What was changed during porting?
-- The class "CSharpWriter" was ported with Copilot to use "Microsoft.CodeAnalysis.CSharp" instead of unsupported "System.CodeDOM". No functionality test were done so no support. I also commented it out in v0.0.2 so I could drop the dependency to "Microsoft.CodeAnalysis.CSharp"
+## What was changed during porting?
+- The class [CSharpWriter](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/blob/main/src/Microsoft.SolverFoundation/Services/CSharpWriter.cs) was commented out as it required "System.CodeDOM" from .NET Framework and was only used for "ExportModelToCSharp()" which was never called. So this method now throws a NotSupportedException.
 - Configuration classes "ConfigurationElement", "ConfigurationSection" and "ConfigurationPropertyAttribute" were replaced by stubs.
 - License checks were disabled
 
-### What to verify if you use this port
-- Check the projects "Microsoft.SolverFoundation.ReferenceTests" and "Microsoft.SolverFoundation.Tests" to verify that your solver model compiles and works correctly
+## What to checl if you use this port
+- Run your model via .NET Framework and this port to verify correctness.
+- You can use the projects [Microsoft.SolverFoundation.ReferenceTests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.ReferenceTests) and [Microsoft.SolverFoundation.Tests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.Tests) to verify your solver model.
 
-### Legal info
+## Legal info
 - The last official version from "Microsoft.SolverFoundation" is from 2016 licensed unter the MS-PL.
+- Here is the ChatGPT answer of my question "Is decompilation and recompilation of MS-PL licensed binaries allowed?". So I assume there is no copyright violation:
 
-Here is the ChatGPT answer of my question "Is decompilation and recompilation of MS-PL licensed binaries allowed?". So I assume there is no copyright violation:
 Yes, the **Microsoft Public License (Ms-PL)** allows **decompilation, modification, and recompilation** of binaries, but with certain conditions.
 
 #### **Key Points of Ms-PL Regarding Decompilation & Recompilation**
