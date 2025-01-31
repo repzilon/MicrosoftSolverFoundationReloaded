@@ -22,7 +22,7 @@
 
 //		private readonly Dictionary<RandomParameter, CodeExpression> randomParameterFields = new Dictionary<RandomParameter, CodeExpression>();
 
-//		private readonly Dictionary<Domain, CodeExpression> domainFields = new Dictionary<Domain, CodeExpression>();
+		//private readonly Dictionary<Domain, CodeExpression> domainFields = new Dictionary<Domain, CodeExpression>();
 
 //		private readonly Dictionary<Tuples, CodeExpression> tuplesFields = new Dictionary<Tuples, CodeExpression>();
 

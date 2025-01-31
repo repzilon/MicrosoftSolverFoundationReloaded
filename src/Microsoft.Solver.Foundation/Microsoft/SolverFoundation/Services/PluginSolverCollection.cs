@@ -787,10 +787,6 @@ namespace Microsoft.SolverFoundation.Services
 			{
 				throw new MsfSolverConfigurationException(Resources.PluginSolverError, ex7);
 			}
-			catch (ConfigurationErrorsException ex8)
-			{
-				throw new MsfSolverConfigurationException(Resources.PluginSolverError, ex8);
-			}
 			catch (AmbiguousMatchException ex9)
 			{
 				throw new MsfSolverConfigurationException(Resources.PluginSolverError, ex9);
