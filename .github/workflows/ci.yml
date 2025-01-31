@@ -20,7 +20,7 @@ jobs:
         dotnet-version: '8.x'
 
     - name: Restore NuGet packages
-      run: dotnet restore
+      run: dotnet restore src/Microsoft.SolverFoundation/Microsoft.SolverFoundation.csproj
 
     - name: Build the project
       run: dotnet build src/Microsoft.SolverFoundation/Microsoft.SolverFoundation.csproj --configuration Release
