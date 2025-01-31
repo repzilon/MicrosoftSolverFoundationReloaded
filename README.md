@@ -1,3 +1,4 @@
+[![NuGet](https://img.shields.io/nuget/v/Reloaded.SolverFoundation.svg)](https://www.nuget.org/packages/MyAwesomePackage/)
 
 # MicrosoftSolverFoundationReloaded
 Last version of Microsoft Solver Foundation Express Edition decompiled and ported to .NET 2.0 Standard
