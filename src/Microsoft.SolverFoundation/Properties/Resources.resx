@@ -1,0 +1,3036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OmlInvalidBuiltinUsedAsIterator" xml:space="preserve">
+    <value>Builtin symbol '{0}' cannot be used as an iterator.</value>
+  </data>
+  <data name="OnlyValidWhenCalledOnDecisionsWith0Indexes" xml:space="preserve">
+    <value>This method is only valid when called on decisions with {0} indexes.</value>
+  </data>
+  <data name="NumberOfParametersForDecisionIsWrong" xml:space="preserve">
+    <value>Number of parameters for Decision is wrong</value>
+  </data>
+  <data name="InternalErrorBadSetElement" xml:space="preserve">
+    <value>Internal error: Bad set element</value>
+  </data>
+  <data name="ColumnCompressedSparseMatrixDoesNotSupportElementInsertion" xml:space="preserve">
+    <value>ColumnCompressedSparseMatrix does not support element insertion</value>
+  </data>
+  <data name="Phase1Optimal" xml:space="preserve">
+    <value>Phase 1 Optimal</value>
+  </data>
+  <data name="GoalsSectionCanContainsOnlyMinimizeOrMaximize" xml:space="preserve">
+    <value>Goals section can contains only Minimize or Maximize clauses</value>
+  </data>
+  <data name="DelegateOfFunctionIsNeeded" xml:space="preserve">
+    <value>A gradient calculation function must be specified before calling Solve.</value>
+  </data>
+  <data name="FunctionNotUnderstoodInExpression" xml:space="preserve">
+    <value>Function '{0}[]' not understood in expression</value>
+  </data>
+  <data name="ToleranceTooLow" xml:space="preserve">
+    <value>Tolerance is too low</value>
+  </data>
+  <data name="ErrObjUnexpected0" xml:space="preserve">
+    <value>Unexpected '{0}'</value>
+  </data>
+  <data name="WrongLineInINDEPSection" xml:space="preserve">
+    <value>Wrong line in INDEP section</value>
+  </data>
+  <data name="PluginSolverInconsistentRegistration" xml:space="preserve">
+    <value>Solver {0} is registered twice with the same capability.</value>
+  </data>
+  <data name="WrongErrorType" xml:space="preserve">
+    <value>Can not deal with that error type</value>
+  </data>
+  <data name="CqnTraceIteration0123" xml:space="preserve">
+    <value>{0,0:000}               {1,0:0.0000e+00}   {2,0:0000}                    {3}</value>
+  </data>
+  <data name="ReportLineFactorings" xml:space="preserve">
+    <value>Factorings: {0} + {1}</value>
+  </data>
+  <data name="CannotAddCutXToModel0" xml:space="preserve">
+    <value>Cannot add cut: {0} to the model</value>
+  </data>
+  <data name="DuplicateRowNames" xml:space="preserve">
+    <value>Duplicate row names: '{0}'</value>
+  </data>
+  <data name="VersionExpress" xml:space="preserve">
+    <value>Express</value>
+  </data>
+  <data name="BoundedVidWasNeitherRowNorVar" xml:space="preserve">
+    <value>Bounded vid was neither a row nor a variable.</value>
+  </data>
+  <data name="StartingPoint" xml:space="preserve">
+    <value>Starting point = </value>
+  </data>
+  <data name="NonBooleanInputs" xml:space="preserve">
+    <value>Non-Boolean term appears where a Boolean term is expected</value>
+  </data>
+  <data name="PluginSolverDuplicatedRegistration" xml:space="preserve">
+    <value>Duplicated solver registration in &lt;MsfPluginSolvers&gt;. The same combination of capability and solverclass can appear in this section at most once</value>
+  </data>
+  <data name="Dimensions0" xml:space="preserve">
+    <value>Dimensions = {0}</value>
+  </data>
+  <data name="KRpRdRgKTMuGammaCx" xml:space="preserve">
+    <value> k      rp         rd         rg         k/t        mu    gamma       cx</value>
+  </data>
+  <data name="IsNotPair" xml:space="preserve">
+    <value>Input {0} is not a pair.</value>
+  </data>
+  <data name="BadKind" xml:space="preserve">
+    <value>Bad Kind</value>
+  </data>
+  <data name="BadMark" xml:space="preserve">
+    <value>Bad mark</value>
+  </data>
+  <data name="CutGenException" xml:space="preserve">
+    <value>Cannot perform cut generation in a multi-threaded environment </value>
+  </data>
+  <data name="BadRule" xml:space="preserve">
+    <value>Bad rule</value>
+  </data>
+  <data name="SimplexSolverSymbolIsMissing" xml:space="preserve">
+    <value>SimplexSolver symbol is missing</value>
+  </data>
+  <data name="CannotRemove0BecauseItIsUsed" xml:space="preserve">
+    <value>Cannot remove {0} because it is being used.</value>
+  </data>
+  <data name="BooleanGoal" xml:space="preserve">
+    <value>Boolean functions cannot be used as goals. Consider changing to Integer.</value>
+  </data>
+  <data name="IdentifierExpected" xml:space="preserve">
+    <value>Identifier expected</value>
+  </data>
+  <data name="UnknownModelerType" xml:space="preserve">
+    <value>The modeler inside a Term is unknown </value>
+  </data>
+  <data name="NonlinearValue" xml:space="preserve">
+    <value>Nonlinear value</value>
+  </data>
+  <data name="DuplicateTokKindForTokKindEnumValue" xml:space="preserve">
+    <value>Duplicate TokKind for TokKindEnum value</value>
+  </data>
+  <data name="CannotRepresentAsAnInteger" xml:space="preserve">
+    <value>Cannot represent {0} as an integer</value>
+  </data>
+  <data name="UnknownPluginSolverParameterType" xml:space="preserve">
+    <value>Cannot find the plug-in solver parameter class {0}</value>
+  </data>
+  <data name="MatrixIsSingular" xml:space="preserve">
+    <value>Matrix is singular</value>
+  </data>
+  <data name="AllBindableParametersShouldHaveBindClause" xml:space="preserve">
+    <value>All bindable parameters should have a binding clause in the Data Binding section.</value>
+  </data>
+  <data name="OptimalExitRepeatPivots0" xml:space="preserve">
+    <value>optimal: exit RepeatPivots {0}</value>
+  </data>
+  <data name="InvalidIndexForSet0" xml:space="preserve">
+    <value>Invalid index {0} for set.</value>
+  </data>
+  <data name="ReportLinePricingExact" xml:space="preserve">
+    <value>Pricing (exact): {0}</value>
+  </data>
+  <data name="OmlInvalidFewerThanNeededArgumentCount01" xml:space="preserve">
+    <value>The operator '{0}' requires at least {1} argument(s).</value>
+  </data>
+  <data name="PluginSolverConfigInvalidParameterClass" xml:space="preserve">
+    <value>Invalid solver parameter class name in MsfConfig section.</value>
+  </data>
+  <data name="OnlyValidForVariables" xml:space="preserve">
+    <value>This method is only valid for variables.</value>
+  </data>
+  <data name="ExpressionTermCouldNotBeResolved" xml:space="preserve">
+    <value>Expression term could not be resolved</value>
+  </data>
+  <data name="ModelCannotBeAnalyzed" xml:space="preserve">
+    <value>Model cannot be analyzed</value>
+  </data>
+  <data name="OmlInvalidBadDomain" xml:space="preserve">
+    <value>The domain '{0}' is not recognized.</value>
+  </data>
+  <data name="CouldNotParseMPSModel" xml:space="preserve">
+    <value>Failed to parse MPS model.</value>
+  </data>
+  <data name="ParsingModelFailed01" xml:space="preserve">
+    <value>Unexpected term: '{1}', '{0}'</value>
+  </data>
+  <data name="OmlInvalidNonNumericInIterator" xml:space="preserve">
+    <value>Values used as iterator bounds must be numeric.</value>
+  </data>
+  <data name="ReportLineNumericFormatExact" xml:space="preserve">
+    <value>Arithmetic: Exact</value>
+  </data>
+  <data name="OmlInvalidForeachInParameter" xml:space="preserve">
+    <value>'{0}' is not allowed in a Parameters section</value>
+  </data>
+  <data name="NotValidIndex012" xml:space="preserve">
+    <value>Not valid index (bigger than number of {0}) in {1}[{2}]</value>
+  </data>
+  <data name="OmlInvalidSectionShouldStartWithDomain" xml:space="preserve">
+    <value>All Parameters sections should start with a domain and all Decisions sections should start with a domain or a submodel.</value>
+  </data>
+  <data name="ErrorFillingSolverParametersWithDirective" xml:space="preserve">
+    <value>Error filling solver parameters with directive.</value>
+  </data>
+  <data name="DisplayFeaturesHistogramOverNumberOfConstraintsAndIntegerVars" xml:space="preserve">
+    <value>Histogram over number of constraints and integer vars:</value>
+  </data>
+  <data name="AcceptedReflectedCount0" xml:space="preserve">
+    <value>Accepted reflected: {0}.</value>
+  </data>
+  <data name="EnumDomainRequiresEnumerationTypeAsArgument" xml:space="preserve">
+    <value>EnumDomain(TAnEnum) requires Enumeration Type as argument</value>
+  </data>
+  <data name="InConstraintTakesTwoArgumentAndTheSecondArgumentMustBeEitherAListOrATuple" xml:space="preserve">
+    <value>In constraint takes two argument and the second argument must be either a list or a tuple</value>
+  </data>
+  <data name="DirectiveRequired" xml:space="preserve">
+    <value>At least one directive is required</value>
+  </data>
+  <data name="UnexpectedColumnKind" xml:space="preserve">
+    <value>unexpected column kind</value>
+  </data>
+  <data name="NullConstraints" xml:space="preserve">
+    <value>Cannot add null constraints.</value>
+  </data>
+  <data name="EnumDomainCannotContainDuplicatedValues0" xml:space="preserve">
+    <value>Enum domain cannot contain duplicate value '{0}'</value>
+  </data>
+  <data name="GetPowerSetListBaselineIsCalledOnANonSetNonListVar" xml:space="preserve">
+    <value>GetPowerSetListBaseline is called on a non-set/non-list variable</value>
+  </data>
+  <data name="ReportLineDecisions" xml:space="preserve">
+    <value>Decisions:</value>
+  </data>
+  <data name="InvalidValueForLinearSolverOption01" xml:space="preserve">
+    <value>Invalid value for linear solver option {0}: '{1}'</value>
+  </data>
+  <data name="TheNumberOfValuePropertiesMustMatchTheNumberOfElementsInTheTuple" xml:space="preserve">
+    <value>The number of value properties must match the number of elements in the tuple.</value>
+  </data>
+  <data name="ReportingNotImplementedForSolverKind0" xml:space="preserve">
+    <value>Reporting not implemented for SolverKind {0}</value>
+  </data>
+  <data name="HSDDoesNotHandleQuadratic" xml:space="preserve">
+    <value>This solver does not support quadratic programming.</value>
+  </data>
+  <data name="EmptyHeap" xml:space="preserve">
+    <value>The heap is empty </value>
+  </data>
+  <data name="ParametersWithNonNumericDataAreNotSupported" xml:space="preserve">
+    <value>Parameters with non-numeric data are not supported.</value>
+  </data>
+  <data name="Expected0" xml:space="preserve">
+    <value>Expected '{0}'</value>
+  </data>
+  <data name="KRpRdGapKtMuGammaCAlphaCxTime" xml:space="preserve">
+    <value> k     rp     rd     gap      k/t     mu   gamma C alpha       cx       time</value>
+  </data>
+  <data name="TheNumberOfIndexPropertiesMustMatchTheNumberOfIndexSets" xml:space="preserve">
+    <value>The number of index properties must match the number of index sets.</value>
+  </data>
+  <data name="NonBooleanConstraints" xml:space="preserve">
+    <value>A constraint must be Boolean </value>
+  </data>
+  <data name="BadValueKind" xml:space="preserve">
+    <value>Bad ValueKind</value>
+  </data>
+  <data name="TheMeanMustBeAFiniteNumberStandardDeviationMustBeANonNegativeNumber" xml:space="preserve">
+    <value>The mean must be a finite number and the standard deviation must be a non-negative number.</value>
+  </data>
+  <data name="OmlInvalidTupleWrongArity" xml:space="preserve">
+    <value>Expected a Tuple with {0} arguments.</value>
+  </data>
+  <data name="CouldntFindASolverForTheModel" xml:space="preserve">
+    <value>OML could not find a solver for the model</value>
+  </data>
+  <data name="Dimensions" xml:space="preserve">
+    <value>Dimensions = </value>
+  </data>
+  <data name="CannotEnumerateScenariosForBinomialValueProbabilityOfAScenarioWithSuccessfulTrialsIsInsufficientlyLarge" xml:space="preserve">
+    <value>Cannot enumerate scenarios for binomial value. Probability of a scenario with {0} successful trials is insufficiently large.</value>
+  </data>
+  <data name="WrongBasicVariableValue012" xml:space="preserve">
+    <value>Wrong basic variable value! {0} {1} {2}</value>
+  </data>
+  <data name="SolverMustImplementILinearModel" xml:space="preserve">
+    <value>Solver must implement ILinearModel</value>
+  </data>
+  <data name="ReportHeaderSolutionDetails" xml:space="preserve">
+    <value>===Solution Details===</value>
+  </data>
+  <data name="InvalidDomainForFDVariable" xml:space="preserve">
+    <value>Invalid domain for CP decision</value>
+  </data>
+  <data name="WanderedToDualInfeasible1" xml:space="preserve">
+    <value>{0} Wandered to dual infeasible: {1}</value>
+  </data>
+  <data name="EnumerateEmptyDomain" xml:space="preserve">
+    <value>Cannot enumerate elements in an empty domain </value>
+  </data>
+  <data name="InvalidBaselineSet" xml:space="preserve">
+    <value>The baseline set is not an integer set</value>
+  </data>
+  <data name="InvalidSetDomainDefinition" xml:space="preserve">
+    <value>The given values for constructing a set either are unordered or have duplicate values </value>
+  </data>
+  <data name="ListExpectedToBeEntirelySymbols" xml:space="preserve">
+    <value>List expected to be entirely symbols</value>
+  </data>
+  <data name="DuplicateEntriesDetectedInDataBoundTo0" xml:space="preserve">
+    <value>Duplicated entries detected in data bound to {0}</value>
+  </data>
+  <data name="SolverDoesNotSupportConstrainedModels" xml:space="preserve">
+    <value>{0} does not support constrained models. Remove this directive and use a directive that supports constrained models.</value>
+  </data>
+  <data name="FatalError" xml:space="preserve">
+    <value>Fatal error</value>
+  </data>
+  <data name="StringDomainIncompatible" xml:space="preserve">
+    <value>Incompatible symbol domain </value>
+  </data>
+  <data name="CSPSolverDoesNotSupportNonIntegerValues" xml:space="preserve">
+    <value>CSP solver does not support non-integer values</value>
+  </data>
+  <data name="SetListVarEmptyDomain" xml:space="preserve">
+    <value>The set/list variable's baseline domain cannot be empty </value>
+  </data>
+  <data name="VariableSeenWithUnrecognizedDomain" xml:space="preserve">
+    <value>Variable seen with unrecognized Domain</value>
+  </data>
+  <data name="ReportLineDegeneratePivots" xml:space="preserve">
+    <value>Degenerate Pivots: {0} ({1:F2} %)</value>
+  </data>
+  <data name="FactoringFailedSubstituted0SlackVariables" xml:space="preserve">
+    <value>Factoring failed. Substituted {0} slack variables.</value>
+  </data>
+  <data name="OnlyBinddataClausesAllowed" xml:space="preserve">
+    <value>Only bind data clauses allowed in Input section</value>
+  </data>
+  <data name="SfsSubmodelSubmodelInstanceNotFound" xml:space="preserve">
+    <value>SubmodelDecision member not found in the SubmodelDecision</value>
+  </data>
+  <data name="ComputeStatisticsIntVars010" xml:space="preserve">
+    <value>Number of Int vars:               {0,-10} </value>
+  </data>
+  <data name="SolverDoesNotImplementInterface" xml:space="preserve">
+    <value>{0} is registered with the {1} interface but does not support it</value>
+  </data>
+  <data name="BindDataInErrorEmptyCellFormat" xml:space="preserve">
+    <value>Cannot bind data to {0} from {1}. {1} either represents multiple cells or an empty cell.</value>
+  </data>
+  <data name="OmlInvalidIndexingByForeach" xml:space="preserve">
+    <value>Value used as index must be single-valued.</value>
+  </data>
+  <data name="ComputeStatisticsDelaySinceStart0Ms" xml:space="preserve">
+    <value>Delay since start:       {0}ms
+</value>
+  </data>
+  <data name="SolutionIsOutOfDate" xml:space="preserve">
+    <value>The solution is out of date.</value>
+  </data>
+  <data name="PluginSolverHostEnvironmentNotSupported" xml:space="preserve">
+    <value>Plugin solvers cannot be hosted in this execution environment.</value>
+  </data>
+  <data name="DisplayFeaturesHistogramOverNumberOfConstraintsAndAllVars" xml:space="preserve">
+    <value>Histogram over number of constraints and all vars:</value>
+  </data>
+  <data name="NonCompositeFieldAccess" xml:space="preserve">
+    <value>The field method is only valid for composite variables </value>
+  </data>
+  <data name="ReportLineNumericFormatHybrid" xml:space="preserve">
+    <value>Arithmetic: Hybrid</value>
+  </data>
+  <data name="OmlInvalidDeclaredIndexIsTable" xml:space="preserve">
+    <value>Index for '{0}' may not be used without indexing.</value>
+  </data>
+  <data name="InvalidArgumentsForUniformDistribution" xml:space="preserve">
+    <value>Invalid arguments for uniform distribution</value>
+  </data>
+  <data name="SizeOfSubmatrixIsFault" xml:space="preserve">
+    <value>Size of sub matrix is fault</value>
+  </data>
+  <data name="TuplesDefinedAsARandomParameterCannotBeUsedInTableConstraint" xml:space="preserve">
+    <value>Tuples defined as a Random Parameter cannot be used in Table Constraint</value>
+  </data>
+  <data name="IterationCount0" xml:space="preserve">
+    <value>Iteration count: {0}.</value>
+  </data>
+  <data name="EachOperationMustHaveAtLeastOneInput" xml:space="preserve">
+    <value>Each operation must have at least one input</value>
+  </data>
+  <data name="SolverSolutionQuality0" xml:space="preserve">
+    <value>Solver solution quality: {0}.</value>
+  </data>
+  <data name="ModelNotSolved" xml:space="preserve">
+    <value>Model is not solved yet. Cannot retrieve decisions' values</value>
+  </data>
+  <data name="InvalidConstraintEncountered" xml:space="preserve">
+    <value>Invalid constraint encountered</value>
+  </data>
+  <data name="IllFormedRule" xml:space="preserve">
+    <value>Ill-formed rule</value>
+  </data>
+  <data name="HasToBeInvocation0" xml:space="preserve">
+    <value>{0} has to be an Invocation</value>
+  </data>
+  <data name="SymmetricSparseMatrixDoesNotSupportElementInsertion" xml:space="preserve">
+    <value>SymmetricSparseMatrix does not support element insertion</value>
+  </data>
+  <data name="SetListNonscalorElement" xml:space="preserve">
+    <value>A composite variable (set/list variable) appears where a scalar variable is expected </value>
+  </data>
+  <data name="ReportLineRows" xml:space="preserve">
+    <value>Rows: {0} -&gt; {1}</value>
+  </data>
+  <data name="SolveMethodNeededToBeCalledBeforeCheckingSolution" xml:space="preserve">
+    <value>Solve method needed to be called before checking for solution details</value>
+  </data>
+  <data name="OmlInvalidIndexedRandomParameters" xml:space="preserve">
+    <value>Arguments for indexed random parameters must be specified through data binding.</value>
+  </data>
+  <data name="ComputeStatisticsBoolVars010" xml:space="preserve">
+    <value>Number of Bool vars:              {0,-10} </value>
+  </data>
+  <data name="InteriorPointCannotLoadAModelWithNoVariables" xml:space="preserve">
+    <value>Interior Point cannot load a model with no variables</value>
+  </data>
+  <data name="NumberOfParametersForDecisionIsWrong0" xml:space="preserve">
+    <value>Number of parameters for Decision '{0}' is wrong</value>
+  </data>
+  <data name="VariableShouldBe0ButIs" xml:space="preserve">
+    <value>Variable {0} should be 0 but is {1}.</value>
+  </data>
+  <data name="CannotSetBoundsOnAQuadraticGoal" xml:space="preserve">
+    <value>Cannot set bounds on a quadratic goal.</value>
+  </data>
+  <data name="TheRowDoesNotSumTo0" xml:space="preserve">
+    <value>The row does not sum to 0. </value>
+  </data>
+  <data name="Variable0AlreadyExistsInDestinationModel" xml:space="preserve">
+    <value>Variable '{0}' already exists in destination model.</value>
+  </data>
+  <data name="SetListOccurrenceResultNotInteger" xml:space="preserve">
+    <value>The result Term in FirstOccurrence and LastOccurrence must be an Integer Term </value>
+  </data>
+  <data name="CannotFindTheDecisionAndIndexesInTheModel0" xml:space="preserve">
+    <value>Cannot find the decision in the model: {0}.  Make sure that the decision has been added to the model and that it is used in at least one goal or constraint.</value>
+  </data>
+  <data name="MustApplyToASingleArgument" xml:space="preserve">
+    <value>{0} must apply to a single argument</value>
+  </data>
+  <data name="ReportLineNumericFormatDouble" xml:space="preserve">
+    <value>Arithmetic: Double</value>
+  </data>
+  <data name="VersionStandard" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="IpmCoreSolutionTime0" xml:space="preserve">
+    <value>IPM core solution time = {0:F2}</value>
+  </data>
+  <data name="ReportLineSolveCompletionStatus" xml:space="preserve">
+    <value>Solve Completion Status: {0}</value>
+  </data>
+  <data name="TheModelIsEmpty" xml:space="preserve">
+    <value>The model is empty</value>
+  </data>
+  <data name="PleaseRequestInteriorPointIpmToHandleQuadraticObjectives" xml:space="preserve">
+    <value>Please request the Interior Point Method (IPM) solver to handle quadratic objectives.</value>
+  </data>
+  <data name="StochasticModelCannotContainMoreThanOneGoal" xml:space="preserve">
+    <value>Multiple goals are not allowed in stochastic models.</value>
+  </data>
+  <data name="GoalWithEmptyDomain" xml:space="preserve">
+    <value>Goal function cannot have an empty domain</value>
+  </data>
+  <data name="IndexConstraintOutOfRange" xml:space="preserve">
+    <value>One of the indexes in the two dimensional Index constraint is out of range </value>
+  </data>
+  <data name="LowerTriangularCoordinateSeen" xml:space="preserve">
+    <value>lower triangular coordinate seen</value>
+  </data>
+  <data name="DisplayFeaturesHistogramOverDomainSizeAndAllVars" xml:space="preserve">
+    <value>Histogram over domain size and all vars:</value>
+  </data>
+  <data name="ThePropertyOrField0WasNotFound" xml:space="preserve">
+    <value>The property or field '{0}' was not found.</value>
+  </data>
+  <data name="SecondArgMustBeNonnegative" xml:space="preserve">
+    <value>{0} second arg must be nonnegative</value>
+  </data>
+  <data name="SolverMustImplementIInteriorPointStatistics" xml:space="preserve">
+    <value>Solver must implement IInteriorPointStatistics</value>
+  </data>
+  <data name="UnExpectedNeedToBe01" xml:space="preserve">
+    <value>Unexpected term ‘{0}’. Expected: ‘{1}’</value>
+  </data>
+  <data name="OmlInvalidIndexingByTable" xml:space="preserve">
+    <value>Value used as index is not a valid type.</value>
+  </data>
+  <data name="InvalidFiniteGoal" xml:space="preserve">
+    <value>Invalid Finite goal</value>
+  </data>
+  <data name="InvalidSATConstraint" xml:space="preserve">
+    <value>Invalid SAT constraint</value>
+  </data>
+  <data name="ThereShouldBeAtLeastOneScenario" xml:space="preserve">
+    <value>There should be at least one scenario</value>
+  </data>
+  <data name="RepairedSingularBasis" xml:space="preserve">
+    <value>{0} Repaired singular basis</value>
+  </data>
+  <data name="ReportCapability" xml:space="preserve">
+    <value>Capabilities Applied: {0}</value>
+  </data>
+  <data name="RuleShouldHaveTwoParameters" xml:space="preserve">
+    <value>Rule ('-&gt;') should have two parameters</value>
+  </data>
+  <data name="MustHaveAtLeastOneElement" xml:space="preserve">
+    <value>{0} must have at least one element</value>
+  </data>
+  <data name="CanNotSpecifyDomainAnyToParameter" xml:space="preserve">
+    <value>Cannot specify Domain.Any for a parameter.</value>
+  </data>
+  <data name="VariableDomainDoesNotContainCorrectIntegerValues" xml:space="preserve">
+    <value>Variable domain does not contain correct integer values</value>
+  </data>
+  <data name="ErrorInBasisSolveOperation012" xml:space="preserve">
+    <value>Error in basis solve operation! {0} {1} {2}</value>
+  </data>
+  <data name="AverageDepthEstimatedTreeSize01" xml:space="preserve">
+    <value>  average depth / estimated tree size : {0} {1}</value>
+  </data>
+  <data name="Sampled" xml:space="preserve">
+    <value>Sampled</value>
+  </data>
+  <data name="PureQuadraticGoalButUnknownWhetherMinimizeOrMaximize" xml:space="preserve">
+    <value>Pure quadratic goal but unknown whether minimizing or maximizing.</value>
+  </data>
+  <data name="MaximumTimeExceeded" xml:space="preserve">
+    <value>Maximum time exceeded</value>
+  </data>
+  <data name="SMPSCanOnlyBeParsedUsingFileOrDirectoryPath" xml:space="preserve">
+    <value>SMPS can only be parsed using a file or directory path</value>
+  </data>
+  <data name="SampleMethod0" xml:space="preserve">
+    <value>Sampling Method: {0}</value>
+  </data>
+  <data name="NoSolverFoundASolutionWithinTheTimeLimit" xml:space="preserve">
+    <value>No solver found a solution within the time limit.</value>
+  </data>
+  <data name="IndexWrongForParameter01" xml:space="preserve">
+    <value>{0} for parameter {1}</value>
+  </data>
+  <data name="InvalidIsElementOfDetectedInSave" xml:space="preserve">
+    <value>Invalid IsElementOf detected in save</value>
+  </data>
+  <data name="ErrorSamplingResultNeedsToBeInteger" xml:space="preserve">
+    <value>Error in sampling. Result needs to be a 32 bit integer, but it is not. successProbability argument of the distribution is probably too small</value>
+  </data>
+  <data name="ModelCouldNotBeNull" xml:space="preserve">
+    <value>model could not be null</value>
+  </data>
+  <data name="MustBeAListOfIntegerValues" xml:space="preserve">
+    <value>Must be a list of integer values</value>
+  </data>
+  <data name="NoVidForTheDecision0" xml:space="preserve">
+    <value>No vid for the decision {0}</value>
+  </data>
+  <data name="SolverDoesNotSupportBoundedVariables" xml:space="preserve">
+    <value>{0} does not support bounded variables. Remove this directive and use a directive that supports bounded variables.</value>
+  </data>
+  <data name="CoefficientForVariableInASOSRowCannotBeZero" xml:space="preserve">
+    <value>Coefficient for variable in a SOS row cannot be zero</value>
+  </data>
+  <data name="MinimumBundaryBiggerThanMaximumBundaryAfterRound01" xml:space="preserve">
+    <value>After rounding, the minimum bound {0} is bigger than the maximum bound {1}</value>
+  </data>
+  <data name="OmlInvalidDefiningBuiltin" xml:space="preserve">
+    <value>Builtin symbol '{0}' cannot be redefined.</value>
+  </data>
+  <data name="OmlInvalidSetsOutsideParametersSection" xml:space="preserve">
+    <value>'{0}' is not allowed outside the Parameters section.</value>
+  </data>
+  <data name="InvalidLogEventId" xml:space="preserve">
+    <value>A log event ID must be between 0 and 63 </value>
+  </data>
+  <data name="PowerIsNotInteger" xml:space="preserve">
+    <value>Power is not integer</value>
+  </data>
+  <data name="IsNotSymbolic" xml:space="preserve">
+    <value>{0} is not symbolic</value>
+  </data>
+  <data name="NoArithmeticObjectForType" xml:space="preserve">
+    <value>There is no arithmetic object for this number type </value>
+  </data>
+  <data name="TheLowerBoundAndTheUpperBoundMustBeFiniteNumbers" xml:space="preserve">
+    <value>The lower bound and the upper bound must be finite numbers.</value>
+  </data>
+  <data name="MappingOfStochasticModelIsNotSupported" xml:space="preserve">
+    <value>Mapping of stochastic model is not supported</value>
+  </data>
+  <data name="IsNotAValidIterationTerm" xml:space="preserve">
+    <value>{0} is not a valid iteration term</value>
+  </data>
+  <data name="GoalCannotBeAConstant" xml:space="preserve">
+    <value>Goal cannot be a constant</value>
+  </data>
+  <data name="InvalidArgumentsForDistribution" xml:space="preserve">
+    <value>Distribution was passed an invalid numeric value.</value>
+  </data>
+  <data name="StochasticModelCannotHaveSOS2Constraints" xml:space="preserve">
+    <value>SOS2 constraints are not allowed in stochastic models.</value>
+  </data>
+  <data name="ListDidNotContainRules" xml:space="preserve">
+    <value>List did not contain Rules</value>
+  </data>
+  <data name="VariableNotFoundInSolution" xml:space="preserve">
+    <value>variable not found in solution</value>
+  </data>
+  <data name="ErrObjEmptyCharacterLiteral" xml:space="preserve">
+    <value>Empty character literal</value>
+  </data>
+  <data name="TheSolverDoesNotSupportSos1" xml:space="preserve">
+    <value>The solver does not support Sos1</value>
+  </data>
+  <data name="TheSolverDoesNotSupportSos2" xml:space="preserve">
+    <value>The solver does not support Sos2</value>
+  </data>
+  <data name="StochasticFileCannotBeFound0" xml:space="preserve">
+    <value>{0} stochastic file cannot be found</value>
+  </data>
+  <data name="CqnTraceIterationHeader" xml:space="preserve">
+    <value>Iteration count   New value    Evaluation call count   Termination criterion</value>
+  </data>
+  <data name="MatrixDimensionsDoNotMatch" xml:space="preserve">
+    <value>Matrix dimensions do not match.</value>
+  </data>
+  <data name="NotSupportedRandomType" xml:space="preserve">
+    <value>Not supported random type</value>
+  </data>
+  <data name="NotARow" xml:space="preserve">
+    <value>not a row</value>
+  </data>
+  <data name="CloneUnsupportedDomain" xml:space="preserve">
+    <value>Cannot create IntegerSolver instance because the model uses an unsupported Domain</value>
+  </data>
+  <data name="ErrObjIntegralConstantIsTooLarge" xml:space="preserve">
+    <value>Integral constant is too large</value>
+  </data>
+  <data name="GoalWasNotMinimizeOrMaximize" xml:space="preserve">
+    <value>Goal was not Minimize or Maximize.</value>
+  </data>
+  <data name="Sos2NeedsAtLeastTwoDecisions" xml:space="preserve">
+    <value>Right-hand clause in Sos2 must contain at least two decisions.</value>
+  </data>
+  <data name="MaximumNumberOfIterationsShouldBePositive" xml:space="preserve">
+    <value>Maximum number of iterations should be positive</value>
+  </data>
+  <data name="InvalidFormForSos2Constraint" xml:space="preserve">
+    <value>Invalid form for Sos2 constraint</value>
+  </data>
+  <data name="ReportLineBacktrackCount" xml:space="preserve">
+    <value>Backtrack Count: {0}</value>
+  </data>
+  <data name="ParameterShouldHaveIndexes" xml:space="preserve">
+    <value>Parameter should have indexes</value>
+  </data>
+  <data name="OmlInvalidInvalidElement" xml:space="preserve">
+    <value>Invalid element.</value>
+  </data>
+  <data name="ValuesForSymbolAreLocked" xml:space="preserve">
+    <value>Values for symbol '{0}' are locked.</value>
+  </data>
+  <data name="OmlInvalidForeachInDomainBound" xml:space="preserve">
+    <value>Domain bound must be single-valued.</value>
+  </data>
+  <data name="InvalidArgumentsForExponentialDistribution" xml:space="preserve">
+    <value>Invalid arguments for exponential distribution</value>
+  </data>
+  <data name="ScenariosCount0" xml:space="preserve">
+    <value>Scenarios Count: {0}</value>
+  </data>
+  <data name="CannotEnumerateAnInfiniteNumberOfScenarios" xml:space="preserve">
+    <value>Cannot enumerate an infinite number of scenarios</value>
+  </data>
+  <data name="VariableAlreadyBelongsToAnotherCone" xml:space="preserve">
+    <value>Variable already belongs to another cone.</value>
+  </data>
+  <data name="BadIterator" xml:space="preserve">
+    <value>Bad iterator</value>
+  </data>
+  <data name="MustApplyToTwoArguments" xml:space="preserve">
+    <value>{0} must apply to two arguments</value>
+  </data>
+  <data name="CannotFindTheConstraintInTheModel" xml:space="preserve">
+    <value>Cannot find the constraint in the model.</value>
+  </data>
+  <data name="WrongSyntaxForDomain" xml:space="preserve">
+    <value>Wrong syntax for domain. Try to use DomainSymbol[min, max] instead.</value>
+  </data>
+  <data name="OmlInvalidSubmodelInstanceSymbolUnknownOrDuplicated" xml:space="preserve">
+    <value>Unknown or duplicated submodel instance symbol</value>
+  </data>
+  <data name="OnlyVariablesNotRowsMayBeUsedWithinAGoalRow" xml:space="preserve">
+    <value>Only variables, not rows, may be used within a goal row</value>
+  </data>
+  <data name="InvalidModelForSolver01" xml:space="preserve">
+    <value>Invalid model for solver: '{0}', '{1}'</value>
+  </data>
+  <data name="DefaultValueShouldBeDefiniteNumber" xml:space="preserve">
+    <value>defaultValue should be a definite number</value>
+  </data>
+  <data name="CalledOnNonType" xml:space="preserve">
+    <value>{0} called on non-type</value>
+  </data>
+  <data name="DecompositionGap0" xml:space="preserve">
+    <value>Decomposition Gap: {0}</value>
+  </data>
+  <data name="ModelSizeLimitHasBeenExceed" xml:space="preserve">
+    <value>Model size limit has been exceeded for this version of the product. Please contact Microsoft Corporation for licensing options.</value>
+  </data>
+  <data name="InitialNonZerosA0Q1" xml:space="preserve">
+    <value>Initial non-zeros A[{0}] Q[{1}]</value>
+  </data>
+  <data name="OmlInvalidBadSetSpecifier" xml:space="preserve">
+    <value>Invalid use of '{0}'.</value>
+  </data>
+  <data name="UnknownKindDetectedInSave" xml:space="preserve">
+    <value>Unknown kind detected in save</value>
+  </data>
+  <data name="InvalidRowListOrRowTuple" xml:space="preserve">
+    <value>Invalid row list or row tuple</value>
+  </data>
+  <data name="ReportLineTotalTimeMs" xml:space="preserve">
+    <value>Total Time (ms): {0}</value>
+  </data>
+  <data name="OmlInvalidInvalidSos2NeedEquality" xml:space="preserve">
+    <value>Sos2 must contain a reference constraint as an equality.</value>
+  </data>
+  <data name="NeedsASimplexSolverFollowedByAnyNumberOfRulesMappingRowVarToValue" xml:space="preserve">
+    <value>{0} needs a simplex solver, followed by any number of rules mapping {row, var} to value.</value>
+  </data>
+  <data name="OmlInvalidRecourseDecision" xml:space="preserve">
+    <value>Invalid recourse decision name.</value>
+  </data>
+  <data name="SimplexSolverCantProcessTheModel01" xml:space="preserve">
+    <value>Simplex solver can't process the model: '{0}', '{1}'</value>
+  </data>
+  <data name="StringDomainNotSupported" xml:space="preserve">
+    <value>This function does not support inputs with symbol domains </value>
+  </data>
+  <data name="InvalidParams" xml:space="preserve">
+    <value>The parameter list cannot be null or empty </value>
+  </data>
+  <data name="WrongNumberOfRandomNumbers01" xml:space="preserve">
+    <value>{0} random numbers are expected as input, but {1} were supplied</value>
+  </data>
+  <data name="OmlInvalidDeclaredIndexUsesForeach" xml:space="preserve">
+    <value>Index for '{0}' must be single-valued.</value>
+  </data>
+  <data name="ParsingMPSFailed0" xml:space="preserve">
+    <value>Parsing MPS failed: '{0}'</value>
+  </data>
+  <data name="CannotFindVirtualPathExtensionFromWCFHost" xml:space="preserve">
+    <value>Cannot find virtual path extension from WCF host.</value>
+  </data>
+  <data name="SOS2NotSupported" xml:space="preserve">
+    <value>Only steepest edge pricing is supported with the SOS2 models</value>
+  </data>
+  <data name="WrongVariableIdentifier0KeysShouldBeNonNullAndUnique" xml:space="preserve">
+    <value>Wrong variable identifier {0} (keys should be non-null and unique)</value>
+  </data>
+  <data name="CompositeDomainIncompatible" xml:space="preserve">
+    <value>The composite domains of the input of this function are not compatible </value>
+  </data>
+  <data name="IndexIsNotConstant" xml:space="preserve">
+    <value>Index is not constant</value>
+  </data>
+  <data name="VariableHasEmptyValueSet" xml:space="preserve">
+    <value>Variable has empty value set</value>
+  </data>
+  <data name="AttributesForSymbolAreLocked" xml:space="preserve">
+    <value>Attributes for symbol '{0}' are locked.</value>
+  </data>
+  <data name="TheMethodOrOperationIsNotImplemented" xml:space="preserve">
+    <value>The method or operation is not implemented.</value>
+  </data>
+  <data name="NeedsASimplexSolverFollowedByAnyNumberOfRulesMappingVariablesLabelsToValues" xml:space="preserve">
+    <value>{0} needs a simplex solver, followed by any number of rules mapping variables/labels to values.</value>
+  </data>
+  <data name="Rescue" xml:space="preserve">
+    <value>rescue...</value>
+  </data>
+  <data name="ComputeStatisticsUserdefined08" xml:space="preserve">
+    <value>(user defined: {0,8})
+</value>
+  </data>
+  <data name="CanTChangeCoefficientsForRowVariables" xml:space="preserve">
+    <value>Cannot change coefficients for row variables</value>
+  </data>
+  <data name="UnrecognizedTerm" xml:space="preserve">
+    <value>Unrecognized term</value>
+  </data>
+  <data name="ValueIsNotLinearOrQuadratic" xml:space="preserve">
+    <value>Value is not linear or quadratic</value>
+  </data>
+  <data name="OutputDataBindingFormatNotSupportedFor0PropertyReferenceNotFound" xml:space="preserve">
+    <value>Output data binding format not supported for {0}: Property reference not found.</value>
+  </data>
+  <data name="SolverDoesNotSupportGettingOrSettingProperties" xml:space="preserve">
+    <value>Solver does not support getting or setting properties</value>
+  </data>
+  <data name="SolverOptionMustBeSimplex0" xml:space="preserve">
+    <value>'Solver' option must be 'Simplex': '{0}'</value>
+  </data>
+  <data name="DisplayFeaturesTotalNumberOfFeatures0" xml:space="preserve">
+    <value>Total number of features: {0}</value>
+  </data>
+  <data name="ModelNotConvex" xml:space="preserve">
+    <value>The model is not convex.</value>
+  </data>
+  <data name="InvalidIntervalDomainDefinition" xml:space="preserve">
+    <value>The lowerbound of the interval is greater than the upperbound </value>
+  </data>
+  <data name="ThereIsNoSolutionToPropagate" xml:space="preserve">
+    <value>There is no solution to propagate</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>Interrupted due to time-out or user's request</value>
+  </data>
+  <data name="BadTextVersionInNewLineToken" xml:space="preserve">
+    <value>Bad TextVersion in new-line token</value>
+  </data>
+  <data name="SymbolicFactorizationTime0SecType1" xml:space="preserve">
+    <value>Symbolic factorization time = {0:F2} sec, type = {1}</value>
+  </data>
+  <data name="DisolverIntegerTermExpected" xml:space="preserve">
+    <value>Unexpected Term kind</value>
+  </data>
+  <data name="InvalidLinearTerm" xml:space="preserve">
+    <value>Invalid linear term</value>
+  </data>
+  <data name="SfsSubmodelInstanceNotFound" xml:space="preserve">
+    <value>Decision member not found in the SubmodelDecision</value>
+  </data>
+  <data name="ModelShouldStartWithModelAndEndWithSymbol" xml:space="preserve">
+    <value>Model should start with \"Model[\" and end with \"]\" symbol</value>
+  </data>
+  <data name="PredictorLoopMuGap" xml:space="preserve">
+    <value>Predictor: loop ={0,-3}, mu {1,8:G5}, gap {2,6:G3}</value>
+  </data>
+  <data name="OmlInvalidTupleElementContainsForeach" xml:space="preserve">
+    <value>Tuple element must be single-valued.</value>
+  </data>
+  <data name="MatrixRowDimensionsMustAgree" xml:space="preserve">
+    <value>Matrix row dimensions must agree.</value>
+  </data>
+  <data name="InvalidVariable" xml:space="preserve">
+    <value>Invalid variable</value>
+  </data>
+  <data name="DisplayFeaturesHistogramOverNumberOfConstraintsAndUserDefinedVars" xml:space="preserve">
+    <value>Histogram over number of constraints and user-defined vars:</value>
+  </data>
+  <data name="GoalsSectionCanContainsOnlyMinimizeOrMaximizeAndNot0" xml:space="preserve">
+    <value>Goals section can contains only Minimize or Maximize clauses, and not {0}</value>
+  </data>
+  <data name="InvalidStringConstant" xml:space="preserve">
+    <value>Invalid symbol constant: this symbol does not exist in the given symbol domain </value>
+  </data>
+  <data name="ThePropertyOrField0WasNotFoundOnType1" xml:space="preserve">
+    <value>The property or field '{0}' was not found on type '{1}'.</value>
+  </data>
+  <data name="OnlyOneGoalIsSupportedWithCQNSolver" xml:space="preserve">
+    <value>Only one goal is supported with Compact Quasi Newton solver.</value>
+  </data>
+  <data name="TheRateMustBeAFinitePositiveNumber" xml:space="preserve">
+    <value>The rate must be a finite positive number.</value>
+  </data>
+  <data name="OmlParameter" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="EachElementInTheListMustBeATuple" xml:space="preserve">
+    <value>Each element in the list must be a Tuple</value>
+  </data>
+  <data name="ErrObjUnterminatedStringLiteral" xml:space="preserve">
+    <value>Unterminated string literal</value>
+  </data>
+  <data name="SyntaxError012" xml:space="preserve">
+    <value>Syntax error: {0}, {1}, {2}</value>
+  </data>
+  <data name="SymbolAlreadyHasAScope" xml:space="preserve">
+    <value>Symbol already has a scope</value>
+  </data>
+  <data name="SizesDoNotMatch" xml:space="preserve">
+    <value>The sizes of {0} and {1} do not match.</value>
+  </data>
+  <data name="AllVariablesShouldBeActiveForTheRow" xml:space="preserve">
+    <value>All variables should be active for the row.</value>
+  </data>
+  <data name="InvalidLinearModel" xml:space="preserve">
+    <value>Invalid linear model: '{0}', '{1}'</value>
+  </data>
+  <data name="CannotSolve" xml:space="preserve">
+    <value>Cannot use IntegerSolver to solve a non-integer model.</value>
+  </data>
+  <data name="OnlyParametersDeclaredOnParametersSectionCanBeBound" xml:space="preserve">
+    <value>Only parameters declared on a Parameters section can be bound</value>
+  </data>
+  <data name="Inputs0And1HaveDifferentSymbolDomains" xml:space="preserve">
+    <value>Inputs {0} and {1} have different symbol domains.</value>
+  </data>
+  <data name="ModelReduction0UnboundedRowsRemoved1ConstantOrUnboundedSlackVariablesRemoved" xml:space="preserve">
+    <value>Model reduction: {0} unbounded rows removed, {1} constant or unbounded slack variables removed</value>
+  </data>
+  <data name="OmlInvalidInvalidSos2NeedEqualityWithTwoArguments" xml:space="preserve">
+    <value>Sos2 must contain a reference constraint as an equality with exactly two arguments.</value>
+  </data>
+  <data name="SearchFirstTermError" xml:space="preserve">
+    <value>SearchFirst contains Terms not belonging to this Solver </value>
+  </data>
+  <data name="SamplesCount0" xml:space="preserve">
+    <value>Sample Count: {0}</value>
+  </data>
+  <data name="PreprocessingDone" xml:space="preserve">
+    <value> done</value>
+  </data>
+  <data name="ExcelModelTooLarge" xml:space="preserve">
+    <value>Model size exceeds evaluation limit - please see About dialog for more information.</value>
+  </data>
+  <data name="Tuples0IsNotBoundToADataSource" xml:space="preserve">
+    <value>Tuples {0} is not bound to a data source</value>
+  </data>
+  <data name="UnnecessaryChange" xml:space="preserve">
+    <value>Internal Error: unnecessary change on the variable </value>
+  </data>
+  <data name="SetListWrongDomain" xml:space="preserve">
+    <value>The argument variable's domain must be CspPowerSet or CspPowerList in set/list operator </value>
+  </data>
+  <data name="TheSolverSThrewAnExceptionWhileSolvingTheModel" xml:space="preserve">
+    <value>The solver(s) threw an exception while solving the model</value>
+  </data>
+  <data name="QuadraticModelOnlySupportsASingleGoalRowCanTChangeToADifferentGoalRow" xml:space="preserve">
+    <value>Quadratic models only support a single goal row. Can't change to a different goal row.</value>
+  </data>
+  <data name="RowNeedsToBeDifferentiatedButIsNotDifferentiable01" xml:space="preserve">
+    <value>Row {0} needs to be differentiated but {1} is not a differentiable operation.</value>
+  </data>
+  <data name="IndexError" xml:space="preserve">
+    <value>Internal Error: should be no way that the ixVar can have a value not in the index set </value>
+  </data>
+  <data name="BadAnnotation" xml:space="preserve">
+    <value>Bad annotation</value>
+  </data>
+  <data name="ParametersCannotBeDisabled" xml:space="preserve">
+    <value>Parameters cannot be disabled</value>
+  </data>
+  <data name="OmlInvalidDecisionInIteratorList" xml:space="preserve">
+    <value>Values used in an iterator cannot depend on decision values.</value>
+  </data>
+  <data name="SolutionMappingIsNotALinearSolutionMapping" xml:space="preserve">
+    <value>The solutionMapping argument is not a LinearSolutionMapping object.</value>
+  </data>
+  <data name="DisolverBooleanTermExpected" xml:space="preserve">
+    <value>Unexpected Term kind</value>
+  </data>
+  <data name="PluginSolverConfigNullElement" xml:space="preserve">
+    <value>Null element in MsfConfig section.</value>
+  </data>
+  <data name="Violation0" xml:space="preserve">
+    <value>Violation: {0}</value>
+  </data>
+  <data name="OmlInvalidTupleContainsDecision0" xml:space="preserve">
+    <value>Tuple element '{0}' may not depend on a decision value.</value>
+  </data>
+  <data name="DecompositionIterations" xml:space="preserve">
+    <value>Decomposition Iterations: {0}</value>
+  </data>
+  <data name="OmlInvalidDeclaredIndexUsesDecision" xml:space="preserve">
+    <value>Index for '{0}' may not depend on a decision value.</value>
+  </data>
+  <data name="ReportLineMoveSelection" xml:space="preserve">
+    <value>Move Selection: {0}</value>
+  </data>
+  <data name="OneOrMoreSolversWereNotAbortedWithinWaitLimitSpecified" xml:space="preserve">
+    <value>One or more solvers were not aborted within the wait limit specified in the directive. If this problem persists, increase Directive.WaitLimit.</value>
+  </data>
+  <data name="OmlInvalidAssignedDecision" xml:space="preserve">
+    <value>Decisions can not be assigned</value>
+  </data>
+  <data name="StochasticModelCanOnlyBeSavedToAnOMLFile" xml:space="preserve">
+    <value>Stochastic models can only be saved in OML format.</value>
+  </data>
+  <data name="NameFoundInModelWasNotPresentedAsAVariable" xml:space="preserve">
+    <value>Name found in Model was not presented as a Decision</value>
+  </data>
+  <data name="ThisVersionOfTheProductHasExpiredPleaseContactMicrosoftCorporationForLicensingOptions" xml:space="preserve">
+    <value>This version of the product has expired. Please contact Microsoft Corporation for licensing options.</value>
+  </data>
+  <data name="OmlInvalidIndexedSetsParameter" xml:space="preserve">
+    <value>Set parameters cannot be indexed.</value>
+  </data>
+  <data name="PropertyNameIsNotSupported0" xml:space="preserve">
+    <value>Property name {0} is not supported.</value>
+  </data>
+  <data name="MulticorrectorIneffective" xml:space="preserve">
+    <value>Multicorrector: ineffective</value>
+  </data>
+  <data name="DisplayFeaturesOccurenceOfConstraintsRatioCountAllConstraints" xml:space="preserve">
+    <value>Occurrence of Constraints (Ratio [= Count/AllConstraints])</value>
+  </data>
+  <data name="OmlInvalidSectionShouldStartWithDomain0" xml:space="preserve">
+    <value>'{0}' is not a domain nor a submodel. All Parameters sections should start with a domain and all Decisions sections should start with a domain or a submodel.</value>
+  </data>
+  <data name="NoReportType" xml:space="preserve">
+    <value>no report type</value>
+  </data>
+  <data name="ThereIsAlreadyAnActiveModelInTheContext" xml:space="preserve">
+    <value>There is already an active model in the context.</value>
+  </data>
+  <data name="DirectiveCannotLocateSolver" xml:space="preserve">
+    <value>Given directive {0} cannot locate a solver that has the capability to solve the model</value>
+  </data>
+  <data name="OperationNotSupportedOnConicRows" xml:space="preserve">
+    <value>This operation is not supported on second order conic rows.</value>
+  </data>
+  <data name="XIsNull0" xml:space="preserve">
+    <value>{0} cannot be null.</value>
+  </data>
+  <data name="InvalidArgumentsForBinomialDistribution" xml:space="preserve">
+    <value>Invalid arguments for binomial distribution</value>
+  </data>
+  <data name="SetListNullInput" xml:space="preserve">
+    <value>The argument to the set/list operator is null </value>
+  </data>
+  <data name="NotLpMilpQpModel" xml:space="preserve">
+    <value>The model is not a LP/MILP/QP model. Make sure the model does not contain any nonlinear constraints or strict inequalities, or use a directive that supports this model type.</value>
+  </data>
+  <data name="NoNewFieldsForSetListComposites" xml:space="preserve">
+    <value>Cannot add new fields to CspPowerSet or CspPowerList composite</value>
+  </data>
+  <data name="CompositeConstraintNotSupported" xml:space="preserve">
+    <value>CspComposite does not support this constraint </value>
+  </data>
+  <data name="OmlInvalidForeachInFilter" xml:space="preserve">
+    <value>A condition for '{0}' must be single-valued.</value>
+  </data>
+  <data name="NeedsASimplexSolver" xml:space="preserve">
+    <value>{0} needs a simplex solver.</value>
+  </data>
+  <data name="ModelShouldNotBeEditedWhileEnumeratingRowsOrVariables" xml:space="preserve">
+    <value>Model should not be edited while enumerating rows or variables.</value>
+  </data>
+  <data name="OnlyNumericDecisionsCanBeIndexed" xml:space="preserve">
+    <value>Only numeric decisions can be indexed.</value>
+  </data>
+  <data name="SfsSubmodelCannotInstantiateRootModel" xml:space="preserve">
+    <value>Root model cannot be instantiated</value>
+  </data>
+  <data name="DoesNotYetHaveAValue" xml:space="preserve">
+    <value>{0} does not yet have a value.</value>
+  </data>
+  <data name="Distribution0WithItsCurrentParametersCannotBeSampledWithLatinHypercubeMethod" xml:space="preserve">
+    <value>{0} with its current parameters cannot be sampled with LatinHypercube method</value>
+  </data>
+  <data name="IsNotNumeric" xml:space="preserve">
+    <value>Input {0} is not numeric.</value>
+  </data>
+  <data name="UnknownVariable0" xml:space="preserve">
+    <value>Unknown variable: {0}</value>
+  </data>
+  <data name="InvalidArgumentsForGeometricDistribution" xml:space="preserve">
+    <value>Invalid arguments for geometric distribution</value>
+  </data>
+  <data name="OmlInvalidInvalidSos1" xml:space="preserve">
+    <value>Sos1 constraint must contain a sum of products</value>
+  </data>
+  <data name="OmlInvalidInvalidSos2" xml:space="preserve">
+    <value>Sos2 must contain a reference constraint.</value>
+  </data>
+  <data name="OutputDataBindingFormatNotSupportedFor0UnrecognizedArgumentsToSelect" xml:space="preserve">
+    <value>Output data binding format not supported for {0}: Unrecognized arguments to Select.</value>
+  </data>
+  <data name="MixedBooleanAndIntegerTypesUnexpectedInArgumentList" xml:space="preserve">
+    <value>Mixed boolean and integer types unexpected in argument list</value>
+  </data>
+  <data name="WeAreMissingAnEmumForTheConstraintValueInTheFeatureExtraction" xml:space="preserve">
+    <value>Unknown feature name</value>
+  </data>
+  <data name="CannotUseThisTerm" xml:space="preserve">
+    <value>Cannot use this term. Only Decisions, Parameters and Constraints can be used</value>
+  </data>
+  <data name="InvalidOptionForLinearSolver0" xml:space="preserve">
+    <value>Invalid option for linear solver: '{0}</value>
+  </data>
+  <data name="CannotSolveBecauseThereIsNoActiveModel" xml:space="preserve">
+    <value>Cannot solve because there is no active model.</value>
+  </data>
+  <data name="OmlInvalidTupleElementNotNumber0" xml:space="preserve">
+    <value>Tuple element '{0}' is not numeric.</value>
+  </data>
+  <data name="Overflow" xml:space="preserve">
+    <value>Overflow: '{0}'</value>
+  </data>
+  <data name="InvalidDomain" xml:space="preserve">
+    <value>Invalid domain</value>
+  </data>
+  <data name="ExpressionFromWrongRewriteSystem" xml:space="preserve">
+    <value>Expression from wrong RewriteSystem!</value>
+  </data>
+  <data name="InvalidInterval" xml:space="preserve">
+    <value>Invalid interval.</value>
+  </data>
+  <data name="TuplesMustIncludeAtLeastOneElement" xml:space="preserve">
+    <value>Tuples must include at least one element</value>
+  </data>
+  <data name="UnexpectedTerm0" xml:space="preserve">
+    <value>Unexpected term ‘{0}’.</value>
+  </data>
+  <data name="LengthCanNotBeZero0" xml:space="preserve">
+    <value>Length of {0} can't be zero</value>
+  </data>
+  <data name="SetListNonscalorIndex" xml:space="preserve">
+    <value>The index Term in ElementAt operator must be an integer variable </value>
+  </data>
+  <data name="DisolverCantProcessTheModel" xml:space="preserve">
+    <value>IntegerSolver can't process the model: '{0}', '{1}'</value>
+  </data>
+  <data name="OmlInvalidTupleElementContainsForeach0" xml:space="preserve">
+    <value>Tuple element '{0}' must be single-valued.</value>
+  </data>
+  <data name="ModelShouldContainAtLeastOneDecisionsSection" xml:space="preserve">
+    <value>Model should contain at least one 'Decisions' section</value>
+  </data>
+  <data name="EnumeratedDomainsAreNotSupportedInOML" xml:space="preserve">
+    <value>Enumerated domains are not supported in OML</value>
+  </data>
+  <data name="AcceptedExpandedCount0" xml:space="preserve">
+    <value>Accepted expanded: {0}.</value>
+  </data>
+  <data name="OmlInvalidTuplesCanOnlyBeAssignedToListOfLists" xml:space="preserve">
+    <value>Tuples can only be assigned to a list of lists.</value>
+  </data>
+  <data name="StatisticalUpperBound01" xml:space="preserve">
+    <value>Statistical Upper Bound: {0} +- {1}</value>
+  </data>
+  <data name="InvalidValueForOption0" xml:space="preserve">
+    <value>Invalid value for option '{0}'</value>
+  </data>
+  <data name="OmlInvalidSymbolRedefined" xml:space="preserve">
+    <value>The symbol '{0}' is already used as a decision or parameter.</value>
+  </data>
+  <data name="ValueSetCannotBeEmpty" xml:space="preserve">
+    <value>Value set cannot be empty</value>
+  </data>
+  <data name="TheValue0IsNotAnAllowable1Value" xml:space="preserve">
+    <value>The value {0} is not an allowable {1} value.</value>
+  </data>
+  <data name="OfReInitializationDueToNodes0" xml:space="preserve">
+    <value>Number of re-initialization due to nodes: {0}</value>
+  </data>
+  <data name="RuleApplicationFailed" xml:space="preserve">
+    <value>rule application failed</value>
+  </data>
+  <data name="BoundsForDiscreteUniformDistriutionNeedsToBeIntegers" xml:space="preserve">
+    <value>Bounds for discrete uniform distribution need to be integers</value>
+  </data>
+  <data name="ClrObjectWrapperException0" xml:space="preserve">
+    <value>ClrObjectWrapper exception: {0}</value>
+  </data>
+  <data name="IsNotBoolean" xml:space="preserve">
+    <value>Input {0} is not Boolean.</value>
+  </data>
+  <data name="CouldNotPrintSensitivityValue" xml:space="preserve">
+    <value>Cannot print sensitivity value</value>
+  </data>
+  <data name="OmlInvalidNonBooleanArgument" xml:space="preserve">
+    <value>Logical or relational operators only accept Boolean arguments.</value>
+  </data>
+  <data name="ReportLineInfeasibleSet" xml:space="preserve">
+    <value>Infeasible set:</value>
+  </data>
+  <data name="InvalidVariable0" xml:space="preserve">
+    <value>'{0}' is a invalid variable.</value>
+  </data>
+  <data name="NeedsToUseDualForSensitivityRepor" xml:space="preserve">
+    <value>needs to use dual for sensitivity report</value>
+  </data>
+  <data name="EmptyArgListInUnequal" xml:space="preserve">
+    <value>Empty argument list in Unequal</value>
+  </data>
+  <data name="DisplayFeaturesHistograms" xml:space="preserve">
+    <value>Histograms</value>
+  </data>
+  <data name="InvalidTermParameterNotInModel" xml:space="preserve">
+    <value>All Parameters involved in an expression must be added to the same model with AddParameter</value>
+  </data>
+  <data name="OmlInvalidSubmodelNameIsAlsoDeclaredAsANamedDomain" xml:space="preserve">
+    <value>Submodel name is also declared as a named domain</value>
+  </data>
+  <data name="StepCount0" xml:space="preserve">
+    <value>Step count: {0}.</value>
+  </data>
+  <data name="CalledOnNull" xml:space="preserve">
+    <value>{0} called on &lt;null&gt;</value>
+  </data>
+  <data name="SearchFirstListElementsMustBePreDeclaredVariables" xml:space="preserve">
+    <value>SearchFirst list elements must be pre-declared Variables</value>
+  </data>
+  <data name="MatrixIsRankDeficient" xml:space="preserve">
+    <value>Matrix is rank deficient.</value>
+  </data>
+  <data name="ReportLineVariableSelection" xml:space="preserve">
+    <value>Variable Selection: {0}</value>
+  </data>
+  <data name="OnlyOneDomainForSetsSection" xml:space="preserve">
+    <value>Only one domain can be specify for Sets section</value>
+  </data>
+  <data name="UpperTriangularCoordinateSeen" xml:space="preserve">
+    <value>upper triangular coordinate seen</value>
+  </data>
+  <data name="OperatorNotDefined" xml:space="preserve">
+    <value>Operator was not defined</value>
+  </data>
+  <data name="ReportLineGoals" xml:space="preserve">
+    <value>Goals:</value>
+  </data>
+  <data name="InvalidSamplingMethod0" xml:space="preserve">
+    <value>Invalid sampling method {0}.</value>
+  </data>
+  <data name="FilteredSumNotYetImplemented" xml:space="preserve">
+    <value>FilteredSum not yet implemented</value>
+  </data>
+  <data name="ListContainsNonNumericValue" xml:space="preserve">
+    <value>List contains a non numeric value</value>
+  </data>
+  <data name="ReportLineBasis" xml:space="preserve">
+    <value>Basis: {0}</value>
+  </data>
+  <data name="DecompositionCannotBeApplied" xml:space="preserve">
+    <value>Decomposition cannot be applied because the master model is unbounded</value>
+  </data>
+  <data name="UnknownConeId0" xml:space="preserve">
+    <value>Unknown cone id: {0}</value>
+  </data>
+  <data name="NonBooleanVariableAttemptedAsConstraint" xml:space="preserve">
+    <value>Non-boolean variable attempted as constraint</value>
+  </data>
+  <data name="NumberOfIterationsToRememberShouldBePositive" xml:space="preserve">
+    <value>Number of iterations to remember should be positive</value>
+  </data>
+  <data name="CannotCloneTerm" xml:space="preserve">
+    <value>Given Term cannot be cloned</value>
+  </data>
+  <data name="ElementOfOnlyAllowsIntegerAndEnumeratedDomains" xml:space="preserve">
+    <value>ElementOf only allows integer and enumerated domains.</value>
+  </data>
+  <data name="OmlInvalidSubmodelNameHasBeenTaken" xml:space="preserve">
+    <value>Submodel name has been taken</value>
+  </data>
+  <data name="SolverContextCannotBeNull" xml:space="preserve">
+    <value>ISolverEnvironment parameter cannot be null when calling PluginSolverCollection.GetSolvers or PluginSolverCollection.GetDefaultSolver</value>
+  </data>
+  <data name="IndexOutOfRange" xml:space="preserve">
+    <value>Index out of range</value>
+  </data>
+  <data name="DuplicatedSet" xml:space="preserve">
+    <value>Duplicated set</value>
+  </data>
+  <data name="Parameter0IsNotBoundToADataSource" xml:space="preserve">
+    <value>Parameter {0} is not bound to a data source</value>
+  </data>
+  <data name="NoSolverFound" xml:space="preserve">
+    <value>No solver could be found that can accept the model given the model type and directive(s)</value>
+  </data>
+  <data name="TreeSearchStatsTotalTime0Ms" xml:space="preserve">
+    <value>Total time:              {0}ms
+</value>
+  </data>
+  <data name="CannotCreateDecisionBindingOnDecisionNotAddedToRootModel" xml:space="preserve">
+    <value>Cannot create decision binding on decision '{0}' because it is not added to the root model</value>
+  </data>
+  <data name="ReportLineValueSelection" xml:space="preserve">
+    <value>Value Selection: {0}</value>
+  </data>
+  <data name="SetListSymbolSetVarNotAllowed" xml:space="preserve">
+    <value>Cannot do Union, Intersection, or Difference on Symbol set variables with different baselines </value>
+  </data>
+  <data name="OnlyOneInputsection" xml:space="preserve">
+    <value>Can not have more that one Input section</value>
+  </data>
+  <data name="NegativePower" xml:space="preserve">
+    <value>Cannot take negative power in ConstraintSolver.Power</value>
+  </data>
+  <data name="OmlInvalidWrongTypeInAssignment" xml:space="preserve">
+    <value>The value assigned to '{0}' has the wrong type.</value>
+  </data>
+  <data name="ErrObjExpectedCharacter0" xml:space="preserve">
+    <value>Expected character '{0}'</value>
+  </data>
+  <data name="NegationShouldHave1Argument" xml:space="preserve">
+    <value>Negation should have 1 argument</value>
+  </data>
+  <data name="UnknownQuality" xml:space="preserve">
+    <value>Unknown quality {0}</value>
+  </data>
+  <data name="CompositeFieldArityZero" xml:space="preserve">
+    <value>Arity of a field in the composite cannot be less than or equal to 0 </value>
+  </data>
+  <data name="ModelHasNoSolution" xml:space="preserve">
+    <value>Model is infeasible or unknown. Cannot access ConstraintSolverSolution.GetValue</value>
+  </data>
+  <data name="PunctuatorAlreadyMapped" xml:space="preserve">
+    <value>Punctuator '{0}' already mapped!</value>
+  </data>
+  <data name="UnsignedLongVarInvalid" xml:space="preserve">
+    <value>The given Term is not an unsigned long variable </value>
+  </data>
+  <data name="SfsSubmodelCannotInstantiateRemovedSubmodel" xml:space="preserve">
+    <value>Submodel '{0}' is removed. Cannot instantiate it any more</value>
+  </data>
+  <data name="ListsCannotMixSymbolsWithLiterals" xml:space="preserve">
+    <value>Lists cannot mix symbols with literals</value>
+  </data>
+  <data name="MicrosoftSolverFoundationVersion01" xml:space="preserve">
+    <value>Microsoft Solver Foundation {0} {1} Edition</value>
+  </data>
+  <data name="CompositeDomainNotSupported" xml:space="preserve">
+    <value>The function does not support composite variables as input.</value>
+  </data>
+  <data name="CannotUseIdenticalOrSet" xml:space="preserve">
+    <value>Cannot use 'Identical' ('===') or Set ('=') in constraints - try using 'Equal' ('==').</value>
+  </data>
+  <data name="TwoAreNull01" xml:space="preserve">
+    <value>Both {0} and {1} are null</value>
+  </data>
+  <data name="QpModelShouldNotReferenceNonVariables" xml:space="preserve">
+    <value>Quadratic models should not reference non-variables.</value>
+  </data>
+  <data name="OmlInvalidDecisionInIteratorList0" xml:space="preserve">
+    <value>Value '{0}' is used in an iterator. Values used in an iterator cannot depend on decision values.</value>
+  </data>
+  <data name="ConeType0NotSupported" xml:space="preserve">
+    <value>Cone type {0} is not supported.</value>
+  </data>
+  <data name="SetBindingMayNotBeCalledOnASetWithFixedValues" xml:space="preserve">
+    <value>SetBinding may not be called on a Set with fixed values.</value>
+  </data>
+  <data name="OmlInvalidFilterIsNotBoolean" xml:space="preserve">
+    <value>A condition for '{0}' must be a Boolean value.</value>
+  </data>
+  <data name="RemovedEnteringCandidate12" xml:space="preserve">
+    <value>{0} Removed entering candidate: {1}, {2}</value>
+  </data>
+  <data name="ExactlyMofNExpectsBooleanTerms" xml:space="preserve">
+    <value>ExactlyMofN expects Boolean Terms</value>
+  </data>
+  <data name="InvalidBounds" xml:space="preserve">
+    <value>Invalid bounds</value>
+  </data>
+  <data name="OmlInvalidGoalNotNumeric0" xml:space="preserve">
+    <value>'{0}' Goal is wrong. Only numeric values are allowed as goals.</value>
+  </data>
+  <data name="ComputationalProgressOfHSDSolver" xml:space="preserve">
+    <value>
+Computational progress of HSD solver:
+</value>
+  </data>
+  <data name="IPMGoalCountHasBeenReducedTo1" xml:space="preserve">
+    <value>IPM goal count has been reduced to 1</value>
+  </data>
+  <data name="InvalidLinearConstraint" xml:space="preserve">
+    <value>Invalid linear constraint</value>
+  </data>
+  <data name="DecisionsCannotBeDisabled" xml:space="preserve">
+    <value>Decisions cannot be disabled</value>
+  </data>
+  <data name="OmlInvalidSymbolRedefinedAsSet" xml:space="preserve">
+    <value>The symbol '{0}' is already used as a set.</value>
+  </data>
+  <data name="SourceModelContainsDuplicateKeys" xml:space="preserve">
+    <value>Source model contains duplicate keys</value>
+  </data>
+  <data name="InvalidCompositeVariableOperation" xml:space="preserve">
+    <value>Invoked operations on composite variables are invalid</value>
+  </data>
+  <data name="LenghtShouldEqualToSumOfLengths012" xml:space="preserve">
+    <value>Length of {0} should be equal to sum of lengths of {1} and {2}</value>
+  </data>
+  <data name="CompositeIndexOutOfRange" xml:space="preserve">
+    <value>The index to the field of the composite is out of range </value>
+  </data>
+  <data name="StochasticModelsMustBeLinear" xml:space="preserve">
+    <value>Stochastic models must be linear. Verify there are no nonlinear terms in the goal or constraints.</value>
+  </data>
+  <data name="AfterFillNonZeros0" xml:space="preserve">
+    <value>After-fill non-zeros {0}</value>
+  </data>
+  <data name="InvalidTermDecisionNotInModel" xml:space="preserve">
+    <value>All Decisions involved in an expression must be added to the same model with AddDecision</value>
+  </data>
+  <data name="MaximizeProblem" xml:space="preserve">
+    <value>Maximize problem</value>
+  </data>
+  <data name="ExpectedTuples" xml:space="preserve">
+    <value>Expected Tuples</value>
+  </data>
+  <data name="OmlInvalidLabel" xml:space="preserve">
+    <value>Invalid label to goal or constraint</value>
+  </data>
+  <data name="MatrixIsNotSymmetric" xml:space="preserve">
+    <value>Matrix is not symmetric.</value>
+  </data>
+  <data name="TuplesMustBeAddedToTheModelBeforeBeingUsed" xml:space="preserve">
+    <value>Tuples must be added to the model before being used</value>
+  </data>
+  <data name="OmlSymbolUsedForDecision0" xml:space="preserve">
+    <value>'{0}' symbol has been used for a decision and cannot be used for a parameter.</value>
+  </data>
+  <data name="NeedsASolverWithSensitivityInformation" xml:space="preserve">
+    <value>{0} needs a solver with sensitivity information.</value>
+  </data>
+  <data name="ReportLineDirectives" xml:space="preserve">
+    <value>Directives:</value>
+  </data>
+  <data name="SfsSubmodelCannotCreateInstanceOfEmptySubmodel" xml:space="preserve">
+    <value>Cannot create instance of an empty Submodel '{0}'</value>
+  </data>
+  <data name="CqnTraceStarting012" xml:space="preserve">
+    <value>Starting          {0,0:0.0000e+00}   {1,0:0000}                    {2}</value>
+  </data>
+  <data name="UnexpectedNeedToBe01orEndOfFile" xml:space="preserve">
+    <value>Unexpected term ‘{0}’. Expected: ‘{1}’ or end of file</value>
+  </data>
+  <data name="InvalidDomainForLinearVariable" xml:space="preserve">
+    <value>Invalid domain for LP decision</value>
+  </data>
+  <data name="DoesNotBelongToMatrix0" xml:space="preserve">
+    <value>This {0} does not belong to the matrix</value>
+  </data>
+  <data name="LoadingOfMPSFilesContainingSpecialOrderedSetsIsNotSupported" xml:space="preserve">
+    <value>Loading of MPS files containing special ordered sets is not supported.</value>
+  </data>
+  <data name="ReportHeaderSolverExecutionDetails" xml:space="preserve">
+    <value>===Solver Execution Details===</value>
+  </data>
+  <data name="OnlyNumericParametersCanBeIndexed" xml:space="preserve">
+    <value>Only numeric parameters can be indexed.</value>
+  </data>
+  <data name="DuplicateParameter" xml:space="preserve">
+    <value>Duplicate Parameter</value>
+  </data>
+  <data name="OmlInvalidDecisionInDomainBound" xml:space="preserve">
+    <value>Domain bounds may not depend on decision values.</value>
+  </data>
+  <data name="NonBooleanExpressionAttemptedAsConstraint" xml:space="preserve">
+    <value>Non-boolean expression attempted as constraint</value>
+  </data>
+  <data name="TreeSearchStatsTotalNbEvents010" xml:space="preserve">
+    <value>Total nb events:         {0,-10} </value>
+  </data>
+  <data name="IncompatibleInputTerms" xml:space="preserve">
+    <value>The input Terms do not belong to the same CspModel instance </value>
+  </data>
+  <data name="OmlInvalidTableInIteratorList0" xml:space="preserve">
+    <value>The term '{0}' cannot be used in an iterator without indexing.</value>
+  </data>
+  <data name="CannotImportForeachDecision" xml:space="preserve">
+    <value>Cannot import Foreach decisions.</value>
+  </data>
+  <data name="ProbabilitiesShouldSumupToOne" xml:space="preserve">
+    <value>Probabilities should sum up to 1</value>
+  </data>
+  <data name="CutLowerUpperEntryCount012" xml:space="preserve">
+    <value>Lower: {0}, Upper: {1}, Entry count: {2}</value>
+  </data>
+  <data name="InvalidNumber" xml:space="preserve">
+    <value>invalid number</value>
+  </data>
+  <data name="ParsingModelFailed0" xml:space="preserve">
+    <value>'{0}'</value>
+  </data>
+  <data name="IndexedDecisionsMayNotBeProbed" xml:space="preserve">
+    <value>Indexed decisions may not be probed</value>
+  </data>
+  <data name="ReportLineModelName" xml:space="preserve">
+    <value>Model Name: {0}</value>
+  </data>
+  <data name="SolverInterfaceNotSupported" xml:space="preserve">
+    <value>The solver interface {0} does not exist or is not supported</value>
+  </data>
+  <data name="SetListWrongSubset" xml:space="preserve">
+    <value>The constant subset must be an array of ordered unique elements </value>
+  </data>
+  <data name="IndexedDecisionUsedWithoutIndex" xml:space="preserve">
+    <value>Indexed decision used without index</value>
+  </data>
+  <data name="SOS1ConstraintsAreNotSupportedInOML" xml:space="preserve">
+    <value>SOS1 constraints are not supported in OML</value>
+  </data>
+  <data name="CannotIndexNonDecision" xml:space="preserve">
+    <value>Cannot index non-Decisions.</value>
+  </data>
+  <data name="DomainIndexOutOfRange" xml:space="preserve">
+    <value>Index is out of the domain </value>
+  </data>
+  <data name="Exception1" xml:space="preserve">
+    <value>{0} Exception: {1}</value>
+  </data>
+  <data name="InvalidValueForSolverOption0" xml:space="preserve">
+    <value>Invalid value for 'Solver' option: '{0}'</value>
+  </data>
+  <data name="NoSolverWithCapabilityForDirectiveWithType01" xml:space="preserve">
+    <value>{1} cannot solve {0} models. Remove this directive and use a directive that supports the {0} capability.</value>
+  </data>
+  <data name="SolutionMappingArgumentIsNotAPluginSolutionMappingObject" xml:space="preserve">
+    <value>solutionMapping argument is not a PluginSolutionMapping object.</value>
+  </data>
+  <data name="CannotImportNonConstantIterator" xml:space="preserve">
+    <value>Cannot import non-constant iterators.</value>
+  </data>
+  <data name="Ms" xml:space="preserve">
+    <value>{0}ms
+</value>
+  </data>
+  <data name="InvalidArgumentsForLognormalDistribution" xml:space="preserve">
+    <value>Invalid arguments for log-normal distribution</value>
+  </data>
+  <data name="SolvingMethod0" xml:space="preserve">
+    <value>Solving Method: {0}</value>
+  </data>
+  <data name="WrongSyntaxParameterTwoInvocation" xml:space="preserve">
+    <value>Wrong syntax for parameter. Try to use param[set1, set2, ...] instead.</value>
+  </data>
+  <data name="CompositeVarGetValueNotSupported" xml:space="preserve">
+    <value>Cannot use GetValue to retrieve value of a composite variable. Need to retrieve the values from its fields manually </value>
+  </data>
+  <data name="UnsignedLongOperatorInputInvalid" xml:space="preserve">
+    <value>The input to an unsigned long operator must be either an integer variable or an unsigned long variable </value>
+  </data>
+  <data name="InvalidArgumentsForNormalDistribution" xml:space="preserve">
+    <value>Invalid arguments for normal distribution</value>
+  </data>
+  <data name="ComputeStatisticsConstraints010" xml:space="preserve">
+    <value>Number of constraints:            {0,-10}
+</value>
+  </data>
+  <data name="UnmatchedSizesOfListsInSumProduct" xml:space="preserve">
+    <value>Unmatched sizes of lists in SumProduct</value>
+  </data>
+  <data name="UnsupportedModelType" xml:space="preserve">
+    <value>Unsupported model type</value>
+  </data>
+  <data name="ErrObjTooManyCharactersInCharacterLiteral" xml:space="preserve">
+    <value>Too many characters in character literal</value>
+  </data>
+  <data name="WrongParameterAssignInForeachStatement" xml:space="preserve">
+    <value>Wrong parameter assign in Foreach statement</value>
+  </data>
+  <data name="TokensNotInSameVersion" xml:space="preserve">
+    <value>Tokens not in same version</value>
+  </data>
+  <data name="CurrentlyOnlyTuplesWhichIsUsedAsARandomParameterSupportsIndexing" xml:space="preserve">
+    <value>Indexed Tuples can only be used for random Parameters.</value>
+  </data>
+  <data name="UnknownMarker" xml:space="preserve">
+    <value>Unknown marker: {0}</value>
+  </data>
+  <data name="BundariesAreNotNumeric" xml:space="preserve">
+    <value>Minimum or maximum boundaries are not numeric</value>
+  </data>
+  <data name="MustHaveAtLeastOneValue" xml:space="preserve">
+    <value>{0} must have at least one value</value>
+  </data>
+  <data name="ErrorCode0Token3Line12" xml:space="preserve">
+    <value>Error code {0} :token {3}:line {1}: {2}</value>
+  </data>
+  <data name="WrongDecisionDeclarationInForeach" xml:space="preserve">
+    <value>Wrong decision declaration in Foreach statement</value>
+  </data>
+  <data name="GeneralWrongForeach" xml:space="preserve">
+    <value>Syntax error in Foreach statement</value>
+  </data>
+  <data name="IntMapNonIntegerIndex" xml:space="preserve">
+    <value>Index Terms in Index constraints must be Integer Terms</value>
+  </data>
+  <data name="AddingFalseAsConstraint" xml:space="preserve">
+    <value>Trying to add constant False as a constraint. The model is infeasible</value>
+  </data>
+  <data name="OmlParseExceptionLocationFormat0123" xml:space="preserve">
+    <value>&lt;{0}, {1}&gt; - &lt;{2}, {3}&gt;</value>
+  </data>
+  <data name="ErrorToken" xml:space="preserve">
+    <value>Error token</value>
+  </data>
+  <data name="PluginSolverConfigInvalidAssembly" xml:space="preserve">
+    <value>Invalid solver assembly in MsfConfig section.</value>
+  </data>
+  <data name="MpsExpectsAStringTheFileNameOptionallyFollowedByABooleanTrueForFixedFormatFalseForFree" xml:space="preserve">
+    <value>Mps expects a string (the file name), optionally followed by a boolean (True for fixed format, False for free).</value>
+  </data>
+  <data name="StartingPointShouldBeNumbers" xml:space="preserve">
+    <value>Values for starting point should be numbers</value>
+  </data>
+  <data name="InternalError" xml:space="preserve">
+    <value>Internal error</value>
+  </data>
+  <data name="DisplayFeaturesAdditionRatio" xml:space="preserve">
+    <value>AdditionRatio</value>
+  </data>
+  <data name="Ev0" xml:space="preserve">
+    <value>EV: {0}</value>
+  </data>
+  <data name="EachScenarioShouldHaveProbabilityAndValue" xml:space="preserve">
+    <value>Each scenario should be initiated with Probability and Value</value>
+  </data>
+  <data name="InvalidSymbolDomainDefinition" xml:space="preserve">
+    <value>The given symbols for constructing a symbol set have duplicate symbols </value>
+  </data>
+  <data name="InvalidTermExceptionMessage" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="Evpi0" xml:space="preserve">
+    <value>EVPI: {0}</value>
+  </data>
+  <data name="SOSRowNameMissing" xml:space="preserve">
+    <value>Miss SOS reference row name</value>
+  </data>
+  <data name="ModelsCannotBeSharedAcrossSolverContextInstances" xml:space="preserve">
+    <value>Models cannot be shared across SolverContext instances. Please use the SolverContext instance that created the Model.</value>
+  </data>
+  <data name="InterfaceIncompatibleWithProblem" xml:space="preserve">
+    <value>{0} is registered with the {1} interface but that interface is incompatible with {2}</value>
+  </data>
+  <data name="CompositeInvalidFieldReference" xml:space="preserve">
+    <value>Specified field does not exist in this composite </value>
+  </data>
+  <data name="DisplayFeaturesXXXX" xml:space="preserve">
+    <value>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</value>
+  </data>
+  <data name="EnumDomainMustHaveAtLeastOneElement" xml:space="preserve">
+    <value>Enum domain must have at least one element</value>
+  </data>
+  <data name="MatrixDimensionsAreNotValid" xml:space="preserve">
+    <value>Matrix dimensions are not valid.</value>
+  </data>
+  <data name="Strategy01" xml:space="preserve">
+    <value>Strategy : {0} ({1})</value>
+  </data>
+  <data name="InvalidKeyChange" xml:space="preserve">
+    <value>Cannot modify an existing key </value>
+  </data>
+  <data name="NegativeIndex01" xml:space="preserve">
+    <value>Negative index in {0}[{1}]</value>
+  </data>
+  <data name="CanNotFindDomain" xml:space="preserve">
+    <value>Cannot find domain</value>
+  </data>
+  <data name="ProhibitedForeachInDecisions" xml:space="preserve">
+    <value>Foreach statements over indexed sets are not allowed in Decision section, use the declaration alone.</value>
+  </data>
+  <data name="TheSuccessProbabilityMustBeANonZeroProbability" xml:space="preserve">
+    <value>The success probability must be a non-zero probability.</value>
+  </data>
+  <data name="EnumDomainCannotContainNullOrEmptyStringValue" xml:space="preserve">
+    <value>Enum domain cannot contain null or empty string values</value>
+  </data>
+  <data name="OmlInvalidSubmodelGoalConstraintName" xml:space="preserve">
+    <value>Submodel, goal and constraint names cannot be a predefined symbol.</value>
+  </data>
+  <data name="StringIsNotAMemberOfEnumeratedDomain" xml:space="preserve">
+    <value>String is not a member of enumerated domain</value>
+  </data>
+  <data name="LogicalSymbolCouldNotBeMadeAVariable" xml:space="preserve">
+    <value>Logical Symbol {0} could not be made a Decision</value>
+  </data>
+  <data name="NullDomain" xml:space="preserve">
+    <value>The domain for a decision cannot be null.</value>
+  </data>
+  <data name="OmlInvalidInvalidElement0" xml:space="preserve">
+    <value>'{0}' element is invalid.</value>
+  </data>
+  <data name="EvaluationCallCount0" xml:space="preserve">
+    <value>Evaluation call count: {0}.</value>
+  </data>
+  <data name="SymbolScopeAlreadyBoundToAnExpression" xml:space="preserve">
+    <value>SymbolScope already bound to an expression</value>
+  </data>
+  <data name="OutputDataBindingFormatNotSupportedFor0CallToSelectNotFound" xml:space="preserve">
+    <value>Output data binding format not supported for {0}: Call to Select not found.</value>
+  </data>
+  <data name="TheFirstArgumentToElementOfMustBeAList" xml:space="preserve">
+    <value>The first argument to ElementOf must be a list</value>
+  </data>
+  <data name="CompositeFroze" xml:space="preserve">
+    <value>Composite cannot be changed since variables of this composite have been created </value>
+  </data>
+  <data name="RejectedContractedCount0" xml:space="preserve">
+    <value>Rejected contracted: {0}.</value>
+  </data>
+  <data name="EmptyArgListInEqual" xml:space="preserve">
+    <value>Empty argument list in Equal</value>
+  </data>
+  <data name="ReportLineConstraintBounds" xml:space="preserve">
+    <value>Constraint Bounds:</value>
+  </data>
+  <data name="ArgumentIsNotATuple" xml:space="preserve">
+    <value>Argument is not a tuple</value>
+  </data>
+  <data name="CloneInvalidTerm" xml:space="preserve">
+    <value>Invalid term to clone</value>
+  </data>
+  <data name="CqnSolverRequiresBothEvaluatorsToBeSpecifiedBeforeCallingSolve" xml:space="preserve">
+    <value>CompactQuasiNewtonSolver requires both FunctionEvaluator and GradientEvaluator to be specified before calling solve.</value>
+  </data>
+  <data name="Cycle01" xml:space="preserve">
+    <value>Cycle! {0} {1}</value>
+  </data>
+  <data name="InvalidDecimalPrecision" xml:space="preserve">
+    <value>Precision for a decimal domain must be 1, 10, 100, 1000, or 10000 </value>
+  </data>
+  <data name="OnlyEnumeratedDomainsSupportStringBinding" xml:space="preserve">
+    <value>Only enumerated domains can be bound to string values.</value>
+  </data>
+  <data name="SecondArgMustBeAConstant" xml:space="preserve">
+    <value>{0} second arg must be a constant</value>
+  </data>
+  <data name="SectionIsValidForConicModelsOnly0" xml:space="preserve">
+    <value>'{0}' is valid for conic models only.</value>
+  </data>
+  <data name="ReportLineSolverSelected" xml:space="preserve">
+    <value>Solver Selected: {0}</value>
+  </data>
+  <data name="InterruptedExitRepeatPivots0" xml:space="preserve">
+    <value>Interrupted: exit RepeatPivots {0}</value>
+  </data>
+  <data name="PluginSolverConfigInvalidSolverClass" xml:space="preserve">
+    <value>Invalid solver class name in MsfConfig section.</value>
+  </data>
+  <data name="SparseDomainWithIncorrectIndexes" xml:space="preserve">
+    <value>SparseDomain with incorrect indexes</value>
+  </data>
+  <data name="InteriorPointAfterReductionThisModelContainsNoVariables" xml:space="preserve">
+    <value>Interior Point: after reduction, this model contains no variables</value>
+  </data>
+  <data name="CannotReuseParameter0InADifferentModel" xml:space="preserve">
+    <value>Cannot reuse parameter {0} in a different model.</value>
+  </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>Aborted</value>
+  </data>
+  <data name="ToleranceDifference0" xml:space="preserve">
+    <value>Tolerance difference: {0}.</value>
+  </data>
+  <data name="InvalidOptionForFiniteSolver0" xml:space="preserve">
+    <value>Invalid option for finite solver: '{0}'</value>
+  </data>
+  <data name="IsNotAValidSet" xml:space="preserve">
+    <value>{0} is not a valid Set</value>
+  </data>
+  <data name="OutputOfNonLinearModelsIsNotSupported" xml:space="preserve">
+    <value>Output of non-linear models or linear models with strict inequalities are not supported.</value>
+  </data>
+  <data name="OmlInvalidBadBuiltinOperator" xml:space="preserve">
+    <value>The operator '{0}' is not supported in OML.</value>
+  </data>
+  <data name="MultipleOccurrenceOfASymbolInSymbolSet" xml:space="preserve">
+    <value>multiple occurrence of a symbol in SymbolSet</value>
+  </data>
+  <data name="IndexesCanNotBeFound0" xml:space="preserve">
+    <value>Indexes [{0}] cannot be found</value>
+  </data>
+  <data name="ValueInElementOfIsNotAnInteger" xml:space="preserve">
+    <value>Value in ElementOf is not an integer.</value>
+  </data>
+  <data name="SpansNotCompatible" xml:space="preserve">
+    <value>Spans not compatible</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="VariableMustBeBasedOnAUserSymbol" xml:space="preserve">
+    <value>Variable must be based on a user symbol</value>
+  </data>
+  <data name="MatrixIsNotSquare" xml:space="preserve">
+    <value>Matrix is not square.</value>
+  </data>
+  <data name="MaximumIterationsExceeded" xml:space="preserve">
+    <value>Maximum iterations exceeded</value>
+  </data>
+  <data name="TheMeanOfLogMustBeAFiniteNumberStandardDeviationOfLogMustBeANonNegativeNumber" xml:space="preserve">
+    <value>The mean of the logarithm of the distribution must be a finite number and the standard deviation of the logarithm of the distribution must be a non-negative number.</value>
+  </data>
+  <data name="NumberOfEvaluationCalls0" xml:space="preserve">
+    <value>Number of evaluation calls: {0}</value>
+  </data>
+  <data name="ThisCanNotExpressDomain" xml:space="preserve">
+    <value>The Term does not express a domain.</value>
+  </data>
+  <data name="SecondStageApproximationIsBetterThanSecondStageResult" xml:space="preserve">
+    <value>The second stage approximation is better that the actual second stage problem result.</value>
+  </data>
+  <data name="ExpiredEvaluationCopy" xml:space="preserve">
+    <value>Expired evaluation copy</value>
+  </data>
+  <data name="ReportLineGoalCoefficients" xml:space="preserve">
+    <value>Goal Coefficients:</value>
+  </data>
+  <data name="ReportLineShadowPricing" xml:space="preserve">
+    <value>Shadow Pricing:</value>
+  </data>
+  <data name="OnlyIntegerAndEnumDecisionsMayBeProbed" xml:space="preserve">
+    <value>Only integer and enum decisions may be probed</value>
+  </data>
+  <data name="ListContainsANonStringValue" xml:space="preserve">
+    <value>List contains a non string value</value>
+  </data>
+  <data name="ElementOfTuplesAreUnbound" xml:space="preserve">
+    <value>Tuples in ElementOf are not bound to any data source</value>
+  </data>
+  <data name="NullGoals" xml:space="preserve">
+    <value>Cannot add null goals.</value>
+  </data>
+  <data name="SymbolIsReserved0" xml:space="preserve">
+    <value>Expression contains the reserved symbol {0}</value>
+  </data>
+  <data name="NullInput" xml:space="preserve">
+    <value>The input cannot be null </value>
+  </data>
+  <data name="AtLeast1ArgumentExpected" xml:space="preserve">
+    <value>At least one argument expected</value>
+  </data>
+  <data name="InfeasiblePrimalDueToUnboundedPrimal" xml:space="preserve">
+    <value>InfeasiblePrimal due to UnboundedPrimal</value>
+  </data>
+  <data name="PluginSolverConfigInvalidName" xml:space="preserve">
+    <value>Invalid solver name in MsfConfig section.</value>
+  </data>
+  <data name="OnlyAppliesToAList" xml:space="preserve">
+    <value>{0} only applies to a List</value>
+  </data>
+  <data name="SfsSubmodelCannotRemoveInstantiatedSubmodel" xml:space="preserve">
+    <value>Submodel '{0}' is already instantiated and cannot be removed.</value>
+  </data>
+  <data name="OmlInvalidIndexingByTable0" xml:space="preserve">
+    <value>Value '{0}' is used as index. Value used as index is not a valid type.</value>
+  </data>
+  <data name="SystemErrorCannotScheduleTasks" xml:space="preserve">
+    <value>system error cannot schedule tasks</value>
+  </data>
+  <data name="PluginSolverError" xml:space="preserve">
+    <value>Microsoft Solver Foundation plugin solver configuration exception.</value>
+  </data>
+  <data name="OnlyIntervalDomainsAreAllowedForSimplex" xml:space="preserve">
+    <value>Only interval domains are allowed for simplex</value>
+  </data>
+  <data name="ParameterShouldUseSetsOrBeAssignedConstant" xml:space="preserve">
+    <value>A parameter must use Sets or be assigned a constant value</value>
+  </data>
+  <data name="HasMultipleValues" xml:space="preserve">
+    <value>{0} has multiple values.</value>
+  </data>
+  <data name="UnknownDomainType" xml:space="preserve">
+    <value>Domain type is unknown </value>
+  </data>
+  <data name="SingularBasis" xml:space="preserve">
+    <value>Singular basis!</value>
+  </data>
+  <data name="IsNotDeclaredAsTuples" xml:space="preserve">
+    <value>'{0}' is not declared as Tuples</value>
+  </data>
+  <data name="EnumerateInterimSolutionsMustBeEnabledForLocalSearch" xml:space="preserve">
+    <value>EnumerateInterimSolutions in ConstraintSolverParams must be enabled for local search</value>
+  </data>
+  <data name="OmlInvalidSubmodelClause" xml:space="preserve">
+    <value>Submodel must be of the form: name -&gt; Model[...], where name is a single non-quoted symbol</value>
+  </data>
+  <data name="WrongArgumentPowerExpectsExponent1" xml:space="preserve">
+    <value>wrong argument: power expects exponent &gt;= 1</value>
+  </data>
+  <data name="DisplayFeaturesHistogramOverDomainSizeAndUserDefinedVars" xml:space="preserve">
+    <value>Histogram over domain size and user-defined vars:</value>
+  </data>
+  <data name="NonlinearTerm" xml:space="preserve">
+    <value>Nonlinear term</value>
+  </data>
+  <data name="InvalidDomainForSATVariable" xml:space="preserve">
+    <value>Invalid domain for SAT decision</value>
+  </data>
+  <data name="TermHasBeenAddedToAModel01" xml:space="preserve">
+    <value>Term '{0}' has been added to model '{1}' and cannot be added to other models</value>
+  </data>
+  <data name="SolverRequiresFunctionEvaluatorToBeSpecifiedBeforeCallingSolve" xml:space="preserve">
+    <value>The solver requires FunctionEvaluator to be specified before calling solve.</value>
+  </data>
+  <data name="InvocationCannotBeUsedAsSetDeclaration" xml:space="preserve">
+    <value>Invocation can not be used as a Set declaration</value>
+  </data>
+  <data name="DisolverTermExpected" xml:space="preserve">
+    <value>Unexpected Term kind</value>
+  </data>
+  <data name="NumberOfElementsInTupleDoesNotMatch" xml:space="preserve">
+    <value>Number of elements in tuple does not match</value>
+  </data>
+  <data name="OmlInvalidForeachNotAllowedInOperator" xml:space="preserve">
+    <value>The operator '{0}' only accepts singled-value arguments.</value>
+  </data>
+  <data name="TheGoalCouldNotBeAddedToTheModel" xml:space="preserve">
+    <value>The goal could not be added to the model.</value>
+  </data>
+  <data name="ModelIsNotStochasticButStochasticDirectiveWasUsed" xml:space="preserve">
+    <value>Model is not stochastic, but a stochastic directive was used</value>
+  </data>
+  <data name="LoadLinearModelPassedThis" xml:space="preserve">
+    <value>LoadLinearModel passed 'this'!</value>
+  </data>
+  <data name="ProbabilityShouldBeMoreThanZeroAndLessOrEqualToOne" xml:space="preserve">
+    <value>Probability should be more than 0 and less or equal to 1</value>
+  </data>
+  <data name="ReportLineNonzeros" xml:space="preserve">
+    <value>Nonzeros: {0}</value>
+  </data>
+  <data name="InvalidSolverInstance" xml:space="preserve">
+    <value>The solver instance is invalid </value>
+  </data>
+  <data name="NotTriangular" xml:space="preserve">
+    <value>not triangular</value>
+  </data>
+  <data name="OmlInvalidForeachInDomainBound0" xml:space="preserve">
+    <value>Domain bound '{0}' must be single-valued.</value>
+  </data>
+  <data name="OmlInvalidGoalNotNumeric" xml:space="preserve">
+    <value>Only numeric values are allowed as goals.</value>
+  </data>
+  <data name="GoalsCannotContainDecisionsMultipliedByRandomParameters" xml:space="preserve">
+    <value>Goals cannot contain Decisions multiplied by RandomParameters</value>
+  </data>
+  <data name="DisplayFeaturesSmallLarge" xml:space="preserve">
+    <value>Small ----------- Large</value>
+  </data>
+  <data name="NumberOfVariablesShouldBePositive" xml:space="preserve">
+    <value>Number of variables should be positive</value>
+  </data>
+  <data name="ReturnedASolutionInAnUnknownFormat" xml:space="preserve">
+    <value>OML returned a solution in an unknown format</value>
+  </data>
+  <data name="OmlInvalidTableArgument" xml:space="preserve">
+    <value>The operator '{0}' cannot accept the term without indexing.</value>
+  </data>
+  <data name="TreeSearchStatsTotalNbNodes010" xml:space="preserve">
+    <value>Total nb nodes:          {0,-10} </value>
+  </data>
+  <data name="SolverResetDuringSolve" xml:space="preserve">
+    <value>Solver has been Reset. Cannot continue solving for the next solution.</value>
+  </data>
+  <data name="UnknownOperation0" xml:space="preserve">
+    <value>Unknown operation id: {0}</value>
+  </data>
+  <data name="OnlyOneRowIsSupportedForCQNModel" xml:space="preserve">
+    <value>Only one row is supported for Compact Quasi Newton model.</value>
+  </data>
+  <data name="InteriorPointCurrentlyRequiresAGoal" xml:space="preserve">
+    <value>Interior Point currently requires a goal</value>
+  </data>
+  <data name="ProhibitedForeachInParameters" xml:space="preserve">
+    <value>Foreach statements over indexed sets are not allowed in Parameters section, use the declaration alone.</value>
+  </data>
+  <data name="OrComma" xml:space="preserve">
+    <value>Or, </value>
+  </data>
+  <data name="VariableMustBeAddedToSolverBeforeUse" xml:space="preserve">
+    <value>Variable must be added to solver before use</value>
+  </data>
+  <data name="TuplesParameterDataMustBeAListOfLists" xml:space="preserve">
+    <value>Tuples parameter data must be a list of lists</value>
+  </data>
+  <data name="Decomposition" xml:space="preserve">
+    <value>Decomposition</value>
+  </data>
+  <data name="InvalidDecisionDefinition" xml:space="preserve">
+    <value>Invalid Decision definition</value>
+  </data>
+  <data name="OmlRecourseMustContainAtLeastOneDecision" xml:space="preserve">
+    <value>Recourse sections must contain exactly one decision</value>
+  </data>
+  <data name="TimeToFirstSolution" xml:space="preserve">
+    <value>Time to first Solution : </value>
+  </data>
+  <data name="OmlInvalidTupleContainsDecision" xml:space="preserve">
+    <value>Tuple element may not depend on a decision value.</value>
+  </data>
+  <data name="StochasticMeasures" xml:space="preserve">
+    <value>Stochastic Measures:</value>
+  </data>
+  <data name="OmlInvalidInvalidAssignmentFormat" xml:space="preserve">
+    <value>Invalid assignment format.</value>
+  </data>
+  <data name="ErrObjUnrecognizedEscapeSequence" xml:space="preserve">
+    <value>Unrecognized escape sequence</value>
+  </data>
+  <data name="SetsOfEnumValuesAreNotSupportedUseDomainAnyInstead" xml:space="preserve">
+    <value>Sets of Enum values are not supported. Use Domain.Any instead.</value>
+  </data>
+  <data name="Property0CanOnlyBeAccessedBySolvingEventHandlers" xml:space="preserve">
+    <value>Property '{0}' can only be accessed by Solving event handlers.</value>
+  </data>
+  <data name="InvalidConeType0" xml:space="preserve">
+    <value>Invalid cone type: {0}</value>
+  </data>
+  <data name="ModelIsStochasticButNonStochasticDirectiveWasUsed" xml:space="preserve">
+    <value>Model is stochastic, but a non-stochastic directive was used</value>
+  </data>
+  <data name="ObjectiveLabelAlreadyExists" xml:space="preserve">
+    <value>Objective label already exists.</value>
+  </data>
+  <data name="UnrecognizedCspTerm" xml:space="preserve">
+    <value>Unrecognized constraint programming solver term</value>
+  </data>
+  <data name="InvalidArgumentCountForOperator0" xml:space="preserve">
+    <value>Invalid argument count for operator {0}.</value>
+  </data>
+  <data name="NoDataBindingSetOn0" xml:space="preserve">
+    <value>No data binding set on {0}</value>
+  </data>
+  <data name="ModelHasNotBeenDifferentiated" xml:space="preserve">
+    <value>The operation is invalid because the model has not been differentiated.</value>
+  </data>
+  <data name="ScenariosMustIncludeOneElement" xml:space="preserve">
+    <value>Scenarios must include one element</value>
+  </data>
+  <data name="NumberNotIntegerOrOutOfRange" xml:space="preserve">
+    <value>Number not integer, or out of range</value>
+  </data>
+  <data name="ErrObjNumberPastColumn0" xml:space="preserve">
+    <value>Number past column {0}</value>
+  </data>
+  <data name="DuplicateVariable0" xml:space="preserve">
+    <value>'{0}' is a duplicate Decision</value>
+  </data>
+  <data name="NeedsASimplexSolverOptionallyFollowedByVariablesLabels" xml:space="preserve">
+    <value>{0} needs a simplex solver, optionally followed by variables/labels.</value>
+  </data>
+  <data name="OmlInvalidDefiningBuiltinAsSet" xml:space="preserve">
+    <value>Builtin symbol '{0}' cannot be used as a set.</value>
+  </data>
+  <data name="UnknownVariableId" xml:space="preserve">
+    <value>Unknown variable id: {0}</value>
+  </data>
+  <data name="UnknownRow" xml:space="preserve">
+    <value>Unknown row: '{0}'</value>
+  </data>
+  <data name="NoneOfTheSuppliedDirectivesWasValidForTheModel" xml:space="preserve">
+    <value>None of the supplied directives was valid for the model</value>
+  </data>
+  <data name="ExpectingIndexes0" xml:space="preserve">
+    <value>Expecting {0} indexes</value>
+  </data>
+  <data name="OmlInvalidIndexOfNonTable0" xml:space="preserve">
+    <value>The value {0} cannot be indexed.</value>
+  </data>
+  <data name="StochasticNeedRecourseDecisionsAndRandomParameters" xml:space="preserve">
+    <value>Stochastic models need to have both recourse decisions and random parameters</value>
+  </data>
+  <data name="DuplicateKey" xml:space="preserve">
+    <value>A variable of the same key already exists </value>
+  </data>
+  <data name="CouldNotParseSMPSModel" xml:space="preserve">
+    <value>Failed to parse SMPS model.</value>
+  </data>
+  <data name="OmlInvalidEachListMustContainSameNumberOfElements" xml:space="preserve">
+    <value>Each list in a Tuples assignment must contain the same number of elements.</value>
+  </data>
+  <data name="MinimumBundaryBiggerThanMaximumBundary" xml:space="preserve">
+    <value>Minimum bound can not be bigger than maximum bound</value>
+  </data>
+  <data name="CannotReuseDecision0InADifferentModel" xml:space="preserve">
+    <value>Cannot reuse decision {0} in a different model</value>
+  </data>
+  <data name="BadIterator0" xml:space="preserve">
+    <value>Bad iterator {0}</value>
+  </data>
+  <data name="WrongMIPNumerics" xml:space="preserve">
+    <value>MIP Solver currently has to use hybrid or exact numerics</value>
+  </data>
+  <data name="InvalidFactorialOperand" xml:space="preserve">
+    <value>Invalid operand for Factorial </value>
+  </data>
+  <data name="ReportLineAlgorithm" xml:space="preserve">
+    <value>Algorithm: {0}</value>
+  </data>
+  <data name="OmlInvalidWrongArgumentCount" xml:space="preserve">
+    <value>The operator '{0}' requires exactly {1} argument(s).</value>
+  </data>
+  <data name="AcceptedContractedCount0" xml:space="preserve">
+    <value>Accepted contracted: {0}</value>
+  </data>
+  <data name="ExpectedNumericValue" xml:space="preserve">
+    <value>Expected numeric value</value>
+  </data>
+  <data name="AlreadySolving" xml:space="preserve">
+    <value>Solve is in progress </value>
+  </data>
+  <data name="TryGetShouldNotReturnFalse" xml:space="preserve">
+    <value>TryGet should not return false</value>
+  </data>
+  <data name="ComparisonsShouldHave2Arguments" xml:space="preserve">
+    <value>Comparisons should have two or more arguments</value>
+  </data>
+  <data name="VariableDomainExceedsCspSolverIntegerDomain" xml:space="preserve">
+    <value>Variable domain exceeds CspSolver integer domain</value>
+  </data>
+  <data name="DisplayFeaturesHistogramOverNumberOfConstraintsAndBoolVars" xml:space="preserve">
+    <value>Histogram over number of constraints and bool vars:</value>
+  </data>
+  <data name="MatrixIsNotPositiveDefinite" xml:space="preserve">
+    <value>Matrix is not positive definite.</value>
+  </data>
+  <data name="ErrObjEndOfFileFoundExpected" xml:space="preserve">
+    <value>End-of-file found, '*/' expected</value>
+  </data>
+  <data name="UnknownDataValue0" xml:space="preserve">
+    <value>Unknown data value {0}</value>
+  </data>
+  <data name="DisplayFeaturesDensestVariableConnectedTo0OfConstraints" xml:space="preserve">
+    <value>-&gt; Densest variable connected to {0}% of constraints.</value>
+  </data>
+  <data name="InvalidSATObjective" xml:space="preserve">
+    <value>Invalid SAT objective</value>
+  </data>
+  <data name="EmptyArgListInProduct" xml:space="preserve">
+    <value>Empty argument list in Product</value>
+  </data>
+  <data name="TheArityOfTheTupleMustBeTheSameAsTheArityOfTheVariableTuple" xml:space="preserve">
+    <value>The arity of the tuple must be the same as the arity of the variable tuple</value>
+  </data>
+  <data name="StartingPointDimensionalityDiffersFromObjectiveFunction" xml:space="preserve">
+    <value>Starting point dimensionality is not the same as the objective function</value>
+  </data>
+  <data name="TheCutIsInvalid0" xml:space="preserve">
+    <value>The cut is invalid. {0}</value>
+  </data>
+  <data name="AtMostMofNExpectsBooleanTerms" xml:space="preserve">
+    <value>AtMostMofN expects Boolean Terms</value>
+  </data>
+  <data name="NonIntegerDomainsInCSPProblemIsNotYetSupportedInOML" xml:space="preserve">
+    <value>non-integer domains in CSP problem is not yet supported in OML</value>
+  </data>
+  <data name="DecompositionCannotBeAppliedInfiniteBound" xml:space="preserve">
+    <value>Decomposition cannot be applied as there is a decision which participates only in second stage constraints, and has an infinite bound.</value>
+  </data>
+  <data name="NoDomainValueKindSpecified" xml:space="preserve">
+    <value>No Domain.ValueKind specified</value>
+  </data>
+  <data name="ListMustHaveAtLeastOneElement" xml:space="preserve">
+    <value>List must have at least one element</value>
+  </data>
+  <data name="ErrObjNewlineInConstant" xml:space="preserve">
+    <value>Newline in constant</value>
+  </data>
+  <data name="SumOfAllProbabilitiesShouldNotExceedOne" xml:space="preserve">
+    <value>Sum of all probabilities should not exceed 1</value>
+  </data>
+  <data name="OnlyREPLACEADDAndMULTIPLYAreSupported" xml:space="preserve">
+    <value>Only REPLACE, ADD and MULTIPLY are supported</value>
+  </data>
+  <data name="IterationLimitExceededInReplaceRepeated" xml:space="preserve">
+    <value>Iteration limit exceeded in ReplaceRepeated[{0},{1},{2}]</value>
+  </data>
+  <data name="PluginSolverCollectionUninitialized" xml:space="preserve">
+    <value>Accessing a PluginSolverCollection instance that has not been initialized.</value>
+  </data>
+  <data name="InvalidValueForDirectiveOption0" xml:space="preserve">
+    <value>Invalid value for 'Directive' option: '{0}'</value>
+  </data>
+  <data name="CannotImportNonSetIterator" xml:space="preserve">
+    <value>Cannot import non-Set iterators.</value>
+  </data>
+  <data name="ConstraintLabelAlreadyExists" xml:space="preserve">
+    <value>Constraint label already exists.</value>
+  </data>
+  <data name="WrongParameterAssignClause" xml:space="preserve">
+    <value>Wrong parameter assign clause</value>
+  </data>
+  <data name="SecondStageDecisionsValuesAverageMinimalMaximal" xml:space="preserve">
+    <value>Second stage decisions (Average [Min, Max]):</value>
+  </data>
+  <data name="ReportLinePricingDouble" xml:space="preserve">
+    <value>Pricing (double): {0}</value>
+  </data>
+  <data name="CompositeDuplicateFields" xml:space="preserve">
+    <value>Field has been added to this composite </value>
+  </data>
+  <data name="IncompatibleVectorSize" xml:space="preserve">
+    <value>The vectors have incompatible sizes </value>
+  </data>
+  <data name="BindDataInErrorMissingCellFormat" xml:space="preserve">
+    <value>Cannot bind data to {0}, please specify cell ranges.</value>
+  </data>
+  <data name="Expected0ArgumentsButSaw1" xml:space="preserve">
+    <value>Expected {0} arguments but received {1}</value>
+  </data>
+  <data name="DuplicateVariable" xml:space="preserve">
+    <value>Duplicate Decision</value>
+  </data>
+  <data name="CompositeUnknownInputs" xml:space="preserve">
+    <value>Terms created in a CspComposite must use other terms created in the same CspComposite as inputs</value>
+  </data>
+  <data name="SfsSubmodelCannotModifyModels" xml:space="preserve">
+    <value>The submodel '{0}' is already instantiated and can no longer be modified.</value>
+  </data>
+  <data name="Argument0ToIndexOperationIsOfAnInvalidType" xml:space="preserve">
+    <value>Argument {0} to index operation is of an invalid type</value>
+  </data>
+  <data name="NoExpiration" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="NeedsASimplexSolverOptionallyFollowedByStatisticNames" xml:space="preserve">
+    <value>{0} needs a simplex solver, optionally followed by statistic names.</value>
+  </data>
+  <data name="NoSuchSet" xml:space="preserve">
+    <value>No such set</value>
+  </data>
+  <data name="OmlInvalidBadTuple" xml:space="preserve">
+    <value>Expected a Tuple here.</value>
+  </data>
+  <data name="SetListNullBaseline" xml:space="preserve">
+    <value>The baseline set of the power-set/power-list variable is null </value>
+  </data>
+  <data name="OmlInvalidRedefiningIterator" xml:space="preserve">
+    <value>The symbol '{0}' is already used as an iterator in an enclosing scope.</value>
+  </data>
+  <data name="VersionEnterprise" xml:space="preserve">
+    <value>Enterprise</value>
+  </data>
+  <data name="InvalidFiniteConstraint" xml:space="preserve">
+    <value>Invalid Finite constraint</value>
+  </data>
+  <data name="OmlInvalidIndexingByForeach0" xml:space="preserve">
+    <value>Value '{0}' is used as index. Value used as index must be single-valued.</value>
+  </data>
+  <data name="SymbolWithDomainCouldNotBeMadeAVariable" xml:space="preserve">
+    <value>Symbol {0} with domain {1} could not be made a Variable</value>
+  </data>
+  <data name="RandomSeed0" xml:space="preserve">
+    <value>Random Seed: {0}</value>
+  </data>
+  <data name="InvalidRowId" xml:space="preserve">
+    <value>Invalid row id.</value>
+  </data>
+  <data name="SfsSubmodelExceedNestingLimit" xml:space="preserve">
+    <value>Submodel nesting exceeds the limit of {0}.</value>
+  </data>
+  <data name="UnknownVariable" xml:space="preserve">
+    <value>The variable given is unknown</value>
+  </data>
+  <data name="LargeErrorInBasicValue0" xml:space="preserve">
+    <value>Large error in basic value: {0}</value>
+  </data>
+  <data name="RowIsUnbounded" xml:space="preserve">
+    <value>row {0} is unbounded</value>
+  </data>
+  <data name="OnlyConstantValuesAreAllowedForTheIterationSetInForeachFilteredForeach" xml:space="preserve">
+    <value>Only constant values are allowed for the iteration set in Foreach/FilteredForeach</value>
+  </data>
+  <data name="InvalidList0" xml:space="preserve">
+    <value>Invalid list {0}.</value>
+  </data>
+  <data name="EmptyINDEPSection" xml:space="preserve">
+    <value>Empty INDEP section</value>
+  </data>
+  <data name="InitialNonZerosA0" xml:space="preserve">
+    <value>Initial non-zeros A[{0}]</value>
+  </data>
+  <data name="ExpectedModel" xml:space="preserve">
+    <value>Expected Model</value>
+  </data>
+  <data name="MustHaveASingleValue" xml:space="preserve">
+    <value>{0} must have a single value.</value>
+  </data>
+  <data name="VersionEvaluation" xml:space="preserve">
+    <value>Evaluation</value>
+  </data>
+  <data name="ColumnIndexesDidNotSortCorrectly" xml:space="preserve">
+    <value>column indexes did not sort correctly</value>
+  </data>
+  <data name="SolverMustBeConstraintSystem" xml:space="preserve">
+    <value>Solver must be ConstraintSystem</value>
+  </data>
+  <data name="SetListIncompatibleDomainKind" xml:space="preserve">
+    <value>The value kind of the domains are incompatible for the set/list operator</value>
+  </data>
+  <data name="ReportLineDatetime0" xml:space="preserve">
+    <value>Date: {0}</value>
+  </data>
+  <data name="UnexpectedNeedToBe012" xml:space="preserve">
+    <value>Unexpected term ‘{0}’. Expected: ‘{1}’ or '{2}'</value>
+  </data>
+  <data name="TheSuccessProbabilityMustBeAProbabilityAndTheNumberOfTrialsMustBeAPositiveNumber" xml:space="preserve">
+    <value>The success probability must be a probability and the number of trials must be a positive number.</value>
+  </data>
+  <data name="PluginSolverConfigInvalidElement" xml:space="preserve">
+    <value>Invalid element in MsfConfig section.</value>
+  </data>
+  <data name="ReportLineVariables" xml:space="preserve">
+    <value>Variables: {0} -&gt; {1} + {2}</value>
+  </data>
+  <data name="OmlInvalidBadDomainBoundType0" xml:space="preserve">
+    <value>Domain bound '{0}' is not of the correct type.</value>
+  </data>
+  <data name="OmlSymbolUsedForParameter0" xml:space="preserve">
+    <value>'{0}' symbol has been used for a parameter and cannot be used for a decision.</value>
+  </data>
+  <data name="InvalidColumnVar" xml:space="preserve">
+    <value>Column variable is not a CspVariable with a symbol domain but the table constraint rows have symbol values </value>
+  </data>
+  <data name="OmlInvalidParameterInDomainBound" xml:space="preserve">
+    <value>Domain bounds may not depend on late-bound data.</value>
+  </data>
+  <data name="OmlInvalidForeachInIterator" xml:space="preserve">
+    <value>Values used as iterator bounds must be single-valued.</value>
+  </data>
+  <data name="InvalidForceOperation" xml:space="preserve">
+    <value>Internal Error: Force only applies to Boolean Terms </value>
+  </data>
+  <data name="LowerBoundCannotBeLargerThanUpperBound" xml:space="preserve">
+    <value>Lower bound cannot be larger than upper bound</value>
+  </data>
+  <data name="DeterministicEquivalent" xml:space="preserve">
+    <value>Deterministic Equivalent</value>
+  </data>
+  <data name="InvalidLinearOrQuadraticTerm" xml:space="preserve">
+    <value>Invalid linear or quadratic term</value>
+  </data>
+  <data name="CanTMixExpressionFromDifferentRewriteSystems" xml:space="preserve">
+    <value>Cannot mix expressions from different RewriteSystems</value>
+  </data>
+  <data name="OmlInvalidNonAssignmentParameterInForeach" xml:space="preserve">
+    <value>Only assignment parameters are allowed inside 'Foreach' or 'ForeachWhere'.</value>
+  </data>
+  <data name="InvalidVariablesClause" xml:space="preserve">
+    <value>Invalid Decisions clause</value>
+  </data>
+  <data name="TreeSearchStatsPerSec" xml:space="preserve">
+    <value>({0} per sec)
+</value>
+  </data>
+  <data name="DomainCanNotHaveBundaries0" xml:space="preserve">
+    <value>{0} domain can not have boundaries</value>
+  </data>
+  <data name="WanderedToInfeasible1" xml:space="preserve">
+    <value> pivot count: {0} Method Wandered to infeasible: {1}</value>
+  </data>
+  <data name="ReducingError" xml:space="preserve">
+    <value>{0} Reducing error</value>
+  </data>
+  <data name="CouldNotFindStochasticCoreFileOrDirectory0" xml:space="preserve">
+    <value>Could not find stochastic core file or directory {0}.</value>
+  </data>
+  <data name="OmlInvalidTableInIteratorList" xml:space="preserve">
+    <value>This term cannot be used in an iterator without indexing.</value>
+  </data>
+  <data name="Result0" xml:space="preserve">
+    <value>result = {0}</value>
+  </data>
+  <data name="ExpressionCannotBeConvertedToTerm" xml:space="preserve">
+    <value>Expression cannot be converted to Term</value>
+  </data>
+  <data name="DomainsSectionIsNotAllowedInSubmodels" xml:space="preserve">
+    <value>Domains section is not allowed in submodels.</value>
+  </data>
+  <data name="OutputDataBindingFormatNotSupportedFor0UnableToCallSelectOn1" xml:space="preserve">
+    <value>Output data binding format not supported for {0}: Unable to call Select on {1}</value>
+  </data>
+  <data name="NotYetImplemented" xml:space="preserve">
+    <value>not yet implemented</value>
+  </data>
+  <data name="AddChange01" xml:space="preserve">
+    <value>AddChange {0} {1}</value>
+  </data>
+  <data name="DomainsSectionMustContainADomainAndAName" xml:space="preserve">
+    <value>Domains section must contain a domain and a name</value>
+  </data>
+  <data name="UnknownPluginAssembly" xml:space="preserve">
+    <value>Cannot load the plug-in solver assembly {0}.</value>
+  </data>
+  <data name="TuplesParametersCannotBeIndexed" xml:space="preserve">
+    <value>Tuples parameters cannot be indexed</value>
+  </data>
+  <data name="OmlInvalidConstraintNotBoolean" xml:space="preserve">
+    <value>Only Boolean values are allowed as constraints.</value>
+  </data>
+  <data name="FirstArgumentForBinomialDistributionMustBeInteger" xml:space="preserve">
+    <value>First argument for binomial distribution must be integer</value>
+  </data>
+  <data name="UnknownDomainEncountered" xml:space="preserve">
+    <value>Unknown domain encountered</value>
+  </data>
+  <data name="Replacing0With1InBasis" xml:space="preserve">
+    <value>Replacing {0} with {1} in basis</value>
+  </data>
+  <data name="DecimalValueOutOfRange" xml:space="preserve">
+    <value>Decimal value out of range </value>
+  </data>
+  <data name="NodesSearchedIn1Ms" xml:space="preserve">
+    <value>{0,-10} nodes searched in {1}ms</value>
+  </data>
+  <data name="NotALinearOperation" xml:space="preserve">
+    <value>Not a linear operation</value>
+  </data>
+  <data name="MustBeATupleOfIntegerValuesThatAreWithinFiniteSolverSIntegerRange" xml:space="preserve">
+    <value>Must be a tuple of integer values that are within Finite Solver's integer range</value>
+  </data>
+  <data name="CSPSolverCantProcessTheModel01" xml:space="preserve">
+    <value>CSP solver cannot process the model: '{0}', '{1}'</value>
+  </data>
+  <data name="UnknownString" xml:space="preserve">
+    <value>Symbol does not belong to the symbol domain </value>
+  </data>
+  <data name="TheModelMustContainAGoal" xml:space="preserve">
+    <value>The model must contain a goal.</value>
+  </data>
+  <data name="ConstantValuesMayNotBeRedefined" xml:space="preserve">
+    <value>Constant values may not be redefined.</value>
+  </data>
+  <data name="OmlSymbolUsedForDifferentType01" xml:space="preserve">
+    <value>'{0}' symbol has been used for different type of {1}.</value>
+  </data>
+  <data name="OneOnlyAddressAllowed" xml:space="preserve">
+    <value>One, and one only address allowed</value>
+  </data>
+  <data name="NotBoolean" xml:space="preserve">
+    <value>Cannot convert the Term to Boolean Term </value>
+  </data>
+  <data name="TheArityOfTuplesInTheListMustBeTheSameAsTheArityOfTheVariableTuple" xml:space="preserve">
+    <value>The arity of tuples in the list must be the same as the arity of the variable tuple</value>
+  </data>
+  <data name="UnknownPluginSolverType" xml:space="preserve">
+    <value>Cannot find the plug-in solver class {0} or it does not implement {1} interface</value>
+  </data>
+  <data name="ResultNeedsToBeInteger" xml:space="preserve">
+    <value>The result cannot be converted to Int32. Either the successProbability argument of the distribution is too small, or probability argument is too big.</value>
+  </data>
+  <data name="FiniteSolveNeedsAModelInvocation" xml:space="preserve">
+    <value>FiniteSolve needs a Model invocation</value>
+  </data>
+  <data name="OmlInvalidTupleOutsideTableConstraint" xml:space="preserve">
+    <value>For a Tuple to appear outside a table constraint, the first column must be of type Probability.</value>
+  </data>
+  <data name="ConstantValueIsNotAnInteger" xml:space="preserve">
+    <value>Constant value is not an integer or a Boolean</value>
+  </data>
+  <data name="IntegralityMayNotBeRedefined" xml:space="preserve">
+    <value>The integrality setting may not be redefined.</value>
+  </data>
+  <data name="NeedsASimplexSolverOptionallyFollowedByLabelVarPairs" xml:space="preserve">
+    <value>{0} needs a simplex solver, optionally followed by {label, var} pairs.</value>
+  </data>
+  <data name="OmlInvalidBadExpr" xml:space="preserve">
+    <value>The expression '{0}' is not recognized as a value or builtin operator.</value>
+  </data>
+  <data name="ExpectedAllowedSectionSymbols" xml:space="preserve">
+    <value>Expected 'Parameters', 'Decisions', 'Goals', or 'Constraints'</value>
+  </data>
+  <data name="OnlyValidWhenCalledOnParametersWith0Indexes" xml:space="preserve">
+    <value>This method is only valid when called on parameters with {0} indexes.</value>
+  </data>
+  <data name="SolverMustImplementILinearSimplexStatistics" xml:space="preserve">
+    <value>Solver must implement ILinearSimplexStatistics</value>
+  </data>
+  <data name="OmlInvalidDecisionInDomainBound0" xml:space="preserve">
+    <value>Domain bound '{0}' may not depend on decision values.</value>
+  </data>
+  <data name="FinishingValue" xml:space="preserve">
+    <value>Finishing value =</value>
+  </data>
+  <data name="FinishingPoint" xml:space="preserve">
+    <value>Finishing point =</value>
+  </data>
+  <data name="IndexCanNotBeFound0" xml:space="preserve">
+    <value>Index [{0}] cannot be found</value>
+  </data>
+  <data name="ForeachCannotBeUsedAsAGoal" xml:space="preserve">
+    <value>Foreach cannot be used as a goal</value>
+  </data>
+  <data name="MinimizeProblem" xml:space="preserve">
+    <value>Minimize problem</value>
+  </data>
+  <data name="ExceptionThrownFromCholeskyThread" xml:space="preserve">
+    <value>Exception thrown from Cholesky thread</value>
+  </data>
+  <data name="InteriorPointSolverDoesNotSupportIntegerVariables" xml:space="preserve">
+    <value>InteriorPointSolver does not support integer variables</value>
+  </data>
+  <data name="NameIsAlreadyUsedAsADomain" xml:space="preserve">
+    <value>Name is already used as a domain</value>
+  </data>
+  <data name="ErrObjFloatingPointConstantIsOutsideTheRangeOfType0" xml:space="preserve">
+    <value>Floating-point constant is outside the range of type '{0}'</value>
+  </data>
+  <data name="PreFeasibilityStrategy0CannotBeUsedWithAModelThatDoesNotHaveGoals" xml:space="preserve">
+    <value>Pre-feasibility strategy {0} cannot be used with a model that does not have goals.</value>
+  </data>
+  <data name="PluginSolverConfigInvalidDirectiveClass" xml:space="preserve">
+    <value>Invalid solver directive class name in MsfConfig section.</value>
+  </data>
+  <data name="PowerIsOutsideOfAllowedBounds" xml:space="preserve">
+    <value>Power is outside of allowed bounds</value>
+  </data>
+  <data name="VariableHasAlreadyBeenAddedToTheModel" xml:space="preserve">
+    <value>Variable has already been added to the model: {0}</value>
+  </data>
+  <data name="WrongLineInPERIODSSection" xml:space="preserve">
+    <value>Wrong line in PERIODS section</value>
+  </data>
+  <data name="OmlInvalidParameterNotAssignmentOrIndex0" xml:space="preserve">
+    <value>Parameter '{0}' must be either assigned a value ('=') or indexed('[]').</value>
+  </data>
+  <data name="SolutionAcceptedAlg0Res1Vals2FMip3" xml:space="preserve">
+    <value>Solution accepted: alg={0}, res={1}, vals={2}, fMip={3}</value>
+  </data>
+  <data name="ElementOfMustHaveExactlyTwoArguments" xml:space="preserve">
+    <value>ElementOf must have exactly two arguments</value>
+  </data>
+  <data name="ParameterShouldBeAssignConstantOfItsDomain" xml:space="preserve">
+    <value>A parameter may only be assigned a constant within the correct domain and range</value>
+  </data>
+  <data name="UnexpectedINTENDMarker" xml:space="preserve">
+    <value>Unexpected 'INTEND' marker</value>
+  </data>
+  <data name="ExceededIterationLimit" xml:space="preserve">
+    <value>Exceeded iteration limit of {0}</value>
+  </data>
+  <data name="DoesNotHaveANumericValue" xml:space="preserve">
+    <value>{0} does not have a numeric value.</value>
+  </data>
+  <data name="RowIndexesDidNotSortCorrectly" xml:space="preserve">
+    <value>row indexes did not sort correctly</value>
+  </data>
+  <data name="ReportLineVariables01" xml:space="preserve">
+    <value>Variables: {0} -&gt; {1}</value>
+  </data>
+  <data name="ErrObjUnexpectedCharacter0" xml:space="preserve">
+    <value>Unexpected character '{0}'</value>
+  </data>
+  <data name="CouldNotGetDoubleValue" xml:space="preserve">
+    <value>Could not get double value</value>
+  </data>
+  <data name="OfReInitialization0" xml:space="preserve">
+    <value>Number of re-initialization: {0}</value>
+  </data>
+  <data name="OmlInvalidAssignmentToSetsParameter" xml:space="preserve">
+    <value>Set parameters cannot be assigned values.</value>
+  </data>
+  <data name="PluginSolverConfigInvalidMsfPluginSolversSection" xml:space="preserve">
+    <value>Invalid MsfPluginSolvers section in MsfConfig section.</value>
+  </data>
+  <data name="Row0AlreadyExistsInDestinationModel" xml:space="preserve">
+    <value>Row '{0}' already exists in destination model.</value>
+  </data>
+  <data name="ReportLinePivotCount" xml:space="preserve">
+    <value>Pivot Count: {0}</value>
+  </data>
+  <data name="RecursionLimitExceeded" xml:space="preserve">
+    <value>Recursion limit exceeded: {0}</value>
+  </data>
+  <data name="NoVidForTheGoal0" xml:space="preserve">
+    <value>No vid for the goal {0}</value>
+  </data>
+  <data name="UnexpectedTermAfterTerm01" xml:space="preserve">
+    <value>Unexpected term '{0}' after '{1}'.</value>
+  </data>
+  <data name="InOrConstraintTakesAtLeastOneArgument" xml:space="preserve">
+    <value>InOr constraint takes at least one argument</value>
+  </data>
+  <data name="ExpectsExactly1IndexesBut2WereProvided" xml:space="preserve">
+    <value>{0} expects exactly {1} indexes but {2} were provided</value>
+  </data>
+  <data name="InvalidIsTrueCall" xml:space="preserve">
+    <value>Cannot call IsTrue on this Term </value>
+  </data>
+  <data name="LicenseFormat0123456" xml:space="preserve">
+    <value>Limits: NonzeroLimit = {1}, MipVariableLimit = {2}, MipRowLimit = {3}, MipNonzeroLimit = {4}, CspTermLimit = {5}, Expiration = {6}.</value>
+  </data>
+  <data name="NoConeTypeSpecified" xml:space="preserve">
+    <value>No cone type specified.</value>
+  </data>
+  <data name="OmlInvalidStackOverflow" xml:space="preserve">
+    <value>The expression was too large to validate.</value>
+  </data>
+  <data name="ReportHeaderReportOverview" xml:space="preserve">
+    <value>===Solver Foundation Service Report===</value>
+  </data>
+  <data name="SOS2ConstraintsAreNotSupportedInOML" xml:space="preserve">
+    <value>SOS2 constraints are not supported in OML</value>
+  </data>
+  <data name="VariableMustBeAddedToSolverBeforeUseInConstraint" xml:space="preserve">
+    <value>Variable must be added to solver before use in constraint</value>
+  </data>
+  <data name="DataBindingFailedForParameter012" xml:space="preserve">
+    <value>Data binding failed for parameter {0} because {2} is not a valid index for set {1}.</value>
+  </data>
+  <data name="ModelTooLarge" xml:space="preserve">
+    <value>Given model is too large and cannot be handled</value>
+  </data>
+  <data name="Preprocessing" xml:space="preserve">
+    <value>Preprocessing...</value>
+  </data>
+  <data name="PropertyRequiresADecision0" xml:space="preserve">
+    <value>The property {0} requires a Decision object, but none was supplied. Accessing Decision properties in a Solving event handler is not supported.</value>
+  </data>
+  <data name="MapArrayIndexingSizeLimitExceeded" xml:space="preserve">
+    <value>Map (array indexing) size limit of {0} elements exceeded</value>
+  </data>
+  <data name="ReportLineEliminatedSlackVariables" xml:space="preserve">
+    <value>Eliminated Slack Variables: {0}</value>
+  </data>
+  <data name="InvalidMatrixDimensions" xml:space="preserve">
+    <value>Invalid matrix dimensions.</value>
+  </data>
+  <data name="WrongVariableType" xml:space="preserve">
+    <value>Given variable's kind is different from the version of the ConstraintSolverSolution.GetValue method called</value>
+  </data>
+  <data name="InvalidSATLiteral" xml:space="preserve">
+    <value>Invalid SAT literal</value>
+  </data>
+  <data name="PostFeasibilityStrategy0CannotBeUsedWithAModelThatDoesNotHaveGoals" xml:space="preserve">
+    <value>Post-feasibility strategy {0} cannot be used with a model that does not have goals.</value>
+  </data>
+  <data name="OmlInvalidIncompatibleArgument" xml:space="preserve">
+    <value>The operator '{0}' must have all arguments of the same type.</value>
+  </data>
+  <data name="SolutionRejectedAlg0Res1Vals2FMip3" xml:space="preserve">
+    <value>Solution rejected: alg={0}, res={1}, vals={2}, fMip={3}</value>
+  </data>
+  <data name="ImproperOption0" xml:space="preserve">
+    <value>Invalid option: '{0}'</value>
+  </data>
+  <data name="InvalidPermutation" xml:space="preserve">
+    <value>The permutation is invalid </value>
+  </data>
+  <data name="InvalidFormForSos1Constraint" xml:space="preserve">
+    <value>Invalid form for Sos1 constraint</value>
+  </data>
+  <data name="OnlyTwoStageProblemsAreSupported" xml:space="preserve">
+    <value>Only two-stage problems are supported</value>
+  </data>
+  <data name="SetListEmptyListUsedInElementAt" xml:space="preserve">
+    <value>The ElementAt operator cannot take an empty constant list variable</value>
+  </data>
+  <data name="SolverDoesNotSupportOperation" xml:space="preserve">
+    <value>{0} does not support the operation {1}. Remove this directive and use a directive that supports {1}.</value>
+  </data>
+  <data name="CqnDashes" xml:space="preserve">
+    <value>----------------------------------------------------------------------------</value>
+  </data>
+  <data name="TaskCreationFailed" xml:space="preserve">
+    <value>Task creation failed</value>
+  </data>
+  <data name="ErrObjKeywordIdentifierOrStringExpectedAfterVerbatimSpecifier" xml:space="preserve">
+    <value>Keyword, identifier, or string expected after verbatim specifier: @</value>
+  </data>
+  <data name="ActualSizeOfMatrixTooBig0" xml:space="preserve">
+    <value>Actual size of matrix is too big (more than {1})</value>
+  </data>
+  <data name="SymbolicFactorNonzeros0" xml:space="preserve">
+    <value>{3}: columns = {0}, nonzeros = {1}, sp = {2:F3}</value>
+  </data>
+  <data name="GoalsNotSupportedComposite" xml:space="preserve">
+    <value>Cannot add goals to CspComposite </value>
+  </data>
+  <data name="UnknownSupportedMPSFieldQUADOBJ" xml:space="preserve">
+    <value>Unknown supported MPS field: QUADOBJ</value>
+  </data>
+  <data name="ReportingIsOnlySupportedForSimplexIPMAndCSPModels" xml:space="preserve">
+    <value>Reporting is only supported for LP, QP, MILP, CP, and UCNLP models.</value>
+  </data>
+  <data name="OmlInvalidBadTuple0" xml:space="preserve">
+    <value>Expected a Tuple here. '{0}' is not a Tuple.</value>
+  </data>
+  <data name="DuplicateName0" xml:space="preserve">
+    <value>Duplicate name {0}</value>
+  </data>
+  <data name="ABoundConstraintIsNeitherAUpperBoundConstraintNorALowerBoundConstraint" xml:space="preserve">
+    <value>A bound constraint is neither a upper-bound constraint nor a lower-bound constraint</value>
+  </data>
+  <data name="CannotCreateDecisionBindingOnDecisionNotAddedToAModel" xml:space="preserve">
+    <value>Cannot create decision binding on decision '{0}' because it is not added to any model</value>
+  </data>
+  <data name="InvalidTermNotInModel" xml:space="preserve">
+    <value>All Terms, Decisions, and Parameters involved in an expression must belong to the same model</value>
+  </data>
+  <data name="OmlInvalidParameterInDomainBound0" xml:space="preserve">
+    <value>Domain bound '{0}' may not depend on late-bound data.</value>
+  </data>
+  <data name="CouldNotParseOMLModel0" xml:space="preserve">
+    <value>Failed to parse OML model. Expression: {0}.</value>
+  </data>
+  <data name="SameParametersBoundMoreThanOnce" xml:space="preserve">
+    <value>Detected multiple bindings on a single parameter. Please make sure parameters are bound only once.</value>
+  </data>
+  <data name="UndefinedSubmodelInstance" xml:space="preserve">
+    <value>Undefined submodel instance</value>
+  </data>
+  <data name="OmlInvalidDeclaredIndexUsesData" xml:space="preserve">
+    <value>Index for '{0}' may not depend on a parameter value.</value>
+  </data>
+  <data name="CannotReuseSet0InADifferentModel" xml:space="preserve">
+    <value>Cannot reuse set {0} in a different model.</value>
+  </data>
+  <data name="SamplingGettingQuantileFromTheBinomialDistributionFailed" xml:space="preserve">
+    <value>Sampling/getting Quantile from the Binomial distribution failed</value>
+  </data>
+  <data name="CannotBindReadOnlyDataTableForOutput" xml:space="preserve">
+    <value>Cannot bind read-only data table for output</value>
+  </data>
+  <data name="ReportLinePhase1Pivots" xml:space="preserve">
+    <value>Phase 1 Pivots: {0} + {1}</value>
+  </data>
+  <data name="NumberOfIterationsPerformed0" xml:space="preserve">
+    <value>Number of iterations performed: {0}</value>
+  </data>
+  <data name="RangeOfDomainWrongNumberOfBoundaries" xml:space="preserve">
+    <value>Range of domain should have minimum value and maximum value or not having them both</value>
+  </data>
+  <data name="OmlInvalidConstraintNotBoolean0" xml:space="preserve">
+    <value>'{0}' Constraint is wrong. Only Boolean values are allowed as constraints.</value>
+  </data>
+  <data name="ReportLineBranches" xml:space="preserve">
+    <value>Branches: {0}</value>
+  </data>
+  <data name="Error012345" xml:space="preserve">
+    <value>Error {0}({1},{2})-({3},{4}): {5}</value>
+  </data>
+  <data name="IllFormedModelCannotBeSaved" xml:space="preserve">
+    <value>Model is ill-formed and cannot be saved to OML</value>
+  </data>
+  <data name="SolverParamtersCouldNotBeEmpty" xml:space="preserve">
+    <value>Simplex must receive at least one SimplexSolverParams object.</value>
+  </data>
+  <data name="NeedsAtLeast2Arguments" xml:space="preserve">
+    <value>{0} needs at least 2 arguments</value>
+  </data>
+  <data name="PowerIsNotConstant" xml:space="preserve">
+    <value>Power is not constant</value>
+  </data>
+  <data name="MissingParameterValue" xml:space="preserve">
+    <value>Missing parameter value: {0}({1})</value>
+  </data>
+  <data name="IPMSolverSupportOnlySingleGoal" xml:space="preserve">
+    <value>Interior Point Method (IPM) solver currently supports a single goal only. 
+Please change the model so that it contains one goal, or use the Simplex solver.</value>
+  </data>
+  <data name="SetListIncompatibleIndex" xml:space="preserve">
+    <value>The index Term in ElementAt operator must have an interval integer domain from 0 to the maximal length of lists in listVar - 1 </value>
+  </data>
+  <data name="BadConstraint" xml:space="preserve">
+    <value>Bad constraint</value>
+  </data>
+  <data name="OmlInvalidTupleElementNotNumber" xml:space="preserve">
+    <value>Tuple element is not numeric.</value>
+  </data>
+  <data name="PluginSolverConfigInvalidCapability" xml:space="preserve">
+    <value>Invalid solver capability in MsfConfig section.</value>
+  </data>
+  <data name="GoalMustBeAnIntegerFunction" xml:space="preserve">
+    <value>Goal must be an integer function</value>
+  </data>
+  <data name="TheValue0WasNotPresentInTheEnumeratedDomain" xml:space="preserve">
+    <value>The value "{0}" was not present in the enumerated domain.</value>
+  </data>
+  <data name="IndexVariableRangesDoNotMatchArrayShape" xml:space="preserve">
+    <value>Index variable ranges do not match array shape</value>
+  </data>
+  <data name="StartingPointShouldBeNumber" xml:space="preserve">
+    <value>The starting point should be a numeric value.</value>
+  </data>
+  <data name="OmlDecision" xml:space="preserve">
+    <value>Decision</value>
+  </data>
+  <data name="SolutionQualityIs0" xml:space="preserve">
+    <value>Solution quality is: {0}</value>
+  </data>
+  <data name="SolverMustBeSimplexSolver" xml:space="preserve">
+    <value>Solver must be SimplexSolver</value>
+  </data>
+  <data name="NoDerivativeExists01" xml:space="preserve">
+    <value>No derivative exists in row {0} for variable {1}.</value>
+  </data>
+  <data name="FirstArgumentOfTupleMemberIsNotATuple" xml:space="preserve">
+    <value>First argument of TupleMember is not a tuple</value>
+  </data>
+  <data name="ConditionOfForEachIsNotConstant" xml:space="preserve">
+    <value>Condition of ForEach is not constant</value>
+  </data>
+  <data name="WriteMpsNeedsAModelOrSimplexSolverOptionallyFollowedByABooleanIndicatingFixedTrueOrFreeFalse" xml:space="preserve">
+    <value>WriteMps needs a Model or simplex solver, optionally followed by a boolean indicating fixed (True) or free (False).</value>
+  </data>
+  <data name="SolverDoesNotSupportNonDifferentiableModels" xml:space="preserve">
+    <value>{0} does not support non-differentiable models. Remove this directive and use a directive that supports non-differentiable models.</value>
+  </data>
+  <data name="NmSolverRequiresEvaluatorToBeSpecifiedBeforeCallingSolve" xml:space="preserve">
+    <value>NelderMeadSolver requires the FunctionEvaluator property to be specified before calling solve.</value>
+  </data>
+  <data name="RandomParameterHasAllreadyFilledWithDistributionDetails" xml:space="preserve">
+    <value>The distribution information for this random parameter has already been specified.</value>
+  </data>
+  <data name="SymbolNotFoundInDomain" xml:space="preserve">
+    <value>Symbol "{0}"not found in the domain of {1}</value>
+  </data>
+  <data name="StatisticalLowerBound01" xml:space="preserve">
+    <value>Statistical Lower Bound: {0} +- {1}</value>
+  </data>
+  <data name="CannotImportConstantParameter" xml:space="preserve">
+    <value>Cannot import constant parameters.</value>
+  </data>
+  <data name="BadOMLName" xml:space="preserve">
+    <value>The name '{0}' contains invalid characters. Names must begin with a letter or underscore, and contain only letters, numbers, and underscores.</value>
+  </data>
+  <data name="OmlInvalidNonNumericArgument" xml:space="preserve">
+    <value>Arithmetic operators only accept numeric arguments.</value>
+  </data>
+  <data name="ErrorInBasisSolve" xml:space="preserve">
+    <value>An error occurred when solving the basis </value>
+  </data>
+  <data name="LogComputationalProgressOfHSDSolver" xml:space="preserve">
+    <value>Computational Progress of HSD Solver:</value>
+  </data>
+  <data name="UnknowTermType" xml:space="preserve">
+    <value>The Term has unknown type </value>
+  </data>
+  <data name="InvalidCSectionFormat" xml:space="preserve">
+    <value>Invalid CSECTION format</value>
+  </data>
+  <data name="DomainValueOutOfRange" xml:space="preserve">
+    <value>Values in the domain are not ordered distinct, or out of range </value>
+  </data>
+  <data name="TupleDataDoesNotBelongToDomainSpecifiedIn01" xml:space="preserve">
+    <value>Tuple data {0} does not belong to the domain {1} specified in the Tuples definition</value>
+  </data>
+  <data name="SATSolverCantProcessTheModel01" xml:space="preserve">
+    <value>SAT solver can't process the model: '{0}', '{1}'</value>
+  </data>
+  <data name="IsNotASymbol" xml:space="preserve">
+    <value>'{0}' is not a symbol</value>
+  </data>
+  <data name="InvalidArgumentsForScenariosDistribution" xml:space="preserve">
+    <value>Invalid arguments for scenarios distribution</value>
+  </data>
+  <data name="ReportLineIterations" xml:space="preserve">
+    <value>Iterations: {0}</value>
+  </data>
+  <data name="ExpectedIdentifier" xml:space="preserve">
+    <value>Expected Identifier</value>
+  </data>
+  <data name="CannotUseThisTerm0" xml:space="preserve">
+    <value>Cannot use the term ('{0}'). Only Decisions, Parameters and Constraints can be used</value>
+  </data>
+  <data name="CannotFindIndexesForDecision0" xml:space="preserve">
+    <value>Cannot find indexes for decision {0}.</value>
+  </data>
+  <data name="IntegerVariablesAreNotSupported" xml:space="preserve">
+    <value>Integer variables are not supported</value>
+  </data>
+  <data name="TypeOfStochasticSolution0" xml:space="preserve">
+    <value>Stochastic Solution Type: {0}</value>
+  </data>
+  <data name="BinddataClausesShouldHaveParameterAndInput" xml:space="preserve">
+    <value>Bind data clauses should have parameter name and input string</value>
+  </data>
+  <data name="InvalidVariableId" xml:space="preserve">
+    <value>Invalid variable id.</value>
+  </data>
+  <data name="OmlInvalidBadDomainBounds" xml:space="preserve">
+    <value>Invalid domain format.</value>
+  </data>
+  <data name="IncompatibleMatrixSize" xml:space="preserve">
+    <value>The matrices have incompatible sizes </value>
+  </data>
+  <data name="OmlInvalidDecisionInFilter" xml:space="preserve">
+    <value>A condition for '{0}' may not be dependent on decision values.</value>
+  </data>
+  <data name="OfReInitializationDueToCuts0" xml:space="preserve">
+    <value>Number of re-initialization due to cuts: {0}</value>
+  </data>
+  <data name="XLessThanY01" xml:space="preserve">
+    <value>{0} is less than {1}</value>
+  </data>
+  <data name="ExpectAListOfIntegersOrAnIntegersRange" xml:space="preserve">
+    <value>Expect a list of integers or an Integers range</value>
+  </data>
+  <data name="StochasticCoreFileShouldHaveOneOfThoseSuffixes0" xml:space="preserve">
+    <value>Stochastic core file should have one of the following suffixes: {0}</value>
+  </data>
+  <data name="InteriorPointSolverCanTProcessTheModel01" xml:space="preserve">
+    <value>Interior point solver can't process the model: '{0}', '{1}'</value>
+  </data>
+  <data name="FinishingValue0" xml:space="preserve">
+    <value>{0} finishing value =</value>
+  </data>
+  <data name="Vss0" xml:space="preserve">
+    <value>VSS: {0}</value>
+  </data>
+  <data name="ReportLineVersion0" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="MinimumDegreeKeyUnmatched" xml:space="preserve">
+    <value>minimum degree key unmatched</value>
+  </data>
+  <data name="ThisSolverDoesNotSupportSettingAPropertyWhileSolving" xml:space="preserve">
+    <value>This solver does not support setting a property while solving.</value>
+  </data>
+  <data name="OmlInvalidBadIterator" xml:space="preserve">
+    <value>Incorrect iterator format for '{0}'.</value>
+  </data>
+  <data name="OmlInvalidBadDomainBoundType" xml:space="preserve">
+    <value>Domain bound is not of the correct type.</value>
+  </data>
+  <data name="OmlInvalidDefiningDuplicatedSymbols" xml:space="preserve">
+    <value>Symbol {0} has been defined. Cannot redefine it in the current Model[] section.</value>
+  </data>
+  <data name="InvalidValueType" xml:space="preserve">
+    <value>The type of the value is unknown </value>
+  </data>
+  <data name="UnknownRowVariableIndex" xml:space="preserve">
+    <value>Unknown row variable index: {0}</value>
+  </data>
+  <data name="ReportLineSolveTimeMs" xml:space="preserve">
+    <value>Solve Time (ms): {0}</value>
+  </data>
+  <data name="ReportLinePhase2Pivots" xml:space="preserve">
+    <value>Phase 2 Pivots: {0} + {1}</value>
+  </data>
+  <data name="StochasticModelMustContainAGoal" xml:space="preserve">
+    <value>Stochastic models must contain a goal.</value>
+  </data>
+  <data name="PreprocessingTime0Ms" xml:space="preserve">
+    <value>Preprocessing time:      {0}ms</value>
+  </data>
+  <data name="TableMismachedDimension" xml:space="preserve">
+    <value>Each row array of a table must have the same dimension as the column variable array </value>
+  </data>
+  <data name="NoChangesBeforeSolveComplete" xml:space="preserve">
+    <value>The model cannot be changed before Solve completes </value>
+  </data>
+  <data name="RejectedExpandedCount0" xml:space="preserve">
+    <value>Rejected expanded: {0}.</value>
+  </data>
+</root>

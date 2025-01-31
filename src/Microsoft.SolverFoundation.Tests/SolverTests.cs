@@ -1,5 +1,6 @@
 using Microsoft.SolverFoundation.Services;
 using Newtonsoft.Json;
+using System.Diagnostics;
 using System.IO;
 using Xunit;
 
@@ -97,6 +98,7 @@ namespace Microsoft.Solver.Foundation.Tests
             Solution solution = context.Solve();
             Report report = solution.GetReport();
             Console.WriteLine(report);
+            Debug.WriteLine(report);
         }
     }
 }

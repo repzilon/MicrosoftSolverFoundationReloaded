@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.Solver.Foundation\Microsoft.Solver.Foundation.csproj" />
+    <ProjectReference Include="..\Microsoft.SolverFoundation\Microsoft.SolverFoundation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
