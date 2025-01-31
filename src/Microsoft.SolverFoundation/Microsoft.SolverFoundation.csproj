@@ -5,11 +5,11 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
 		<PackageId>Reloaded.SolverFoundation</PackageId>
-		<Version>0.0.3</Version>
+		<Version>0.0.4</Version>
 		<Authors>Ralf Kornelius</Authors>
-		<Description>.NET 2.0 Standard port of Microsoft.SolverFoundation</Description>
+		<Description>.NET 2.0 Standard compatible port of Microsoft Solver Foundation Express Edition</Description>
 		<PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageLicenseExpression>MS-PL</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded</PackageProjectUrl> 
 	</PropertyGroup>
 

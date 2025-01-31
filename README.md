@@ -1,5 +1,5 @@
 # MicrosoftSolverFoundationReloaded
-Decompiled and ported to .Net2.0 Standard version of the Microsoft.Solver.Foundation
+Last version of Microsoft Solver Foundation Express Edition decompiled and ported to .NET 2.0 Standard
 
 Latest legacy version taken from: https://www.nuget.org/packages/Microsoft.Solver.Foundation and decompiled via ILSpy.
 
