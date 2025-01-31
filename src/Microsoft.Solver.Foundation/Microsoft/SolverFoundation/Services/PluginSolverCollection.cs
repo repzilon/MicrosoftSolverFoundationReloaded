@@ -1,27 +1,20 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Runtime.Remoting.Messaging;
 using System.Security;
-using System.ServiceModel;
-using System.ServiceModel.Activation;
-using System.Web;
-using System.Web.Configuration;
 using Microsoft.SolverFoundation.Common;
 using Microsoft.SolverFoundation.Properties;
 using Microsoft.SolverFoundation.Solvers;
-using Microsoft.Win32;
 
 namespace Microsoft.SolverFoundation.Services
 {
-	/// <summary> Helper class for the solver plugin section in the configuration file
-	/// </summary>
-	internal sealed class PluginSolverCollection
+    /// <summary> Helper class for the solver plugin section in the configuration file
+    /// </summary>
+    internal sealed class PluginSolverCollection
 	{
 		private struct PluginSolverInfo
 		{
@@ -220,37 +213,39 @@ namespace Microsoft.SolverFoundation.Services
 		private string GetPluginSolverPathFromRegistry()
 		{
 			_pluginSolverPath = "";
-			try
-			{
-				using (RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Microsoft Solver Foundation", writable: false))
-				{
-					if (registryKey != null && registryKey.GetValueKind("PluginDirectory") == RegistryValueKind.String)
-					{
-						_pluginSolverPath = (string)registryKey.GetValue("PluginDirectory");
-						if (!_pluginSolverPath.EndsWith("\\", StringComparison.Ordinal))
-						{
-							_pluginSolverPath += "\\";
-						}
-					}
-					if (_pluginSolverPath == null)
-					{
-						return _pluginSolverPath = "";
-					}
-				}
-			}
-			catch (SecurityException)
-			{
-			}
-			catch (ObjectDisposedException)
-			{
-			}
-			catch (IOException)
-			{
-			}
-			catch (UnauthorizedAccessException)
-			{
-			}
 			return _pluginSolverPath;
+			// SKIPPED
+			//try
+			//{
+			//	using (RegistryKey registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Microsoft Solver Foundation", writable: false))
+			//	{
+			//		if (registryKey != null && registryKey.GetValueKind("PluginDirectory") == RegistryValueKind.String)
+			//		{
+			//			_pluginSolverPath = (string)registryKey.GetValue("PluginDirectory");
+			//			if (!_pluginSolverPath.EndsWith("\\", StringComparison.Ordinal))
+			//			{
+			//				_pluginSolverPath += "\\";
+			//			}
+			//		}
+			//		if (_pluginSolverPath == null)
+			//		{
+			//			return _pluginSolverPath = "";
+			//		}
+			//	}
+			//}
+			//catch (SecurityException)
+			//{
+			//}
+			//catch (ObjectDisposedException)
+			//{
+			//}
+			//catch (IOException)
+			//{
+			//}
+			//catch (UnauthorizedAccessException)
+			//{
+			//}
+			//return _pluginSolverPath;
 		}
 
 		private void InitializeGurobiSolverType()
@@ -697,59 +692,61 @@ namespace Microsoft.SolverFoundation.Services
 		/// <remarks>Current we do not support hosted environment</remarks>
 		internal static IEnumerable<ConfigMsfPluginSolverElement> GetPluginSolverSection()
 		{
-			Configuration config;
-			try
-			{
-				if (CallContext.HostContext == null)
-				{
-					if (OperationContext.Current != null)
-					{
-						VirtualPathExtension virtualPathExtension = OperationContext.Current.Host.Extensions.Find<VirtualPathExtension>();
-						config = ((virtualPathExtension == null) ? ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None) : WebConfigurationManager.OpenWebConfiguration(virtualPathExtension.VirtualPath));
-					}
-					else
-					{
-						config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-					}
-				}
-				else if (CallContext.HostContext is HttpContext httpContext)
-				{
-					string applicationPath = httpContext.Request.ApplicationPath;
-					config = WebConfigurationManager.OpenWebConfiguration(applicationPath);
-				}
-				else
-				{
-					config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-				}
-			}
-			catch (FileNotFoundException)
-			{
-				yield break;
-			}
-			catch (FileLoadException)
-			{
-				yield break;
-			}
-			catch (PathTooLongException)
-			{
-				yield break;
-			}
-			catch (ConfigurationErrorsException)
-			{
-				yield break;
-			}
-			ConfigurationSection msfConfig = config.Sections["MsfConfig"];
-			if (!(msfConfig is MsfConfigSection csg))
-			{
-				yield break;
-			}
-			foreach (ConfigMsfPluginSolverElement pluginSolver in csg.Solvers)
-			{
-				if (pluginSolver != null)
-				{
-					yield return pluginSolver;
-				}
-			}
+			return new List<ConfigMsfPluginSolverElement>();
+			// SKIPPED
+			//Configuration config;
+			//try
+			//{
+			//	if (CallContext.HostContext == null)
+			//	{
+			//		if (OperationContext.Current != null)
+			//		{
+			//			VirtualPathExtension virtualPathExtension = OperationContext.Current.Host.Extensions.Find<VirtualPathExtension>();
+			//			config = ((virtualPathExtension == null) ? ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None) : WebConfigurationManager.OpenWebConfiguration(virtualPathExtension.VirtualPath));
+			//		}
+			//		else
+			//		{
+			//			config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+			//		}
+			//	}
+			//	else if (CallContext.HostContext is HttpContext httpContext)
+			//	{
+			//		string applicationPath = httpContext.Request.ApplicationPath;
+			//		config = WebConfigurationManager.OpenWebConfiguration(applicationPath);
+			//	}
+			//	else
+			//	{
+			//		config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+			//	}
+			//}
+			//catch (FileNotFoundException)
+			//{
+			//	yield break;
+			//}
+			//catch (FileLoadException)
+			//{
+			//	yield break;
+			//}
+			//catch (PathTooLongException)
+			//{
+			//	yield break;
+			//}
+			//catch (ConfigurationErrorsException)
+			//{
+			//	yield break;
+			//}
+			//ConfigurationSection msfConfig = config.Sections["MsfConfig"];
+			//if (!(msfConfig is MsfConfigSection csg))
+			//{
+			//	yield break;
+			//}
+			//foreach (ConfigMsfPluginSolverElement pluginSolver in csg.Solvers)
+			//{
+			//	if (pluginSolver != null)
+			//	{
+			//		yield return pluginSolver;
+			//	}
+			//}
 		}
 
 		/// <summary> Create a PluginSolverCollection instance and initialize it by preloading all registered solver assemblies and gathering necessary type info

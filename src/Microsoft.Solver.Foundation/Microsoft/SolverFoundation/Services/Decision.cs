@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data.Linq;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -326,10 +325,11 @@ namespace Microsoft.SolverFoundation.Services
 			{
 				_owningModel.VerifyModelNotFrozen();
 			}
-			if (binding is ITable table2 && table2.IsReadOnly)
-			{
-				throw new InvalidModelDataException(Resources.CannotBindReadOnlyDataTableForOutput);
-			}
+			// SKIPPED
+			//if (binding is ITable table2 && table2.IsReadOnly)
+			//{
+			//	throw new InvalidModelDataException(Resources.CannotBindReadOnlyDataTableForOutput);
+			//}
 			Type typeFromHandle = typeof(T);
 			PropertyInfo valueFieldProperty = typeFromHandle.GetProperty(valueField);
 			FieldInfo valueFieldField = typeFromHandle.GetField(valueField);
