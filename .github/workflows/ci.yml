@@ -23,12 +23,12 @@ jobs:
       run: dotnet restore
 
     - name: Build the project
-      run: dotnet build --configuration Release
+      run: dotnet build src/Microsoft.SolverFoundation/Microsoft.SolverFoundation.csproj --configuration Release
 
     - name: Pack the project
-      run: dotnet pack --configuration Release --no-build
+      run: dotnet pack src/Microsoft.SolverFoundation/Microsoft.SolverFoundation.csproj --configuration Release --no-build
 
     - name: Publish to NuGet
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: dotnet nuget push ./bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push src/Microsoft.SolverFoundation/bin/Release/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
