@@ -1,0 +1,28 @@
+#from: https://blog.nashtechglobal.com/a-workflow-for-nuget-packages-using-github-actions/
+name: Publish NuGet Package
+on:
+    push:
+        tags:
+            - 'v*.*.*'
+            
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+steps:
+    - name: Checkout repository
+       uses: actions/checkout@v2
+    - name: Set up .NET Core
+       uses: actions/setup-dotnet@v3
+       with:
+         dotnet-version: '8.x' # Adjust to your target .NET version
+    - name: Restore dependencies
+       run: dotnet restore
+    - name: Build project
+       run: dotnet build --configuration Release --no-restore
+    - name: Pack project
+       run: dotnet pack --configuration Release --no-restore --output ./nupkg
+    - name: Publish package to NuGet
+       env:
+         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+       run: dotnet nuget push ./nupkg/*.nupkg --source https://api.nuget.org/v3/index.json --api-key $NUGET_API_KEY

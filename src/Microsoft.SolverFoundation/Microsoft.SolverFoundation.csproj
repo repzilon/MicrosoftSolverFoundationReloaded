@@ -3,12 +3,20 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+		<PackageId>Microsoft.SolverFoundation</PackageId>
+		<Version>0.0.1</Version>
+		<Authors>Ralf Kornelius</Authors>
+		<Description>.NET 2.0 Standard port of Microsoft.SolverFoundation</Description>
+		<PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Microsoft\**" />
-	  <EmbeddedResource Remove="Microsoft\**" />
-	  <None Remove="Microsoft\**" />
+		<Compile Remove="Microsoft\**" />
+		<EmbeddedResource Remove="Microsoft\**" />
+		<None Remove="Microsoft\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -16,32 +24,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Properties\ResourceNew.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>ResourceNew.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Properties\Resources.Designer.cs">
-	    <DependentUpon>Resources.resx</DependentUpon>
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	  </Compile>
-	  <Compile Update="Solvers\Properties\Resources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </Compile>
+		<Compile Update="Properties\ResourceNew.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ResourceNew.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DependentUpon>Resources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="Solvers\Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
-	<ItemGroup>	 
-	  <EmbeddedResource Update="Properties\Resources.resx">
-	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-	    <Generator>ResXFileCodeGenerator</Generator>
-	  </EmbeddedResource>	 
-	  <EmbeddedResource Update="Solvers\Properties\Resources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+			<Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Solvers\Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 	</ItemGroup>
 
 </Project>
