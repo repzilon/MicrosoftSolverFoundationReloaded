@@ -12,10 +12,10 @@ Last official version of "Microsoft.SolverFoundation" ported to .NET Standard 2.
 
 ## What was changed during porting?
 - The class [CSharpWriter](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/blob/main/src/Microsoft.SolverFoundation/Services/CSharpWriter.cs) was commented out as it required "System.CodeDOM" from .NET Framework and was only used for "ExportModelToCSharp()" which was never called. So this method now throws a NotSupportedException.
-- Configuration classes "ConfigurationElement", "ConfigurationSection" and "ConfigurationPropertyAttribute" were replaced by stubs.
+- Configuration classes "ConfigurationElement", "ConfigurationSection" and "ConfigurationPropertyAttribute" were replaced by stubs. It belongs to the configuration and it seems it doesn't have an effect in the main logic.
 - License checks were disabled
 
-## What to checl if you use this port
+## What to check if you use this port
 - Run your model via .NET Framework and this port to verify correctness.
 - You can use the projects [Microsoft.SolverFoundation.ReferenceTests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.ReferenceTests) and [Microsoft.SolverFoundation.Tests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.Tests) to verify your solver model.
 
