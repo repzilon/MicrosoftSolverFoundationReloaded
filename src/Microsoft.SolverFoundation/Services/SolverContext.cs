@@ -686,10 +686,11 @@ namespace Microsoft.SolverFoundation.Services
         /// <param name="writer">A TextWriter where the output is written.</param>
         internal void ExportModelToCSharp(TextWriter writer)
         {
-            using (CSharpWriter cSharpWriter = new CSharpWriter())
-            {
-                cSharpWriter.Write(_currentModel, writer);
-            }
+            throw new NotSupportedException("Was commented out during porting.");
+            //using (CSharpWriter cSharpWriter = new CSharpWriter())
+            //{
+            //    cSharpWriter.Write(_currentModel, writer);
+            //}
         }
 
         /// <summary>

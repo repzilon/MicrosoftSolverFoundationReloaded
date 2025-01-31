@@ -10,7 +10,7 @@ Latest legacy version taken from: https://www.nuget.org/packages/Microsoft.Solve
 - I am not sure if this decompilation is legally allowed so if there are complains I can delete this repository. The last official version from "Microsoft.SolverFoundation" is from 2016. I also don't use this code in any commercial project.
 
 ### What was changed during porting?
-- The class "CSharpWriter" was ported with Copilot to use "Microsoft.CodeAnalysis.CSharp" instead of unsupported "System.CodeDOM". No functionality test were done so no support.
+- The class "CSharpWriter" was ported with Copilot to use "Microsoft.CodeAnalysis.CSharp" instead of unsupported "System.CodeDOM". No functionality test were done so no support. I also commented it out in v0.0.2 so I could drop the dependency to "Microsoft.CodeAnalysis.CSharp"
 - Configuration classes "ConfigurationElement", "ConfigurationSection" and "ConfigurationPropertyAttribute" were replaced by stubs.
 - License checks were disabled
 
