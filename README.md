@@ -1,8 +1,8 @@
 
 [![NuGet](https://img.shields.io/nuget/v/Reloaded.SolverFoundation.svg)](https://www.nuget.org/packages/Reloaded.SolverFoundation/)
 
-# Microsoft.SolverFoundation for NET. Standard 2.0 / NET. Core
-Last version of Microsoft Solver Foundation Express Edition ported to .NET Standard 2.0.
+# Microsoft Solver Foundation Express Edition for NET. Standard 2.0 / NET. Core
+Last official version of "Microsoft.SolverFoundation" ported to .NET Standard 2.0 / NET. Core.
 
 ## Overview
 - Latest legacy version was taken from [Nuget package "Microsoft.Solver.Foundation"](https://www.nuget.org/packages/Microsoft.Solver.Foundation)  and decompiled via ILSpy
