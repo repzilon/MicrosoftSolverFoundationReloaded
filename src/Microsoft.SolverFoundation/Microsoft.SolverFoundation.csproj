@@ -10,21 +10,15 @@
 		<Description>.NET 2.0 Standard compatible port of Microsoft Solver Foundation Express Edition</Description>
 		<PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
 		<PackageLicenseExpression>MS-PL</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded</PackageProjectUrl> 
+		<PackageProjectUrl>https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Remove="Microsoft\**" />
-		<EmbeddedResource Remove="Microsoft\**" />
-		<None Remove="Microsoft\**" />
-	</ItemGroup>
-
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+	
 	<ItemGroup>
-		<Compile Update="Properties\ResourceNew.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>ResourceNew.resx</DependentUpon>
-		</Compile>
 		<Compile Update="Properties\Resources.Designer.cs">
 			<DependentUpon>Resources.resx</DependentUpon>
 			<DesignTime>True</DesignTime>
