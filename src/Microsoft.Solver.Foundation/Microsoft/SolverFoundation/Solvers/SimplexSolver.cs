@@ -1074,7 +1074,7 @@ namespace Microsoft.SolverFoundation.Solvers
 				}
 			}
 			_solvingState = SimplexSolveState.Init;
-			CheckLicense();
+			//CheckLicense(); // disabled license check
 			if (base.IsMipModel && GoalCount == 0)
 			{
 				for (int j = 0; j < parameters.Length; j++)
