@@ -10,7 +10,6 @@
 		<Description>.NET 2.0 Standard port of Microsoft.SolverFoundation</Description>
 		<PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
