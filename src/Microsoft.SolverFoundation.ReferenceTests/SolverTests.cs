@@ -1,9 +1,12 @@
-using Microsoft.SolverFoundation.Services;
+using NUnit.Framework;
 using System.Diagnostics;
+using System.Linq;
+using System;
+using Microsoft.SolverFoundation.Services;
 
-namespace Microsoft.SolverFoundation.Tests
+namespace Microsoft.SolverFoundation.ReferenceTests
 {
-    public class Tests
+    public class SolverTests
     {
         [SetUp]
         public void Setup()
