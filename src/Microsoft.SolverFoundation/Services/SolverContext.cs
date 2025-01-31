@@ -416,11 +416,11 @@ namespace Microsoft.SolverFoundation.Services
                 }
                 throw new InvalidOperationException(modelReport._errors[0]);
             }
-            // disabled license check
-            //if (License.Expiration.HasValue && License.Expiration < DateTime.Today)
-            //{
-            //    throw new MsfLicenseException(Resources.ExpiredEvaluationCopy);
-            //}
+
+            if (License.Expiration.HasValue && License.Expiration < DateTime.Today)
+            {
+                throw new MsfLicenseException(Resources.ExpiredEvaluationCopy);
+            }
             Stopwatch stopwatch = new Stopwatch();
             Stopwatch stopwatch2 = new Stopwatch();
             Stopwatch stopwatch3 = new Stopwatch();
