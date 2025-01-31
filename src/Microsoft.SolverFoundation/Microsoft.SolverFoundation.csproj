@@ -5,7 +5,7 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
 		<PackageId>Reloaded.SolverFoundation</PackageId>
-		<Version>1.0.5</Version>
+		<Version>1.0.6</Version>
 		<Authors>Ralf Kornelius</Authors>
 		<Description>.NET Standard 2.0 / .NET Core compatible port of Microsoft Solver Foundation Express Edition</Description>
 		<PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>

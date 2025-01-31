@@ -20,7 +20,7 @@ Last official version of "Microsoft.SolverFoundation" ported to .NET Standard 2.
 - You can use the projects [Microsoft.SolverFoundation.ReferenceTests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.ReferenceTests) and [Microsoft.SolverFoundation.Tests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.Tests) to verify your solver model.
 
 ## Legal info
-- The last official version from "Microsoft.SolverFoundation" is from 2016 licensed unter the MS-PL.
+- The last known official version from "Microsoft.SolverFoundation" is "3.1.0" from "19.01.2017" licensed unter the MS-PL.
 - Here is the ChatGPT answer of my question "Is decompilation and recompilation of MS-PL licensed binaries allowed?". So I assume there is no copyright violation:
 
 Yes, the **Microsoft Public License (Ms-PL)** allows **decompilation, modification, and recompilation** of binaries, but with certain conditions.
