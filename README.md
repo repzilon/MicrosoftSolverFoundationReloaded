@@ -13,3 +13,6 @@ Latest legacy version taken from: https://www.nuget.org/packages/Microsoft.Solve
 - The class "CSharpWriter" was migrated with Copilot to use "Microsoft.CodeAnalysis.CSharp" instead of unsupported "System.CodeDOM". No functionality test were done so no support.
 - Configuration classes "ConfigurationElement", "ConfigurationSection" and "ConfigurationPropertyAttribute" were replaced by stubs.
 - License checks were disabled
+
+### What to verify if you use this port
+- Check the projects "Microsoft.SolverFoundation.ReferenceTests" and "Microsoft.SolverFoundation.Tests" to verify that your solver model compiles and works correctly
