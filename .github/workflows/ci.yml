@@ -2,6 +2,7 @@
 name: Build and Publish to NuGet
 
 on:
+  workflow_dispatch:  # This enables the manual trigger
   push:
     tags:
         - 'v*.*.*'
