@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\Microsoft.SolverFoundation.ReferenceTests\SolverTests.cs" Link="SolverTests.cs" />
+    <Compile Include="..\Microsoft.SolverFoundation.ReferenceTests\CustomScenario.cs" Link="CustomScenario.cs" />
   </ItemGroup>
 
   <ItemGroup>

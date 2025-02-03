@@ -1,6 +1,7 @@
+using Microsoft.SolverFoundation.ReferenceTests;
 using NUnit.Framework;
 
-namespace Microsoft.SolverFoundation.ReferenceTests
+namespace Microsoft.SolverFoundation.Tests
 {
     public class SolverTests
     {
