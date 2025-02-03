@@ -7,7 +7,7 @@
 		<PackageId>Reloaded.SolverFoundation</PackageId>
 		<Version>1.0.6</Version>
 		<Authors>Ralf Kornelius</Authors>
-		<Description>.NET Standard 2.0 / .NET Core compatible port of Microsoft Solver Foundation Express Edition</Description>
+		<Description>.NET Standard 2.0/.NET Core compatible port of Microsoft Solver Foundation Express Edition</Description>
 		<PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
 		<PackageLicenseExpression>MS-PL</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded</PackageProjectUrl>

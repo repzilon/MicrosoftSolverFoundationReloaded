@@ -1,7 +1,7 @@
 
 [![NuGet](https://img.shields.io/nuget/v/Reloaded.SolverFoundation.svg)](https://www.nuget.org/packages/Reloaded.SolverFoundation/)
 
-# Microsoft Solver Foundation Express Edition for NET. Standard 2.0 / NET. Core
+# Microsoft Solver Foundation Express Edition for NET. Standard 2.0/NET. Core
 Last official version of "Microsoft.SolverFoundation" ported to .NET Standard 2.0 / NET. Core.
 
 ## Overview
@@ -20,7 +20,8 @@ Last official version of "Microsoft.SolverFoundation" ported to .NET Standard 2.
 - You can use the projects [Microsoft.SolverFoundation.ReferenceTests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.ReferenceTests) and [Microsoft.SolverFoundation.Tests](https://github.com/Ralf1108/MicrosoftSolverFoundationReloaded/tree/main/src/Microsoft.SolverFoundation.Tests) to verify your solver model.
 
 ## Legal info
-- The last known official version from "Microsoft.SolverFoundation" is "3.1.0" from "19.01.2017" licensed unter the MS-PL.
+- The last known official library version from "Microsoft.Solver.Foundation" is "3.0.2", targeting .NET Framework 4.0 from and licensed unter the MS-PL.
+- The last known official [Nuget package](https://www.nuget.org/packages/Microsoft.Solver.Foundation) from "Microsoft.Solver.Foundation" is "3.1.0" from "19.01.2017".
 - Here is the ChatGPT answer of my question "Is decompilation and recompilation of MS-PL licensed binaries allowed?". So I assume there is no copyright violation:
 
 Yes, the **Microsoft Public License (Ms-PL)** allows **decompilation, modification, and recompilation** of binaries, but with certain conditions.
