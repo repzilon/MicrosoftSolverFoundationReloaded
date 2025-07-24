@@ -84,8 +84,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signNum == 1)
-				{
+				if (_signNum == 1) {
 					return _bitsNum == null;
 				}
 				return false;
@@ -96,8 +95,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 1)
-				{
+				if (_signDen == 1) {
 					return _bitsDen == null;
 				}
 				return false;
@@ -111,8 +109,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum == 0;
 				}
 				return false;
@@ -126,8 +123,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (IsNumOne)
-				{
+				if (IsNumOne) {
 					return IsDenOne;
 				}
 				return false;
@@ -141,8 +137,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum == 0;
 				}
 				return true;
@@ -156,8 +151,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum == 3;
 				}
 				return false;
@@ -171,8 +165,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0 && _signNum != 0)
-				{
+				if (_signDen == 0 && _signNum != 0) {
 					return _signNum <= 2;
 				}
 				return false;
@@ -186,8 +179,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0 && _signNum != 0)
-				{
+				if (_signDen == 0 && _signNum != 0) {
 					return _signNum <= 1;
 				}
 				return false;
@@ -201,8 +193,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum == 2;
 				}
 				return false;
@@ -216,8 +207,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum == 1;
 				}
 				return false;
@@ -231,8 +221,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum == -1;
 				}
 				return false;
@@ -246,8 +235,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0)
-				{
+				if (_signDen == 0) {
 					return _signNum < 2;
 				}
 				return true;
@@ -281,8 +269,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			get
 			{
-				if (_signDen == 0 && _signNum == 2)
-				{
+				if (_signDen == 0 && _signNum == 2) {
 					return PositiveInfinity;
 				}
 				return new Rational((int)Statics.Abs(_signNum), _bitsNum, _signDen, _bitsDen);
@@ -336,32 +323,25 @@ namespace Microsoft.SolverFoundation.Common
 		/// <exception cref="T:System.ArgumentException"></exception>
 		internal static Rational ConvertToRational(object obj)
 		{
-			if (obj is Rational)
-			{
+			if (obj is Rational) {
 				return (Rational)obj;
 			}
-			if (obj is BigInteger)
-			{
+			if (obj is BigInteger) {
 				return (BigInteger)obj;
 			}
-			if (obj is int)
-			{
+			if (obj is int) {
 				return (int)obj;
 			}
-			if (obj is uint)
-			{
+			if (obj is uint) {
 				return (uint)obj;
 			}
-			if (obj is long)
-			{
+			if (obj is long) {
 				return (long)obj;
 			}
-			if (obj is ulong)
-			{
+			if (obj is ulong) {
 				return (ulong)obj;
 			}
-			if (obj is double)
-			{
+			if (obj is double) {
 				return (double)obj;
 			}
 			throw new ArgumentException(Resources.InvalidNumber);
@@ -375,16 +355,13 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static Rational Get(BigInteger bnNum, BigInteger bnDen)
 		{
-			if (bnDen.IsZero)
-			{
-				if (!bnNum.IsZero)
-				{
+			if (bnDen.IsZero) {
+				if (!bnNum.IsZero) {
 					return UnsignedInfinity;
 				}
 				return Indeterminate;
 			}
-			if (bnNum.IsZero)
-			{
+			if (bnNum.IsZero) {
 				return Zero;
 			}
 			int sign = 1;
@@ -400,8 +377,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool IsInteger()
 		{
-			if (!IsDenOne)
-			{
+			if (!IsDenOne) {
 				return _signNum == 0;
 			}
 			return true;
@@ -414,8 +390,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool IsInteger(out BigInteger bn)
 		{
-			if (IsDenOne || _signNum == 0)
-			{
+			if (IsDenOne || _signNum == 0) {
 				bn = new BigInteger(_signNum, _bitsNum);
 				return true;
 			}
@@ -428,16 +403,14 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational GetIntegerPart()
 		{
-			if (IsDenOne || _signDen == 0)
-			{
+			if (IsDenOne || _signDen == 0) {
 				return this;
 			}
 			int signDst = 1;
 			BigRegister regNum = new BigRegister(_signNum, _bitsNum, ref signDst);
 			BigRegister regDen = new BigRegister(_signDen, _bitsDen);
 			regNum.Div(ref regDen);
-			if (regNum.IsSingle(0u))
-			{
+			if (regNum.IsSingle(0u)) {
 				return default(Rational);
 			}
 			return new Rational(signDst, ref regNum, 1, null);
@@ -449,8 +422,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational GetFractionalPart()
 		{
-			if (IsDenOne || _signDen == 0)
-			{
+			if (IsDenOne || _signDen == 0) {
 				return Zero;
 			}
 			int signDst = 1;
@@ -466,20 +438,16 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational GetFloor()
 		{
-			if (IsDenOne || _signDen == 0)
-			{
+			if (IsDenOne || _signDen == 0) {
 				return this;
 			}
 			int signDst = 1;
 			BigRegister regNum = new BigRegister(_signNum, _bitsNum, ref signDst);
 			BigRegister regDen = new BigRegister(_signDen, _bitsDen);
 			regNum.Div(ref regDen);
-			if (signDst < 0)
-			{
+			if (signDst < 0) {
 				regNum.Add(1u);
-			}
-			else if (regNum.IsSingle(0u))
-			{
+			} else if (regNum.IsSingle(0u)) {
 				return default(Rational);
 			}
 			return new Rational(signDst, ref regNum, 1, null);
@@ -491,16 +459,14 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational GetFloorResidual()
 		{
-			if (IsDenOne || _signDen == 0)
-			{
+			if (IsDenOne || _signDen == 0) {
 				return Zero;
 			}
 			int signDst = 1;
 			BigRegister regNum = new BigRegister(_signNum, _bitsNum, ref signDst);
 			BigRegister regDen = new BigRegister(_signDen, _bitsDen);
 			regNum.Mod(ref regDen);
-			if (signDst < 0)
-			{
+			if (signDst < 0) {
 				regNum.Sub(ref signDst, ref regDen);
 			}
 			return new Rational(1, ref regNum, _signDen, _bitsDen);
@@ -512,20 +478,16 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational GetCeiling()
 		{
-			if (IsDenOne || _signDen == 0)
-			{
+			if (IsDenOne || _signDen == 0) {
 				return this;
 			}
 			int signDst = 1;
 			BigRegister regNum = new BigRegister(_signNum, _bitsNum, ref signDst);
 			BigRegister regDen = new BigRegister(_signDen, _bitsDen);
 			regNum.Div(ref regDen);
-			if (signDst > 0)
-			{
+			if (signDst > 0) {
 				regNum.Add(1u);
-			}
-			else if (regNum.IsSingle(0u))
-			{
+			} else if (regNum.IsSingle(0u)) {
 				return default(Rational);
 			}
 			return new Rational(signDst, ref regNum, 1, null);
@@ -537,16 +499,14 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational GetCeilingResidual()
 		{
-			if (IsDenOne || _signDen == 0)
-			{
+			if (IsDenOne || _signDen == 0) {
 				return Zero;
 			}
 			int signDst = 1;
 			BigRegister regNum = new BigRegister(_signNum, _bitsNum, ref signDst);
 			BigRegister regDen = new BigRegister(_signDen, _bitsDen);
 			regNum.Mod(ref regDen);
-			if (signDst > 0)
-			{
+			if (signDst > 0) {
 				regNum.Sub(ref signDst, ref regDen);
 			}
 			return new Rational(-1, ref regNum, _signDen, _bitsDen);
@@ -559,8 +519,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static implicit operator Rational(int n)
 		{
-			if (n != 0)
-			{
+			if (n != 0) {
 				return new Rational(n, 1);
 			}
 			return Zero;
@@ -574,8 +533,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static implicit operator Rational(uint u)
 		{
-			if (u != 0)
-			{
+			if (u != 0) {
 				return new Rational(u, 1);
 			}
 			return Zero;
@@ -588,8 +546,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static implicit operator Rational(long nn)
 		{
-			if (nn != 0)
-			{
+			if (nn != 0) {
 				return new Rational(nn, 1);
 			}
 			return Zero;
@@ -603,8 +560,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static implicit operator Rational(ulong uu)
 		{
-			if (uu != 0)
-			{
+			if (uu != 0) {
 				return new Rational(uu, 1);
 			}
 			return Zero;
@@ -618,40 +574,31 @@ namespace Microsoft.SolverFoundation.Common
 		public static implicit operator Rational(double dbl)
 		{
 			NumberUtils.GetDoubleParts(dbl, out var sign, out var exp, out var man, out var fFinite);
-			if (!fFinite)
-			{
-				if (!(dbl > 0.0))
-				{
-					if (!(dbl < 0.0))
-					{
+			if (!fFinite) {
+				if (!(dbl > 0.0)) {
+					if (!(dbl < 0.0)) {
 						return Indeterminate;
 					}
 					return NegativeInfinity;
 				}
 				return PositiveInfinity;
 			}
-			if (man == 0)
-			{
+			if (man == 0) {
 				return Zero;
 			}
 			int num = Statics.CbitLowZero(man);
-			if (num > 0)
-			{
+			if (num > 0) {
 				man >>= num;
 				exp += num;
 			}
 			BigInteger bigInteger = man;
 			BigInteger bnDen = 1;
-			if (exp < 0)
-			{
+			if (exp < 0) {
 				bnDen = BigInteger.Power(2, -exp);
-			}
-			else if (exp > 0)
-			{
+			} else if (exp > 0) {
 				bigInteger *= BigInteger.Power(2, exp);
 			}
-			if (sign < 0)
-			{
+			if (sign < 0) {
 				bigInteger = -bigInteger;
 			}
 			return new Rational(bigInteger, bnDen);
@@ -664,8 +611,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static implicit operator Rational(BigInteger bn)
 		{
-			if (!bn.IsZero)
-			{
+			if (!bn.IsZero) {
 				return new Rational(bn, 1);
 			}
 			return Zero;
@@ -678,12 +624,10 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static explicit operator int(Rational rat)
 		{
-			if (rat._signDen == 0)
-			{
+			if (rat._signDen == 0) {
 				return 0;
 			}
-			if (rat.IsDenOne)
-			{
+			if (rat.IsDenOne) {
 				return (int)rat.Numerator;
 			}
 			return (int)(rat.Numerator / rat.Denominator);
@@ -697,12 +641,10 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static explicit operator uint(Rational rat)
 		{
-			if (rat._signDen == 0)
-			{
+			if (rat._signDen == 0) {
 				return 0u;
 			}
-			if (rat.IsDenOne)
-			{
+			if (rat.IsDenOne) {
 				return (uint)rat.Numerator;
 			}
 			return (uint)(rat.Numerator / rat.Denominator);
@@ -715,12 +657,10 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static explicit operator long(Rational rat)
 		{
-			if (rat._signDen == 0)
-			{
+			if (rat._signDen == 0) {
 				return 0L;
 			}
-			if (rat.IsDenOne)
-			{
+			if (rat.IsDenOne) {
 				return (long)rat.Numerator;
 			}
 			return (long)(rat.Numerator / rat.Denominator);
@@ -734,12 +674,10 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static explicit operator ulong(Rational rat)
 		{
-			if (rat._signDen == 0)
-			{
+			if (rat._signDen == 0) {
 				return 0uL;
 			}
-			if (rat.IsDenOne)
-			{
+			if (rat.IsDenOne) {
 				return (ulong)rat.Numerator;
 			}
 			return (ulong)(rat.Numerator / rat.Denominator);
@@ -752,18 +690,16 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static explicit operator double(Rational rat)
 		{
-			if (rat._signDen == 0)
-			{
-				switch (rat._signNum)
-				{
-				case -1:
-					return double.NegativeInfinity;
-				case 0:
-					return 0.0;
-				case 1:
-					return double.PositiveInfinity;
-				default:
-					return double.NaN;
+			if (rat._signDen == 0) {
+				switch (rat._signNum) {
+					case -1:
+						return double.NegativeInfinity;
+					case 0:
+						return 0.0;
+					case 1:
+						return double.PositiveInfinity;
+					default:
+						return double.NaN;
 				}
 			}
 			int signDst = 1;
@@ -773,16 +709,13 @@ namespace Microsoft.SolverFoundation.Common
 			bigRegister2.GetApproxParts(out var exp2, out var man2);
 			double num = (double)man / (double)man2;
 			int num2 = exp - exp2;
-			if (num2 == 0)
-			{
-				if (signDst >= 0)
-				{
+			if (num2 == 0) {
+				if (signDst >= 0) {
 					return num;
 				}
 				return 0.0 - num;
 			}
-			if (-1074 <= num2 && num2 <= 1023)
-			{
+			if (-1074 <= num2 && num2 <= 1023) {
 				return num * NumberUtils.GetDoubleFromParts(signDst, num2, 1uL);
 			}
 			NumberUtils.GetDoubleParts(num, out var _, out var exp3, out var man3, out var _);
@@ -804,12 +737,10 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static explicit operator BigInteger(Rational rat)
 		{
-			if (rat._signDen == 0)
-			{
+			if (rat._signDen == 0) {
 				return 0;
 			}
-			if (rat.IsDenOne)
-			{
+			if (rat.IsDenOne) {
 				return rat.Numerator;
 			}
 			return rat.Numerator / rat.Denominator;
@@ -822,8 +753,7 @@ namespace Microsoft.SolverFoundation.Common
 		public double GetSignedDouble()
 		{
 			double num = (double)this;
-			if (num == 0.0 && _signDen != 0)
-			{
+			if (num == 0.0 && _signDen != 0) {
 				num = double.Epsilon * (double)Sign;
 			}
 			return num;
@@ -835,8 +765,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <param name="num"></param>
 		public static void Negate(ref Rational num)
 		{
-			if (num.HasSign)
-			{
+			if (num.HasSign) {
 				num._signNum = -num._signNum;
 			}
 		}
@@ -848,8 +777,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static Rational operator -(Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				rat._signNum = -rat._signNum;
 			}
 			return rat;
@@ -863,22 +791,17 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static Rational operator +(Rational rat1, Rational rat2)
 		{
-			if (rat1._signDen == 0)
-			{
-				if (rat1._signNum == 0)
-				{
+			if (rat1._signDen == 0) {
+				if (rat1._signNum == 0) {
 					return rat2;
 				}
-				if (rat2._signDen != 0 || rat2._signNum == 0 || (rat1._signNum <= 1 && rat1._signNum == rat2._signNum))
-				{
+				if (rat2._signDen != 0 || rat2._signNum == 0 || (rat1._signNum <= 1 && rat1._signNum == rat2._signNum)) {
 					return rat1;
 				}
 				return Indeterminate;
 			}
-			if (rat2._signDen == 0)
-			{
-				if (rat2._signNum != 0)
-				{
+			if (rat2._signDen == 0) {
+				if (rat2._signNum != 0) {
 					return rat2;
 				}
 				return rat1;
@@ -888,17 +811,12 @@ namespace Microsoft.SolverFoundation.Common
 			BigRegister reg = new BigRegister(rat1._signNum, rat1._bitsNum, ref signDst);
 			BigRegister reg2 = new BigRegister(rat2._signNum, rat2._bitsNum, ref signDst2);
 			BigRegister reg3 = new BigRegister(rat1._signDen, rat1._bitsDen);
-			if (rat1._signDen == rat2._signDen && BigInteger.EqualBits(rat1._bitsDen, rat2._bitsDen))
-			{
-				if (signDst == signDst2)
-				{
+			if (rat1._signDen == rat2._signDen && BigInteger.EqualBits(rat1._bitsDen, rat2._bitsDen)) {
+				if (signDst == signDst2) {
 					reg.Add(ref reg2);
-				}
-				else
-				{
+				} else {
 					reg.Sub(ref signDst, ref reg2);
-					if (reg.IsSingle(0u))
-					{
+					if (reg.IsSingle(0u)) {
 						return default(Rational);
 					}
 				}
@@ -910,28 +828,22 @@ namespace Microsoft.SolverFoundation.Common
 			BigRegister reg5 = new BigRegister(ref reg3);
 			BigRegister reg6 = new BigRegister(ref reg4);
 			BigRegister.GCD(ref reg5, ref reg6);
-			if (!reg5.IsSingle(1u))
-			{
+			if (!reg5.IsSingle(1u)) {
 				reg3.Div(ref reg5);
 				reg4.Div(ref reg5);
 			}
 			int num = Math.Max(reg.Size + reg4.Size, reg2.Size + reg3.Size);
 			BigRegister reg7 = ((num > 2) ? new BigRegister(num) : default(BigRegister));
 			reg7.Mul(ref reg, ref reg4);
-			if (signDst == signDst2)
-			{
+			if (signDst == signDst2) {
 				reg7.AddMul(ref reg2, ref reg3);
-			}
-			else
-			{
+			} else {
 				reg7.SubMul(ref signDst, ref reg2, ref reg3);
 			}
-			if (!reg5.IsSingle(1u))
-			{
+			if (!reg5.IsSingle(1u)) {
 				reg6.Load(ref reg7);
 				BigRegister.GCD(ref reg5, ref reg6);
-				if (!reg5.IsSingle(1u))
-				{
+				if (!reg5.IsSingle(1u)) {
 					regDen.Div(ref reg5);
 					reg7.Div(ref reg5);
 				}
@@ -958,22 +870,19 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public Rational Invert()
 		{
-			if (_signDen == 0)
-			{
-				switch (_signNum)
-				{
-				case -1:
-				case 1:
-				case 2:
-					return Zero;
-				case 0:
-					return UnsignedInfinity;
-				default:
-					return Indeterminate;
+			if (_signDen == 0) {
+				switch (_signNum) {
+					case -1:
+					case 1:
+					case 2:
+						return Zero;
+					case 0:
+						return UnsignedInfinity;
+					default:
+						return Indeterminate;
 				}
 			}
-			if (_signNum < 0)
-			{
+			if (_signNum < 0) {
 				return new Rational(-_signDen, _bitsDen, -_signNum, _bitsNum);
 			}
 			return new Rational(_signDen, _bitsDen, _signNum, _bitsNum);
@@ -987,62 +896,51 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static Rational operator *(Rational rat1, Rational rat2)
 		{
-			if (rat1.IsOne)
-			{
+			if (rat1.IsOne) {
 				return rat2;
 			}
-			if (rat2.IsOne)
-			{
+			if (rat2.IsOne) {
 				return rat1;
 			}
-			if (rat1._signDen == 0)
-			{
+			if (rat1._signDen == 0) {
 				int signNum = rat1._signNum;
-				if (rat2._signDen != 0)
-				{
-					if (rat2._signNum < 0 && signNum <= 1)
-					{
+				if (rat2._signDen != 0) {
+					if (rat2._signNum < 0 && signNum <= 1) {
 						rat1._signNum = -signNum;
 					}
 					return rat1;
 				}
 				int signNum2 = rat2._signNum;
-				switch (signNum)
-				{
-				case 0:
-					if (signNum2 != 0)
-					{
-						return Indeterminate;
-					}
-					return rat1;
-				case -1:
-				case 1:
-					switch (signNum2)
-					{
-					case -1:
-						return new Rational(-signNum, null, 0, null);
-					case 1:
+				switch (signNum) {
+					case 0:
+						if (signNum2 != 0) {
+							return Indeterminate;
+						}
 						return rat1;
-					case 2:
-						return rat2;
-					}
-					break;
-				case 2:
-					switch (signNum2)
-					{
 					case -1:
 					case 1:
+						switch (signNum2) {
+							case -1:
+								return new Rational(-signNum, null, 0, null);
+							case 1:
+								return rat1;
+							case 2:
+								return rat2;
+						}
+						break;
 					case 2:
-						return rat1;
-					}
-					break;
+						switch (signNum2) {
+							case -1:
+							case 1:
+							case 2:
+								return rat1;
+						}
+						break;
 				}
 				return Indeterminate;
 			}
-			if (rat2._signDen == 0)
-			{
-				if (rat1._signNum < 0 && rat2._signNum <= 1)
-				{
+			if (rat2._signDen == 0) {
+				if (rat1._signNum < 0 && rat2._signNum <= 1) {
 					rat2._signNum = -rat2._signNum;
 				}
 				return rat2;
@@ -1067,52 +965,42 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static Rational operator /(Rational rat1, Rational rat2)
 		{
-			if (rat1._signDen == 0)
-			{
+			if (rat1._signDen == 0) {
 				int signNum = rat1._signNum;
-				if (rat2._signDen != 0)
-				{
-					if (rat2._signNum < 0 && signNum <= 1)
-					{
+				if (rat2._signDen != 0) {
+					if (rat2._signNum < 0 && signNum <= 1) {
 						rat1._signNum = -signNum;
 					}
 					return rat1;
 				}
 				int signNum2 = rat2._signNum;
-				if (signNum == 0)
-				{
-					switch (signNum2)
-					{
-					case -1:
-					case 1:
-					case 2:
-						return rat1;
+				if (signNum == 0) {
+					switch (signNum2) {
+						case -1:
+						case 1:
+						case 2:
+							return rat1;
 					}
-				}
-				else if (signNum2 == 0)
-				{
-					switch (signNum)
-					{
-					case -1:
-					case 1:
-					case 2:
-						return UnsignedInfinity;
+				} else if (signNum2 == 0) {
+					switch (signNum) {
+						case -1:
+						case 1:
+						case 2:
+							return UnsignedInfinity;
 					}
 				}
 				return Indeterminate;
 			}
-			if (rat2._signDen == 0)
-			{
-				switch (rat2._signNum)
-				{
-				case 0:
-					return UnsignedInfinity;
-				case -1:
-				case 1:
-				case 2:
-					return Zero;
-				default:
-					return Indeterminate;
+			if (rat2._signDen == 0) {
+				switch (rat2._signNum) {
+					case 0:
+						return UnsignedInfinity;
+					case -1:
+					case 1:
+					case 2:
+						return Zero;
+					default:
+						return Indeterminate;
 				}
 			}
 			int signDst = 1;
@@ -1136,8 +1024,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static Rational AddMul(Rational ratAdd, Rational ratMul1, Rational ratMul2)
 		{
-			if (ratMul1.IsDenOne || ratMul2.IsDenOne || ratAdd._signDen == 0 || ratMul1._signDen == 0 || ratMul2._signDen == 0)
-			{
+			if (ratMul1.IsDenOne || ratMul2.IsDenOne || ratAdd._signDen == 0 || ratMul1._signDen == 0 || ratMul2._signDen == 0) {
 				return ratAdd + ratMul1 * ratMul2;
 			}
 			int signDst = 1;
@@ -1151,56 +1038,45 @@ namespace Microsoft.SolverFoundation.Common
 			BigRegister reg7 = new BigRegister(ref reg2);
 			BigRegister reg8 = new BigRegister(ref reg6);
 			BigRegister.GCD(ref reg7, ref reg8);
-			if (!reg7.IsSingle(1u))
-			{
+			if (!reg7.IsSingle(1u)) {
 				reg2.Div(ref reg7);
 				reg6.Div(ref reg7);
 			}
 			reg7.Load(ref reg3);
 			reg8.Load(ref reg5);
 			BigRegister.GCD(ref reg7, ref reg8);
-			if (!reg7.IsSingle(1u))
-			{
+			if (!reg7.IsSingle(1u)) {
 				reg3.Div(ref reg7);
 				reg5.Div(ref reg7);
 			}
 			BigRegister regDen = new BigRegister(ref reg4);
-			if (reg5.Size > 16 && reg6.Size > 16)
-			{
+			if (reg5.Size > 16 && reg6.Size > 16) {
 				reg7.Load(ref reg4);
 				reg8.Load(ref reg5);
 				BigRegister.GCD(ref reg7, ref reg8);
-				if (!reg7.IsSingle(1u))
-				{
+				if (!reg7.IsSingle(1u)) {
 					reg4.Div(ref reg7);
 					reg5.Div(ref reg7);
 				}
 				BigRegister reg9 = new BigRegister(ref reg4);
 				reg8.Load(ref reg6);
 				BigRegister.GCD(ref reg9, ref reg8);
-				if (!reg9.IsSingle(1u))
-				{
+				if (!reg9.IsSingle(1u)) {
 					reg4.Div(ref reg9);
 					reg6.Div(ref reg9);
-					if (reg7.IsSingle(1u))
-					{
+					if (reg7.IsSingle(1u)) {
 						Statics.Swap(ref reg7, ref reg9);
-					}
-					else
-					{
+					} else {
 						reg7.Mul(ref reg9);
 					}
 				}
 				reg5.Mul(ref reg6);
-			}
-			else
-			{
+			} else {
 				reg5.Mul(ref reg6);
 				reg7.Load(ref reg4);
 				reg8.Load(ref reg5);
 				BigRegister.GCD(ref reg7, ref reg8);
-				if (!reg7.IsSingle(1u))
-				{
+				if (!reg7.IsSingle(1u)) {
 					reg4.Div(ref reg7);
 					reg5.Div(ref reg7);
 				}
@@ -1209,24 +1085,18 @@ namespace Microsoft.SolverFoundation.Common
 			BigRegister reg10 = ((num > 3) ? new BigRegister(num) : default(BigRegister));
 			reg10.Mul(ref reg2, ref reg3);
 			reg10.Mul(ref reg4);
-			if (signDst2 == signDst)
-			{
+			if (signDst2 == signDst) {
 				reg10.AddMul(ref reg, ref reg5);
-			}
-			else
-			{
+			} else {
 				reg10.SubMul(ref signDst2, ref reg, ref reg5);
-				if (reg10.IsSingle(0u))
-				{
+				if (reg10.IsSingle(0u)) {
 					return Zero;
 				}
 			}
-			if (!reg7.IsSingle(1u))
-			{
+			if (!reg7.IsSingle(1u)) {
 				reg8.Load(ref reg10);
 				BigRegister.GCD(ref reg7, ref reg8);
-				if (!reg7.IsSingle(1u))
-				{
+				if (!reg7.IsSingle(1u)) {
 					regDen.Div(ref reg7);
 					reg10.Div(ref reg7);
 				}
@@ -1244,83 +1114,56 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool Power(Rational ratBase, Rational ratExp, out Rational ratRes)
 		{
-			if (!ratExp.HasSign)
-			{
+			if (!ratExp.HasSign) {
 				ratRes = Indeterminate;
 				return true;
 			}
 			int sign = ratExp.Sign;
 			BigInteger bn;
-			if (ratBase._signDen == 0)
-			{
+			if (ratBase._signDen == 0) {
 				int signNum = ratBase._signNum;
-				if (sign == 0 || signNum == 3)
-				{
+				if (sign == 0 || signNum == 3) {
 					ratRes = Indeterminate;
-				}
-				else if (signNum == 0)
-				{
+				} else if (signNum == 0) {
 					ratRes = ((sign > 0) ? Zero : UnsignedInfinity);
-				}
-				else if (sign < 0)
-				{
+				} else if (sign < 0) {
 					ratRes = Zero;
-				}
-				else if (ratExp.IsInteger(out bn))
-				{
+				} else if (ratExp.IsInteger(out bn)) {
 					ratRes = (bn.IsEven ? ratBase.AbsoluteValue : ratBase);
-				}
-				else if (signNum == -1)
-				{
+				} else if (signNum == -1) {
 					ratRes = UnsignedInfinity;
-				}
-				else
-				{
+				} else {
 					ratRes = ratBase;
 				}
 				return true;
 			}
-			if (sign == 0)
-			{
+			if (sign == 0) {
 				ratRes = 1;
 				return true;
 			}
-			if (ratExp._signDen == 0)
-			{
+			if (ratExp._signDen == 0) {
 				BigInteger absoluteValue = ratBase.Numerator.AbsoluteValue;
-				if (absoluteValue.IsOne && ratBase.IsDenOne)
-				{
+				if (absoluteValue.IsOne && ratBase.IsDenOne) {
 					ratRes = Indeterminate;
-				}
-				else if (absoluteValue < ratBase.Denominator == sign > 0)
-				{
+				} else if (absoluteValue < ratBase.Denominator == sign > 0) {
 					ratRes = Zero;
-				}
-				else if (ratBase._signNum > 0)
-				{
+				} else if (ratBase._signNum > 0) {
 					ratRes = PositiveInfinity;
-				}
-				else
-				{
+				} else {
 					ratRes = UnsignedInfinity;
 				}
 				return true;
 			}
-			if (ratExp.IsInteger(out bn))
-			{
-				if (bn < 0)
-				{
+			if (ratExp.IsInteger(out bn)) {
+				if (bn < 0) {
 					ratBase = ratBase.Invert();
 					BigInteger.Negate(ref bn);
 				}
-				if (BigInteger.Power(ratBase.Numerator, bn, out BigInteger bnRes) && BigInteger.Power(ratBase.Denominator, bn, out BigInteger bnRes2))
-				{
+				if (BigInteger.Power(ratBase.Numerator, bn, out BigInteger bnRes) && BigInteger.Power(ratBase.Denominator, bn, out BigInteger bnRes2)) {
 					ratRes = new Rational(bnRes, bnRes2);
 					return true;
 				}
-			}
-			else if (ratBase == 1)
-			{
+			} else if (ratBase == 1) {
 				ratRes = ratBase;
 				return true;
 			}
@@ -1336,8 +1179,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <(Rational rat1, Rational rat2)
 		{
-			if (rat1.HasSign)
-			{
+			if (rat1.HasSign) {
 				return rat1.CompareTo(rat2) < 0;
 			}
 			return false;
@@ -1351,8 +1193,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <=(Rational rat1, Rational rat2)
 		{
-			if (rat1.HasSign)
-			{
+			if (rat1.HasSign) {
 				return rat1.CompareTo(rat2) <= 0;
 			}
 			return false;
@@ -1366,8 +1207,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >(Rational rat1, Rational rat2)
 		{
-			if (rat2.HasSign)
-			{
+			if (rat2.HasSign) {
 				return rat1.CompareTo(rat2) > 0;
 			}
 			return false;
@@ -1381,8 +1221,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >=(Rational rat1, Rational rat2)
 		{
-			if (rat2.HasSign)
-			{
+			if (rat2.HasSign) {
 				return rat1.CompareTo(rat2) >= 0;
 			}
 			return false;
@@ -1418,8 +1257,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <(Rational rat, BigInteger bn)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(bn) < 0;
 			}
 			return false;
@@ -1433,8 +1271,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <=(Rational rat, BigInteger bn)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(bn) <= 0;
 			}
 			return false;
@@ -1514,8 +1351,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >(BigInteger bn, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(bn) < 0;
 			}
 			return false;
@@ -1529,8 +1365,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >=(BigInteger bn, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(bn) <= 0;
 			}
 			return false;
@@ -1566,8 +1401,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <(Rational rat, int n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -1581,8 +1415,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <=(Rational rat, int n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -1662,8 +1495,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >(int n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -1677,8 +1509,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >=(int n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -1715,8 +1546,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator <(Rational rat, uint n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -1731,8 +1561,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator <=(Rational rat, uint n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -1819,8 +1648,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator >(uint n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -1835,8 +1663,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator >=(uint n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -1874,8 +1701,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <(Rational rat, long n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -1889,8 +1715,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <=(Rational rat, long n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -1970,8 +1795,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >(long n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -1985,8 +1809,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >=(long n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -2023,8 +1846,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator <(Rational rat, ulong n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -2039,8 +1861,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator <=(Rational rat, ulong n)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -2127,8 +1948,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator >(ulong n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) < 0;
 			}
 			return false;
@@ -2143,8 +1963,7 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public static bool operator >=(ulong n, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(n) <= 0;
 			}
 			return false;
@@ -2182,8 +2001,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <(Rational rat, double dbl)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(dbl) < 0;
 			}
 			return false;
@@ -2197,8 +2015,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <=(Rational rat, double dbl)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(dbl) <= 0;
 			}
 			return false;
@@ -2212,8 +2029,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >(Rational rat, double dbl)
 		{
-			if (!double.IsNaN(dbl))
-			{
+			if (!double.IsNaN(dbl)) {
 				return rat.CompareTo(dbl) > 0;
 			}
 			return false;
@@ -2227,8 +2043,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >=(Rational rat, double dbl)
 		{
-			if (!double.IsNaN(dbl))
-			{
+			if (!double.IsNaN(dbl)) {
 				return rat.CompareTo(dbl) >= 0;
 			}
 			return false;
@@ -2264,8 +2079,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <(double dbl, Rational rat)
 		{
-			if (!double.IsNaN(dbl))
-			{
+			if (!double.IsNaN(dbl)) {
 				return rat.CompareTo(dbl) > 0;
 			}
 			return false;
@@ -2279,8 +2093,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator <=(double dbl, Rational rat)
 		{
-			if (!double.IsNaN(dbl))
-			{
+			if (!double.IsNaN(dbl)) {
 				return rat.CompareTo(dbl) >= 0;
 			}
 			return false;
@@ -2294,8 +2107,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >(double dbl, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(dbl) < 0;
 			}
 			return false;
@@ -2309,8 +2121,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public static bool operator >=(double dbl, Rational rat)
 		{
-			if (rat.HasSign)
-			{
+			if (rat.HasSign) {
 				return rat.CompareTo(dbl) <= 0;
 			}
 			return false;
@@ -2345,8 +2156,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public override bool Equals(object obj)
 		{
-			if (!(obj is Rational))
-			{
+			if (!(obj is Rational)) {
 				return false;
 			}
 			return Equals((Rational)obj);
@@ -2368,8 +2178,7 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool Equals(Rational rat)
 		{
-			if (_signNum == rat._signNum && _signDen == rat._signDen && BigInteger.EqualBits(_bitsNum, rat._bitsNum))
-			{
+			if (_signNum == rat._signNum && _signDen == rat._signDen && BigInteger.EqualBits(_bitsNum, rat._bitsNum)) {
 				return BigInteger.EqualBits(_bitsDen, rat._bitsDen);
 			}
 			return false;
@@ -2382,33 +2191,26 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public int CompareTo(Rational rat)
 		{
-			if (_signDen == 0)
-			{
+			if (_signDen == 0) {
 				int num = OrderSpec(_signNum);
-				if (rat._signDen == 0)
-				{
+				if (rat._signDen == 0) {
 					int value = OrderSpec(rat._signNum);
 					return num.CompareTo(value);
 				}
-				if (num == 3)
-				{
+				if (num == 3) {
 					return -rat.Sign;
 				}
-				if (num >= 3)
-				{
+				if (num >= 3) {
 					return 1;
 				}
 				return -1;
 			}
-			if (rat._signDen == 0)
-			{
-				if (rat._signNum == 0)
-				{
+			if (rat._signDen == 0) {
+				if (rat._signNum == 0) {
 					return Sign;
 				}
 				int num2 = OrderSpec(rat._signNum);
-				if (num2 >= 3)
-				{
+				if (num2 >= 3) {
 					return -1;
 				}
 				return 1;
@@ -2423,10 +2225,8 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool Equals(BigInteger bn)
 		{
-			if (!IsDenOne || !(Numerator == bn))
-			{
-				if (_signNum == 0)
-				{
+			if (!IsDenOne || !(Numerator == bn)) {
+				if (_signNum == 0) {
 					return bn.IsZero;
 				}
 				return false;
@@ -2441,15 +2241,12 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public int CompareTo(BigInteger bn)
 		{
-			if (_signDen == 0)
-			{
-				if (_signNum == 0)
-				{
+			if (_signDen == 0) {
+				if (_signNum == 0) {
 					return -bn.Sign;
 				}
 				int num = OrderSpec(_signNum);
-				if (num >= 3)
-				{
+				if (num >= 3) {
 					return 1;
 				}
 				return -1;
@@ -2464,10 +2261,8 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool Equals(int n)
 		{
-			if (!IsDenOne || !(Numerator == n))
-			{
-				if (_signNum == 0)
-				{
+			if (!IsDenOne || !(Numerator == n)) {
+				if (_signNum == 0) {
 					return n == 0;
 				}
 				return false;
@@ -2482,32 +2277,25 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public int CompareTo(object obj)
 		{
-			if (obj is Rational)
-			{
+			if (obj is Rational) {
 				return CompareTo((Rational)obj);
 			}
-			if (obj is BigInteger)
-			{
+			if (obj is BigInteger) {
 				return CompareTo((BigInteger)obj);
 			}
-			if (obj is int)
-			{
+			if (obj is int) {
 				return CompareTo((int)obj);
 			}
-			if (obj is uint)
-			{
+			if (obj is uint) {
 				return CompareTo((uint)obj);
 			}
-			if (obj is long)
-			{
+			if (obj is long) {
 				return CompareTo((long)obj);
 			}
-			if (obj is ulong)
-			{
+			if (obj is ulong) {
 				return CompareTo((ulong)obj);
 			}
-			if (obj is double)
-			{
+			if (obj is double) {
 				return CompareTo((double)obj);
 			}
 			throw new ArgumentException(Resources.InvalidNumber);
@@ -2531,10 +2319,8 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public bool Equals(uint u)
 		{
-			if (!IsDenOne || !(Numerator == u))
-			{
-				if (_signNum == 0)
-				{
+			if (!IsDenOne || !(Numerator == u)) {
+				if (_signNum == 0) {
 					return u == 0;
 				}
 				return false;
@@ -2560,10 +2346,8 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool Equals(long nn)
 		{
-			if (!IsDenOne || !(Numerator == nn))
-			{
-				if (_signNum == 0)
-				{
+			if (!IsDenOne || !(Numerator == nn)) {
+				if (_signNum == 0) {
 					return nn == 0;
 				}
 				return false;
@@ -2578,15 +2362,12 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public int CompareTo(long nn)
 		{
-			if (_signDen == 0)
-			{
-				if (_signNum == 0)
-				{
+			if (_signDen == 0) {
+				if (_signNum == 0) {
 					return -Math.Sign(nn);
 				}
 				int num = OrderSpec(_signNum);
-				if (num >= 3)
-				{
+				if (num >= 3) {
 					return 1;
 				}
 				return -1;
@@ -2602,10 +2383,8 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public bool Equals(ulong uu)
 		{
-			if (!IsDenOne || !(Numerator == uu))
-			{
-				if (_signNum == 0)
-				{
+			if (!IsDenOne || !(Numerator == uu)) {
+				if (_signNum == 0) {
 					return uu == 0;
 				}
 				return false;
@@ -2621,19 +2400,15 @@ namespace Microsoft.SolverFoundation.Common
 		[CLSCompliant(false)]
 		public int CompareTo(ulong uu)
 		{
-			if (_signDen == 0)
-			{
-				if (_signNum == 0)
-				{
-					if (uu != 0)
-					{
+			if (_signDen == 0) {
+				if (_signNum == 0) {
+					if (uu != 0) {
 						return -1;
 					}
 					return 0;
 				}
 				int num = OrderSpec(_signNum);
-				if (num >= 3)
-				{
+				if (num >= 3) {
 					return 1;
 				}
 				return -1;
@@ -2648,43 +2423,34 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public bool Equals(double dbl)
 		{
-			if (_signDen == 0)
-			{
-				if (_signNum == 0)
-				{
+			if (_signDen == 0) {
+				if (_signNum == 0) {
 					return dbl == 0.0;
 				}
 				return double.IsNaN(dbl);
 			}
-			if (IsDenOne)
-			{
+			if (IsDenOne) {
 				return Numerator == dbl;
 			}
 			BigInteger denominator;
 			BigInteger bigInteger = (denominator = Denominator);
-			if (bigInteger.IsPowerOfTwo)
-			{
+			if (bigInteger.IsPowerOfTwo) {
 				BigInteger numerator;
 				BigInteger bigInteger2 = (numerator = Numerator);
-				if (bigInteger2.BitCount <= 53)
-				{
+				if (bigInteger2.BitCount <= 53) {
 					NumberUtils.GetDoubleParts(dbl, out var sign, out var exp, out var man, out var fFinite);
-					if (!fFinite || man == 0 || numerator.Sign != sign)
-					{
+					if (!fFinite || man == 0 || numerator.Sign != sign) {
 						return false;
 					}
 					int num = Statics.CbitLowZero(man);
-					if (num > 0)
-					{
+					if (num > 0) {
 						man >>= num;
 						exp += num;
 					}
-					if (denominator.BitCount - 1 != -exp)
-					{
+					if (denominator.BitCount - 1 != -exp) {
 						return false;
 					}
-					if (sign >= 0)
-					{
+					if (sign >= 0) {
 						return numerator == man;
 					}
 					return -numerator == man;
@@ -2700,93 +2466,73 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public int CompareTo(double dbl)
 		{
-			if (_signDen == 0)
-			{
-				switch (_signNum)
-				{
-				default:
-					if (!double.IsNaN(dbl))
-					{
-						return -1;
-					}
-					return 0;
-				case 2:
-					if (!double.IsNaN(dbl))
-					{
-						return -1;
-					}
-					return 1;
-				case -1:
-					if (!double.IsNaN(dbl))
-					{
-						if (!double.IsNegativeInfinity(dbl))
-						{
+			if (_signDen == 0) {
+				switch (_signNum) {
+					default:
+						if (!double.IsNaN(dbl)) {
 							return -1;
 						}
 						return 0;
-					}
-					return 1;
-				case 0:
-					if (!(dbl > 0.0))
-					{
-						if (dbl != 0.0)
-						{
+					case 2:
+						if (!double.IsNaN(dbl)) {
+							return -1;
+						}
+						return 1;
+					case -1:
+						if (!double.IsNaN(dbl)) {
+							if (!double.IsNegativeInfinity(dbl)) {
+								return -1;
+							}
+							return 0;
+						}
+						return 1;
+					case 0:
+						if (!(dbl > 0.0)) {
+							if (dbl != 0.0) {
+								return 1;
+							}
+							return 0;
+						}
+						return -1;
+					case 1:
+						if (!double.IsPositiveInfinity(dbl)) {
 							return 1;
 						}
 						return 0;
-					}
-					return -1;
-				case 1:
-					if (!double.IsPositiveInfinity(dbl))
-					{
-						return 1;
-					}
-					return 0;
 				}
 			}
-			if (IsDenOne)
-			{
+			if (IsDenOne) {
 				return Numerator.CompareTo(dbl);
 			}
 			NumberUtils.GetDoubleParts(dbl, out var sign, out var exp, out var man, out var fFinite);
-			if (!fFinite)
-			{
-				if (man == 0)
-				{
+			if (!fFinite) {
+				if (man == 0) {
 					return -sign;
 				}
 				return 1;
 			}
-			if (man == 0)
-			{
+			if (man == 0) {
 				return Sign;
 			}
-			if (Sign != sign)
-			{
-				if (sign >= 0)
-				{
+			if (Sign != sign) {
+				if (sign >= 0) {
 					return -1;
 				}
 				return 1;
 			}
 			int num = Statics.CbitLowZero(man);
-			if (num > 0)
-			{
+			if (num > 0) {
 				man >>= num;
 				exp += num;
 			}
 			BigInteger bigInteger = man;
 			BigInteger bnDen = 1;
-			if (exp < 0)
-			{
+			if (exp < 0) {
 				bnDen = BigInteger.Power(2, -exp);
-			}
-			else if (exp > 0)
-			{
+			} else if (exp > 0) {
 				bigInteger *= BigInteger.Power(2, exp);
 			}
-			if (sign < 0)
-			{
+			if (sign < 0) {
 				bigInteger = -bigInteger;
 			}
 			return BigInteger.CompareFractions(Numerator, Denominator, bigInteger, bnDen);
@@ -2798,24 +2544,21 @@ namespace Microsoft.SolverFoundation.Common
 		/// <returns></returns>
 		public override string ToString()
 		{
-			if (_signDen == 0)
-			{
-				switch (_signNum)
-				{
-				case -1:
-					return "-Infinity";
-				case 0:
-					return "0";
-				case 1:
-					return "Infinity";
-				case 2:
-					return "UnsignedInfinity";
-				default:
-					return "Indeterminate";
+			if (_signDen == 0) {
+				switch (_signNum) {
+					case -1:
+						return "-Infinity";
+					case 0:
+						return "0";
+					case 1:
+						return "Infinity";
+					case 2:
+						return "UnsignedInfinity";
+					default:
+						return "Indeterminate";
 				}
 			}
-			if (IsDenOne)
-			{
+			if (IsDenOne) {
 				return Numerator.ToString();
 			}
 			return string.Format(CultureInfo.InvariantCulture, "{0}/{1}", new object[2] { Numerator, Denominator });
@@ -2828,18 +2571,15 @@ namespace Microsoft.SolverFoundation.Common
 		/// <param name="cchMax"></param>
 		public void AppendDecimalString(StringBuilder sb, int cchMax)
 		{
-			if (_signDen == 0)
-			{
+			if (_signDen == 0) {
 				sb.Append(ToString());
 				return;
 			}
-			if (_signNum < 0)
-			{
+			if (_signNum < 0) {
 				sb.Append('-');
 				cchMax--;
 			}
-			if (cchMax < 3)
-			{
+			if (cchMax < 3) {
 				cchMax = 3;
 			}
 			int length = sb.Length;
@@ -2848,17 +2588,14 @@ namespace Microsoft.SolverFoundation.Common
 			BigRegister regDen = new BigRegister(_signDen, _bitsDen);
 			BigRegister regQuo = default(BigRegister);
 			bigRegister.ModDiv(ref regDen, ref regQuo);
-			if (!regQuo.IsSingle(0u))
-			{
+			if (!regQuo.IsSingle(0u)) {
 				sb.Append(regQuo.GetInteger(1));
 				length2 = sb.Length;
-				if (length2 - length > cchMax)
-				{
+				if (length2 - length > cchMax) {
 					int num = 2;
 					int exp = length2 - length + num - cchMax;
 					string text;
-					while (num <= (text = exp.ToString(CultureInfo.InvariantCulture)).Length)
-					{
+					while (num <= (text = exp.ToString(CultureInfo.InvariantCulture)).Length) {
 						num = text.Length + 1;
 						exp = length2 - length - Math.Max(cchMax - num, 1);
 					}
@@ -2869,53 +2606,42 @@ namespace Microsoft.SolverFoundation.Common
 					sb.Append('e').Append(exp);
 					return;
 				}
-				if (bigRegister.IsSingle(0u))
-				{
+				if (bigRegister.IsSingle(0u)) {
 					return;
 				}
 			}
 			int num2 = 0;
-			while (sb.Length - length <= cchMax && !bigRegister.IsSingle(0u))
-			{
+			while (sb.Length - length <= cchMax && !bigRegister.IsSingle(0u)) {
 				bigRegister.Mul(1000000000u);
 				bigRegister.ModDiv(ref regDen, ref regQuo);
-				if (sb.Length == length)
-				{
-					if (regQuo.IsSingle(0u))
-					{
+				if (sb.Length == length) {
+					if (regQuo.IsSingle(0u)) {
 						num2 += 9;
 						continue;
 					}
 					sb.Append(regQuo.High);
 					num2 += 9 - (sb.Length - length);
-				}
-				else
-				{
+				} else {
 					sb.AppendFormat("{0:D9}", regQuo.High);
 				}
 			}
 			int ichLim = sb.Length;
 			int exp2 = 0;
 			RemoveDecZeros(sb, length, ref ichLim, ref exp2);
-			if (ichLim - length + num2 >= cchMax)
-			{
-				if (num2 > 3)
-				{
+			if (ichLim - length + num2 >= cchMax) {
+				if (num2 > 3) {
 					int num3 = -num2 - 1;
 					string text2 = num3.ToString(CultureInfo.InvariantCulture);
 					int num4 = text2.Length + 1;
-					if (ichLim - length >= cchMax - num4 && ichLim > length + 1)
-					{
+					if (ichLim - length >= cchMax - num4 && ichLim > length + 1) {
 						ichLim = length + Math.Max(cchMax - num4 - 1, 1);
 						exp2 = -ichLim;
-						if (RoundDecStr(sb, length, ref ichLim, ref exp2))
-						{
+						if (RoundDecStr(sb, length, ref ichLim, ref exp2)) {
 							num3++;
 						}
 					}
 					sb.Length = ichLim;
-					if (ichLim - length > 1)
-					{
+					if (ichLim - length > 1) {
 						sb.Insert(length + 1, '.');
 					}
 					sb.Append('e').Append(num3);
@@ -2923,41 +2649,31 @@ namespace Microsoft.SolverFoundation.Common
 				}
 				ichLim = Math.Max(length2, Math.Max(length + 1, length + cchMax - num2 - 1));
 				exp2 = -ichLim;
-				if (RoundDecStr(sb, length, ref ichLim, ref exp2))
-				{
+				if (RoundDecStr(sb, length, ref ichLim, ref exp2)) {
 					int num5 = length2 - length;
 					sb.Length = length + 1;
-					if (num2 > 0)
-					{
+					if (num2 > 0) {
 						sb.Insert(length, '.');
-						if (--num2 > 0)
-						{
+						if (--num2 > 0) {
 							sb.Insert(length + 1, new string('0', num2));
 						}
-					}
-					else if (num5 >= cchMax && num5 >= 3)
-					{
+					} else if (num5 >= cchMax && num5 >= 3) {
 						sb.Append('e').Append(num5);
-					}
-					else if (num5 > 0)
-					{
+					} else if (num5 > 0) {
 						sb.Append(new string('0', num5));
 					}
 					return;
 				}
-				if (ichLim < length2)
-				{
+				if (ichLim < length2) {
 					sb.Length = ichLim;
 					sb.Append(new string('0', length2 - ichLim));
 					return;
 				}
 			}
 			sb.Length = ichLim;
-			if (length2 < ichLim)
-			{
+			if (length2 < ichLim) {
 				sb.Insert(length2, '.');
-				if (num2 > 0)
-				{
+				if (num2 > 0) {
 					sb.Insert(length + 1, new string('0', num2));
 				}
 			}
@@ -2965,14 +2681,11 @@ namespace Microsoft.SolverFoundation.Common
 
 		private static bool RoundDecStr(StringBuilder sb, int ichMin, ref int ichLim, ref int exp)
 		{
-			if (sb[ichLim] < '5')
-			{
+			if (sb[ichLim] < '5') {
 				return false;
 			}
-			do
-			{
-				if ((sb[ichLim - 1] += '\u0001') <= '9')
-				{
+			do {
+				if ((sb[ichLim - 1] += '\u0001') <= '9') {
 					return false;
 				}
 				exp++;
@@ -2986,8 +2699,7 @@ namespace Microsoft.SolverFoundation.Common
 
 		private static void RemoveDecZeros(StringBuilder sb, int ichMin, ref int ichLim, ref int exp)
 		{
-			while (sb[ichLim - 1] == '0')
-			{
+			while (sb[ichLim - 1] == '0') {
 				ichLim--;
 				exp++;
 			}

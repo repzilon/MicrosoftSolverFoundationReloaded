@@ -25,8 +25,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			Rational rational = num - num.GetFloor();
 			Rational rational2 = 1 - rational;
-			if (!(rational2 < rational))
-			{
+			if (!(rational2 < rational)) {
 				return rational;
 			}
 			return rational2;
@@ -36,11 +35,9 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			double num2 = num.ToDouble();
 			Rational rational = num - num2;
-			if (rational > 0)
-			{
+			if (rational > 0) {
 				Rational rational2;
-				for (rational2 = 10; num - (num + rational * rational2).ToDouble() > 0; rational2 *= (Rational)10)
-				{
+				for (rational2 = 10; num - (num + rational * rational2).ToDouble() > 0; rational2 *= (Rational)10) {
 				}
 				num2 = (num + rational * rational2).ToDouble();
 			}
@@ -51,11 +48,9 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			double num2 = num.ToDouble();
 			Rational rational = num - num2;
-			if (rational < 0)
-			{
+			if (rational < 0) {
 				Rational rational2;
-				for (rational2 = 10; num - (num + rational * rational2).ToDouble() < 0; rational2 *= (Rational)10)
-				{
+				for (rational2 = 10; num - (num + rational * rational2).ToDouble() < 0; rational2 *= (Rational)10) {
 				}
 				num2 = (num + rational * rational2).ToDouble();
 			}
@@ -71,23 +66,18 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static uint Gcd(uint u1, uint u2)
 		{
-			if (u2 <= u1)
-			{
-				if (u2 == 0)
-				{
+			if (u2 <= u1) {
+				if (u2 == 0) {
 					return u1;
 				}
 				u1 %= u2;
 			}
-			while (true)
-			{
-				if (u1 == 0)
-				{
+			while (true) {
+				if (u1 == 0) {
 					return u2;
 				}
 				u2 %= u1;
-				if (u2 == 0)
-				{
+				if (u2 == 0) {
 					break;
 				}
 				u1 %= u2;
@@ -97,28 +87,22 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static ulong Gcd(ulong uu1, ulong uu2)
 		{
-			if (uu1 >= uu2)
-			{
+			if (uu1 >= uu2) {
 				goto IL_0004;
 			}
 			goto IL_0028;
-			IL_0004:
-			if (uu1 > uint.MaxValue)
-			{
-				if (uu2 == 0)
-				{
+		IL_0004:
+			if (uu1 > uint.MaxValue) {
+				if (uu2 == 0) {
 					return uu1;
 				}
 				int num = 32;
-				while (true)
-				{
+				while (true) {
 					uu1 -= uu2;
-					if (uu1 < uu2)
-					{
+					if (uu1 < uu2) {
 						break;
 					}
-					if (--num == 0)
-					{
+					if (--num == 0) {
 						uu1 %= uu2;
 						break;
 					}
@@ -126,51 +110,41 @@ namespace Microsoft.SolverFoundation.Common
 				goto IL_0028;
 			}
 			goto IL_004e;
-			IL_004e:
+		IL_004e:
 			uint num2 = (uint)uu1;
 			uint num3 = (uint)uu2;
-			if (num2 >= num3)
-			{
+			if (num2 >= num3) {
 				goto IL_0058;
 			}
 			goto IL_0077;
-			IL_0077:
-			if (num2 == 0)
-			{
+		IL_0077:
+			if (num2 == 0) {
 				return num3;
 			}
 			int num4 = 32;
-			while (true)
-			{
+			while (true) {
 				num3 -= num2;
-				if (num3 < num2)
-				{
+				if (num3 < num2) {
 					break;
 				}
-				if (--num4 == 0)
-				{
+				if (--num4 == 0) {
 					num3 %= num2;
 					break;
 				}
 			}
 			goto IL_0058;
-			IL_0028:
-			if (uu2 > uint.MaxValue)
-			{
-				if (uu1 == 0)
-				{
+		IL_0028:
+			if (uu2 > uint.MaxValue) {
+				if (uu1 == 0) {
 					return uu2;
 				}
 				int num5 = 32;
-				while (true)
-				{
+				while (true) {
 					uu2 -= uu1;
-					if (uu2 < uu1)
-					{
+					if (uu2 < uu1) {
 						break;
 					}
-					if (--num5 == 0)
-					{
+					if (--num5 == 0) {
 						uu2 %= uu1;
 						break;
 					}
@@ -178,21 +152,17 @@ namespace Microsoft.SolverFoundation.Common
 				goto IL_0004;
 			}
 			goto IL_004e;
-			IL_0058:
-			if (num3 == 0)
-			{
+		IL_0058:
+			if (num3 == 0) {
 				return num2;
 			}
 			int num6 = 32;
-			while (true)
-			{
+			while (true) {
 				num2 -= num3;
-				if (num2 < num3)
-				{
+				if (num2 < num3) {
 					break;
 				}
-				if (--num6 == 0)
-				{
+				if (--num6 == 0) {
 					num2 %= num3;
 					break;
 				}
@@ -229,8 +199,7 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static int Size<T>(T[] rgv)
 		{
-			if (rgv == null)
-			{
+			if (rgv == null) {
 				return 0;
 			}
 			return rgv.Length;
@@ -255,15 +224,11 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void MoveItem<T>(T[] rgv, int ivSrc, int ivDst)
 		{
-			if (ivSrc != ivDst)
-			{
+			if (ivSrc != ivDst) {
 				T val = rgv[ivSrc];
-				if (ivSrc < ivDst)
-				{
+				if (ivSrc < ivDst) {
 					Array.Copy(rgv, ivSrc + 1, rgv, ivSrc, ivDst - ivSrc);
-				}
-				else
-				{
+				} else {
 					Array.Copy(rgv, ivDst, rgv, ivDst + 1, ivSrc - ivDst);
 				}
 				rgv[ivDst] = val;
@@ -272,58 +237,45 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void EnsureArraySize<T>(ref T[] rgv, int cv)
 		{
-			if (rgv.Length < cv)
-			{
+			if (rgv.Length < cv) {
 				Array.Resize(ref rgv, Math.Max(cv, rgv.Length + rgv.Length / 2));
 			}
 		}
 
 		public static void QuickSort<T>(T[] rgv, int ivFirst, int ivLast, Comparison<T> cmp)
 		{
-			while (ivFirst < ivLast)
-			{
+			while (ivFirst < ivLast) {
 				int num = ivFirst;
 				int num2 = ivLast;
 				int num3 = num + num2 >> 1;
 				T x = rgv[num3];
-				while (true)
-				{
-					if (cmp(x, rgv[num]) > 0)
-					{
+				while (true) {
+					if (cmp(x, rgv[num]) > 0) {
 						num++;
 						continue;
 					}
-					while (cmp(x, rgv[num2]) < 0)
-					{
+					while (cmp(x, rgv[num2]) < 0) {
 						num2--;
 					}
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
-					if (num < num2)
-					{
+					if (num < num2) {
 						Swap(ref rgv[num], ref rgv[num2]);
 					}
 					num++;
 					num2--;
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
 				}
-				if (num2 - ivFirst <= ivLast - num)
-				{
-					if (ivFirst < num2)
-					{
+				if (num2 - ivFirst <= ivLast - num) {
+					if (ivFirst < num2) {
 						QuickSort(rgv, ivFirst, num2, cmp);
 					}
 					ivFirst = num;
-				}
-				else
-				{
-					if (num < ivLast)
-					{
+				} else {
+					if (num < ivLast) {
 						QuickSort(rgv, num, ivLast, cmp);
 					}
 					ivLast = num2;
@@ -333,55 +285,42 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void QuickSort(int[] rgv, int ivFirst, int ivLast)
 		{
-			if (ivLast - ivFirst < 20)
-			{
+			if (ivLast - ivFirst < 20) {
 				QuadSort(rgv, ivFirst, ivLast);
 				return;
 			}
-			while (ivFirst < ivLast)
-			{
+			while (ivFirst < ivLast) {
 				int num = ivFirst;
 				int num2 = ivLast;
 				int num3 = num + num2 >> 1;
 				int num4 = rgv[num3];
-				while (true)
-				{
-					if (num4 > rgv[num])
-					{
+				while (true) {
+					if (num4 > rgv[num]) {
 						num++;
 						continue;
 					}
-					while (num4 < rgv[num2])
-					{
+					while (num4 < rgv[num2]) {
 						num2--;
 					}
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
-					if (num < num2)
-					{
+					if (num < num2) {
 						Swap(ref rgv[num], ref rgv[num2]);
 					}
 					num++;
 					num2--;
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
 				}
-				if (num2 - ivFirst <= ivLast - num)
-				{
-					if (ivFirst < num2)
-					{
+				if (num2 - ivFirst <= ivLast - num) {
+					if (ivFirst < num2) {
 						QuickSort(rgv, ivFirst, num2);
 					}
 					ivFirst = num;
-				}
-				else
-				{
-					if (num < ivLast)
-					{
+				} else {
+					if (num < ivLast) {
 						QuickSort(rgv, num, ivLast);
 					}
 					ivLast = num2;
@@ -391,21 +330,17 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void QuadSort(int[] rgv, int ivFirst, int ivLast)
 		{
-			for (int num = ivLast; num > ivFirst; num--)
-			{
+			for (int num = ivLast; num > ivFirst; num--) {
 				int num2 = num;
 				int num3 = rgv[num2];
 				int num4 = num;
-				while (--num4 >= ivFirst)
-				{
-					if (num3 < rgv[num4])
-					{
+				while (--num4 >= ivFirst) {
+					if (num3 < rgv[num4]) {
 						num2 = num4;
 						num3 = rgv[num2];
 					}
 				}
-				if (num2 != num)
-				{
+				if (num2 != num) {
 					Swap(ref rgv[num2], ref rgv[num]);
 				}
 			}
@@ -420,21 +355,17 @@ namespace Microsoft.SolverFoundation.Common
 		/// <param name="ivLast">Last index to sort (inclusive).</param>
 		public static void QuadSort<T>(double[] rgv, T[] items, int ivFirst, int ivLast)
 		{
-			for (int num = ivLast; num > ivFirst; num--)
-			{
+			for (int num = ivLast; num > ivFirst; num--) {
 				int num2 = num;
 				double num3 = rgv[num2];
 				int num4 = num;
-				while (--num4 >= ivFirst)
-				{
-					if (num3 < rgv[num4])
-					{
+				while (--num4 >= ivFirst) {
+					if (num3 < rgv[num4]) {
 						num2 = num4;
 						num3 = rgv[num2];
 					}
 				}
-				if (num2 != num)
-				{
+				if (num2 != num) {
 					Swap(ref rgv[num2], ref rgv[num]);
 					Swap(ref items[num2], ref items[num]);
 				}
@@ -443,55 +374,42 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void QuickSortIndirect(int[] rgiv, int[] rgv, int iivFirst, int iivLast)
 		{
-			if (iivLast - iivFirst < 20)
-			{
+			if (iivLast - iivFirst < 20) {
 				QuadSortIndirect(rgiv, rgv, iivFirst, iivLast);
 				return;
 			}
-			while (iivFirst < iivLast)
-			{
+			while (iivFirst < iivLast) {
 				int num = iivFirst;
 				int num2 = iivLast;
 				int num3 = num + num2 >> 1;
 				int num4 = rgv[rgiv[num3]];
-				while (true)
-				{
-					if (num4 > rgv[rgiv[num]])
-					{
+				while (true) {
+					if (num4 > rgv[rgiv[num]]) {
 						num++;
 						continue;
 					}
-					while (num4 < rgv[rgiv[num2]])
-					{
+					while (num4 < rgv[rgiv[num2]]) {
 						num2--;
 					}
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
-					if (num < num2)
-					{
+					if (num < num2) {
 						Swap(ref rgiv[num], ref rgiv[num2]);
 					}
 					num++;
 					num2--;
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
 				}
-				if (num2 - iivFirst <= iivLast - num)
-				{
-					if (iivFirst < num2)
-					{
+				if (num2 - iivFirst <= iivLast - num) {
+					if (iivFirst < num2) {
 						QuickSortIndirect(rgiv, rgv, iivFirst, num2);
 					}
 					iivFirst = num;
-				}
-				else
-				{
-					if (num < iivLast)
-					{
+				} else {
+					if (num < iivLast) {
 						QuickSortIndirect(rgiv, rgv, num, iivLast);
 					}
 					iivLast = num2;
@@ -501,55 +419,42 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void QuickSortIndirect(int[] rgiv, Rational[] rgv, int iivFirst, int iivLast)
 		{
-			if (iivLast - iivFirst < 20)
-			{
+			if (iivLast - iivFirst < 20) {
 				QuadSortIndirect(rgiv, rgv, iivFirst, iivLast);
 				return;
 			}
-			while (iivFirst < iivLast)
-			{
+			while (iivFirst < iivLast) {
 				int num = iivFirst;
 				int num2 = iivLast;
 				int num3 = num + num2 >> 1;
 				Rational rational = rgv[rgiv[num3]];
-				while (true)
-				{
-					if (rational > rgv[rgiv[num]])
-					{
+				while (true) {
+					if (rational > rgv[rgiv[num]]) {
 						num++;
 						continue;
 					}
-					while (rational < rgv[rgiv[num2]])
-					{
+					while (rational < rgv[rgiv[num2]]) {
 						num2--;
 					}
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
-					if (num < num2)
-					{
+					if (num < num2) {
 						Swap(ref rgiv[num], ref rgiv[num2]);
 					}
 					num++;
 					num2--;
-					if (num > num2)
-					{
+					if (num > num2) {
 						break;
 					}
 				}
-				if (num2 - iivFirst <= iivLast - num)
-				{
-					if (iivFirst < num2)
-					{
+				if (num2 - iivFirst <= iivLast - num) {
+					if (iivFirst < num2) {
 						QuickSortIndirect(rgiv, rgv, iivFirst, num2);
 					}
 					iivFirst = num;
-				}
-				else
-				{
-					if (num < iivLast)
-					{
+				} else {
+					if (num < iivLast) {
 						QuickSortIndirect(rgiv, rgv, num, iivLast);
 					}
 					iivLast = num2;
@@ -559,21 +464,17 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void QuadSortIndirect(int[] rgiv, int[] rgv, int iivFirst, int iivLast)
 		{
-			for (int num = iivLast; num > iivFirst; num--)
-			{
+			for (int num = iivLast; num > iivFirst; num--) {
 				int num2 = num;
 				int num3 = rgv[rgiv[num2]];
 				int num4 = num;
-				while (--num4 >= iivFirst)
-				{
-					if (num3 < rgv[rgiv[num4]])
-					{
+				while (--num4 >= iivFirst) {
+					if (num3 < rgv[rgiv[num4]]) {
 						num2 = num4;
 						num3 = rgv[rgiv[num2]];
 					}
 				}
-				if (num2 != num)
-				{
+				if (num2 != num) {
 					Swap(ref rgiv[num2], ref rgiv[num]);
 				}
 			}
@@ -581,21 +482,17 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void QuadSortIndirect(int[] rgiv, Rational[] rgv, int iivFirst, int iivLast)
 		{
-			for (int num = iivLast; num > iivFirst; num--)
-			{
+			for (int num = iivLast; num > iivFirst; num--) {
 				int num2 = num;
 				Rational rational = rgv[rgiv[num2]];
 				int num3 = num;
-				while (--num3 >= iivFirst)
-				{
-					if (rational < rgv[rgiv[num3]])
-					{
+				while (--num3 >= iivFirst) {
+					if (rational < rgv[rgiv[num3]]) {
 						num2 = num3;
 						rational = rgv[rgiv[num2]];
 					}
 				}
-				if (num2 != num)
-				{
+				if (num2 != num) {
 					Swap(ref rgiv[num2], ref rgiv[num]);
 				}
 			}
@@ -620,11 +517,9 @@ namespace Microsoft.SolverFoundation.Common
 			uint num = 5381u;
 			uint num2 = num;
 			int num3 = str.Length;
-			while (num3 > 0)
-			{
+			while (num3 > 0) {
 				num = ((num << 5) + num) ^ str[--num3];
-				if (num3 <= 0)
-				{
+				if (num3 <= 0) {
 					break;
 				}
 				num2 = ((num2 << 5) + num2) ^ str[--num3];
@@ -641,11 +536,9 @@ namespace Microsoft.SolverFoundation.Common
 			uint num = 5381u;
 			uint num2 = num;
 			int num3 = sb.Length;
-			while (num3 > 0)
-			{
+			while (num3 > 0) {
 				num = ((num << 5) + num) ^ sb[--num3];
-				if (num3 <= 0)
-				{
+				if (num3 <= 0) {
 					break;
 				}
 				num2 = ((num2 << 5) + num2) ^ sb[--num3];
@@ -661,33 +554,27 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static int CbitHighZero(uint u)
 		{
-			if (u == 0)
-			{
+			if (u == 0) {
 				return 32;
 			}
 			int num = 0;
-			if ((u & 0xFFFF0000u) == 0)
-			{
+			if ((u & 0xFFFF0000u) == 0) {
 				num += 16;
 				u <<= 16;
 			}
-			if ((u & 0xFF000000u) == 0)
-			{
+			if ((u & 0xFF000000u) == 0) {
 				num += 8;
 				u <<= 8;
 			}
-			if ((u & 0xF0000000u) == 0)
-			{
+			if ((u & 0xF0000000u) == 0) {
 				num += 4;
 				u <<= 4;
 			}
-			if ((u & 0xC0000000u) == 0)
-			{
+			if ((u & 0xC0000000u) == 0) {
 				num += 2;
 				u <<= 2;
 			}
-			if ((u & 0x80000000u) == 0)
-			{
+			if ((u & 0x80000000u) == 0) {
 				num++;
 			}
 			return num;
@@ -695,33 +582,27 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static int CbitLowZero(uint u)
 		{
-			if (u == 0)
-			{
+			if (u == 0) {
 				return 32;
 			}
 			int num = 0;
-			if ((u & 0xFFFF) == 0)
-			{
+			if ((u & 0xFFFF) == 0) {
 				num += 16;
 				u >>= 16;
 			}
-			if ((u & 0xFF) == 0)
-			{
+			if ((u & 0xFF) == 0) {
 				num += 8;
 				u >>= 8;
 			}
-			if ((u & 0xF) == 0)
-			{
+			if ((u & 0xF) == 0) {
 				num += 4;
 				u >>= 4;
 			}
-			if ((u & 3) == 0)
-			{
+			if ((u & 3) == 0) {
 				num += 2;
 				u >>= 2;
 			}
-			if ((u & 1) == 0)
-			{
+			if ((u & 1) == 0) {
 				num++;
 			}
 			return num;
@@ -729,8 +610,7 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static int CbitHighZero(ulong uu)
 		{
-			if ((uu & 0xFFFFFFFF00000000uL) == 0)
-			{
+			if ((uu & 0xFFFFFFFF00000000uL) == 0) {
 				return 32 + CbitHighZero((uint)uu);
 			}
 			return CbitHighZero((uint)(uu >> 32));
@@ -738,8 +618,7 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static int CbitLowZero(ulong uu)
 		{
-			if ((uu & 0xFFFFFFFFu) == 0)
-			{
+			if ((uu & 0xFFFFFFFFu) == 0) {
 				return 32 + CbitLowZero((uint)(uu >> 32));
 			}
 			return CbitLowZero((uint)uu);
@@ -768,10 +647,8 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			List<T> list = new List<T>();
 			int num = 0;
-			foreach (T item in iter)
-			{
-				if (num < limit)
-				{
+			foreach (T item in iter) {
+				if (num < limit) {
 					list.Add(item);
 					num++;
 					continue;
@@ -784,8 +661,7 @@ namespace Microsoft.SolverFoundation.Common
 		public static T[] EnumerableToArray<T>(IEnumerable<T> iter)
 		{
 			List<T> list = new List<T>();
-			foreach (T item in iter)
-			{
+			foreach (T item in iter) {
 				list.Add(item);
 			}
 			return list.ToArray();
@@ -803,24 +679,21 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static IEnumerable<T> SingleOrEmptyIter<T>(T t)
 		{
-			if (t != null)
-			{
+			if (t != null) {
 				yield return t;
 			}
 		}
 
 		public static IEnumerable<D> ImplicitCastIter<S, D>(IEnumerable<S> ebleSrc) where S : D
 		{
-			foreach (S item in ebleSrc)
-			{
+			foreach (S item in ebleSrc) {
 				yield return (D)(object)item;
 			}
 		}
 
 		public static IEnumerable<D> ExplicitCastIter<S, D>(IEnumerable<S> ebleSrc) where D : S
 		{
-			foreach (S item in ebleSrc)
-			{
+			foreach (S item in ebleSrc) {
 				yield return (D)(object)item;
 			}
 		}
@@ -830,9 +703,8 @@ namespace Microsoft.SolverFoundation.Common
 			DebugContracts.NonNull(vector);
 			int count2 = Math.Min(maxItemsToPrint, count);
 			string text = string.Join(", ", from x in vector.Take(count2)
-				select x.ToString());
-			if (count >= maxItemsToPrint)
-			{
+											select x.ToString());
+			if (count >= maxItemsToPrint) {
 				text += "...";
 			}
 			return text;
@@ -847,13 +719,10 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			DebugContracts.NonNull(indexes);
 			StringBuilder stringBuilder = new StringBuilder();
-			if (indexes.Length > 0)
-			{
+			if (indexes.Length > 0) {
 				stringBuilder.Append("(");
-				for (int i = 0; i < indexes.Length; i++)
-				{
-					if (i > 0)
-					{
+				for (int i = 0; i < indexes.Length; i++) {
+					if (i > 0) {
 						stringBuilder.Append(",");
 					}
 					stringBuilder.Append(indexes[i]);

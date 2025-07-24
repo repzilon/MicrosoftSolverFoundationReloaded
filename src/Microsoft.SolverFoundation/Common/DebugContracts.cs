@@ -22,8 +22,7 @@ namespace Microsoft.SolverFoundation.Common
 
 		public static void NonNull<T>(T t) where T : class
 		{
-			if (t != null)
-			{
+			if (t != null) {
 				return;
 			}
 			throw new NullReferenceException();

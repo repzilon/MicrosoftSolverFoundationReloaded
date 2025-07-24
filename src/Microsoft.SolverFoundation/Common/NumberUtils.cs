@@ -33,21 +33,15 @@ namespace Microsoft.SolverFoundation.Common
 			sign = 1 - ((int)(doubleUlong.uu >> 62) & 2);
 			man = doubleUlong.uu & 0xFFFFFFFFFFFFFL;
 			exp = (int)(doubleUlong.uu >> 52) & 0x7FF;
-			if (exp == 0)
-			{
+			if (exp == 0) {
 				fFinite = true;
-				if (man != 0)
-				{
+				if (man != 0) {
 					exp = -1074;
 				}
-			}
-			else if (exp == 2047)
-			{
+			} else if (exp == 2047) {
 				fFinite = false;
 				exp = int.MaxValue;
-			}
-			else
-			{
+			} else {
 				fFinite = true;
 				man |= 4503599627370496uL;
 				exp -= 1075;
@@ -58,39 +52,27 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			DoubleUlong doubleUlong = default(DoubleUlong);
 			doubleUlong.dbl = 0.0;
-			if (man == 0)
-			{
+			if (man == 0) {
 				doubleUlong.uu = 0uL;
-			}
-			else
-			{
+			} else {
 				int num = Statics.CbitHighZero(man) - 11;
 				man = ((num >= 0) ? (man << num) : (man >> -num));
 				exp -= num;
 				exp += 1075;
-				if (exp >= 2047)
-				{
+				if (exp >= 2047) {
 					doubleUlong.uu = 9218868437227405312uL;
-				}
-				else if (exp <= 0)
-				{
+				} else if (exp <= 0) {
 					exp--;
-					if (exp < -52)
-					{
+					if (exp < -52) {
 						doubleUlong.uu = 0uL;
-					}
-					else
-					{
+					} else {
 						doubleUlong.uu = man >> -exp;
 					}
-				}
-				else
-				{
+				} else {
 					doubleUlong.uu = (man & 0xFFFFFFFFFFFFFL) | (ulong)((long)exp << 52);
 				}
 			}
-			if (sign < 0)
-			{
+			if (sign < 0) {
 				doubleUlong.uu |= 9223372036854775808uL;
 			}
 			return doubleUlong.dbl;
@@ -113,28 +95,24 @@ namespace Microsoft.SolverFoundation.Common
 			DoubleUlong doubleUlong = default(DoubleUlong);
 			doubleUlong.uu = 0uL;
 			doubleUlong.dbl = dbl;
-			if (doubleUlong.uu == 0)
-			{
+			if (doubleUlong.uu == 0) {
 				return dbl;
 			}
-			switch ((int)(doubleUlong.uu >> 52) & 0x7FF)
-			{
-			case 2047:
-				return dbl;
-			default:
-				doubleUlong.uu &= 18442240474082181120uL;
-				break;
-			case 0:
-			{
-				ulong num = doubleUlong.uu & 0xFFFFFFFFFFFFFL;
-				ulong num2;
-				while ((num2 = num & (num - 1)) != 0)
-				{
-					num = num2;
-				}
-				doubleUlong.uu = (doubleUlong.uu & 0x8000000000000000uL) | num;
-				break;
-			}
+			switch ((int)(doubleUlong.uu >> 52) & 0x7FF) {
+				case 2047:
+					return dbl;
+				default:
+					doubleUlong.uu &= 18442240474082181120uL;
+					break;
+				case 0: {
+						ulong num = doubleUlong.uu & 0xFFFFFFFFFFFFFL;
+						ulong num2;
+						while ((num2 = num & (num - 1)) != 0) {
+							num = num2;
+						}
+						doubleUlong.uu = (doubleUlong.uu & 0x8000000000000000uL) | num;
+						break;
+					}
 			}
 			return doubleUlong.dbl;
 		}
