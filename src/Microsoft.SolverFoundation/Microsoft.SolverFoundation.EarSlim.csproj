@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <PackageId>Repzilon.SolverFoundation</PackageId>
+    <Version>1.0.6</Version>
+    <Authors>Ralf Kornelius, repzilon@users.noreply.githib.com</Authors>
+    <Description>.NET Framework 4.6 and .NET Standard 2.0 compatible port of Microsoft Solver Foundation Express Edition</Description>
+    <PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
+    <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/repzilon/MicrosoftSolverFoundationReloaded</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\**" />
+    <Compile Remove="Rewrite\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="Solvers\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <EmbeddedResource Remove="Rewrite\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Solvers\**" />
+    <None Remove="Common\**" />
+    <None Remove="Rewrite\**" />
+    <None Remove="Services\**" />
+    <None Remove="Solvers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Common\BigInteger.cs" />
+    <Compile Include="Common\BigRegister.cs" />
+    <Compile Include="Common\DebugContracts.cs" />
+    <Compile Include="Common\NumberUtils.cs" />
+    <Compile Include="Common\Rational.cs" />
+    <Compile Include="Common\Statics.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
