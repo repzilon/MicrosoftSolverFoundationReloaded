@@ -1,5 +1,7 @@
 ﻿using BenchmarkDotNet.Configs;
+#if !NET46
 using BenchmarkDotNet.Exporters;
+#endif
 using BenchmarkDotNet.Running;
 
 namespace Microsoft.SolverFoundation.Benchmark
@@ -10,7 +12,9 @@ namespace Microsoft.SolverFoundation.Benchmark
         {
             BenchmarkRunner.Run<SolverBenchmark>(
                 ManualConfig.Create(DefaultConfig.Instance)
+#if !NET46
                     .AddExporter(MarkdownExporter.Default) // Export results as Markdown
+#endif
             );
         }
     }
