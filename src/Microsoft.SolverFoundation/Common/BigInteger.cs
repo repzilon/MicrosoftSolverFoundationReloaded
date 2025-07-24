@@ -1,25 +1,18 @@
 using System;
-using System.Diagnostics;
 using System.Globalization;
+#if !EARSLIM
 using System.Text;
+#endif
 using Microsoft.SolverFoundation.Properties;
 
 namespace Microsoft.SolverFoundation.Common
 {
 	/// <summary>
-	/// An arbitary pecision integer 
+	/// An arbitary pecision integer
 	/// </summary>
 	[CLSCompliant(true)]
 	public struct BigInteger : IComparable, IComparable<BigInteger>, IEquatable<BigInteger>, IComparable<int>, IEquatable<int>, IComparable<uint>, IEquatable<uint>, IComparable<long>, IEquatable<long>, IComparable<ulong>, IEquatable<ulong>, IComparable<double>, IEquatable<double>
 	{
-		private const int knMaskHighBit = int.MinValue;
-
-		private const uint kuMaskHighBit = 2147483648u;
-
-		private const int kcbitUint = 32;
-
-		private const int kcbitUlong = 64;
-
 		private int _sign;
 
 		private uint[] _bits;
@@ -65,12 +58,13 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// zero test 
+		/// zero test
 		/// </summary>
 		public bool IsZero => _sign == 0;
 
+#if !EARSLIM
 		/// <summary>
-		/// one test 
+		/// one test
 		/// </summary>
 		public bool IsOne
 		{
@@ -84,7 +78,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// eveness test 
+		/// eveness test
 		/// </summary>
 		public bool IsEven
 		{
@@ -96,12 +90,14 @@ namespace Microsoft.SolverFoundation.Common
 				return (_sign & 1) == 0;
 			}
 		}
+#endif
 
 		/// <summary>
-		/// get sign 
+		/// get sign
 		/// </summary>
 		public int Sign => (_sign >> 31) - (-_sign >> 31);
 
+#if !EARSLIM
 		/// <summary>
 		/// get absolute value
 		/// </summary>
@@ -115,6 +111,7 @@ namespace Microsoft.SolverFoundation.Common
 				return result;
 			}
 		}
+#endif
 
 		internal BigInteger(int n, uint[] rgu)
 		{
@@ -139,16 +136,6 @@ namespace Microsoft.SolverFoundation.Common
 				return num;
 			}
 			return num - 1;
-		}
-
-		[Conditional("DEBUG")]
-		private void AssertValid()
-		{
-		}
-
-		[Conditional("DEBUG")]
-		internal static void AssertValid(int sign, uint[] bits)
-		{
 		}
 
 		internal static int GetBitCount(int sign, uint[] bits)
@@ -244,7 +231,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert BigInteger to int 
+		/// convert BigInteger to int
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -260,7 +247,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert BigInteger to unsigned int 
+		/// convert BigInteger to unsigned int
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -277,7 +264,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert BigInteger to long 
+		/// convert BigInteger to long
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -294,7 +281,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert BigInteger to unsigned long 
+		/// convert BigInteger to unsigned long
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -312,7 +299,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert BigInteger to double 
+		/// convert BigInteger to double
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -499,8 +486,9 @@ namespace Microsoft.SolverFoundation.Common
 			return -AddOne(value);
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// TestBit 
+		/// TestBit
 		/// </summary>
 		public bool TestBit(long ibit)
 		{
@@ -525,6 +513,7 @@ namespace Microsoft.SolverFoundation.Common
 		{
 			bn._sign = -bn._sign;
 		}
+#endif
 
 		/// <summary>
 		/// negate a BigInteger
@@ -693,6 +682,7 @@ namespace Microsoft.SolverFoundation.Common
 			return bigRegister.GetInteger(sign);
 		}
 
+#if !EARSLIM
 		/// <summary>
 		/// Divide a BigInterg by uDen, return the quotient and the remainder.
 		/// </summary>
@@ -742,6 +732,7 @@ namespace Microsoft.SolverFoundation.Common
 			BigRegister.GCD(ref reg, ref reg2);
 			return reg.GetInteger(1);
 		}
+#endif
 
 		private static void MulUpper(ref uint uHiRes, ref int cuRes, uint uHiMul, int cuMul)
 		{
@@ -871,6 +862,7 @@ namespace Microsoft.SolverFoundation.Common
 			return true;
 		}
 
+#if !EARSLIM
 		/// <summary>
 		/// Compute power of two BigIntergers and return a Rational number
 		/// </summary>
@@ -896,9 +888,10 @@ namespace Microsoft.SolverFoundation.Common
 			ratRes = Rational.Indeterminate;
 			return false;
 		}
+#endif
 
 		/// <summary>
-		/// Compute the power 
+		/// Compute the power
 		/// </summary>
 		/// <param name="bnBase"></param>
 		/// <param name="bnExp"></param>
@@ -911,6 +904,7 @@ namespace Microsoft.SolverFoundation.Common
 			return bnRes;
 		}
 
+#if !EARSLIM
 		/// <summary>
 		/// Compute factorial of a BigInteger
 		/// </summary>
@@ -940,6 +934,7 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return bnRes;
 		}
+#endif
 
 		internal static int GetDiffLength(uint[] rgu1, uint[] rgu2, int cu)
 		{
@@ -953,7 +948,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// less than 
+		/// less than
 		/// </summary>
 		/// <param name="bn1"></param>
 		/// <param name="bn2"></param>
@@ -975,7 +970,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// greater than 
+		/// greater than
 		/// </summary>
 		/// <param name="bn1"></param>
 		/// <param name="bn2"></param>
@@ -986,7 +981,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// greater than or equal to 
+		/// greater than or equal to
 		/// </summary>
 		/// <param name="bn1"></param>
 		/// <param name="bn2"></param>
@@ -997,7 +992,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// equal 
+		/// equal
 		/// </summary>
 		/// <param name="bn1"></param>
 		/// <param name="bn2"></param>
@@ -1008,7 +1003,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// not equal 
+		/// not equal
 		/// </summary>
 		/// <param name="bn1"></param>
 		/// <param name="bn2"></param>
@@ -1019,7 +1014,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare to an int 
+		/// compare to an int
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <param name="n"></param>
@@ -1715,7 +1710,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// override equals comparison 
+		/// override equals comparison
 		/// </summary>
 		/// <param name="obj"></param>
 		/// <returns></returns>
@@ -1728,7 +1723,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Compares the current number with another number (int, uint, double, long, ulong, Rational, BigInteger) and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.  
+		/// Compares the current number with another number (int, uint, double, long, ulong, Rational, BigInteger) and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
 		/// </summary>
 		/// <param name="obj">a number object</param>
 		/// <returns></returns>
@@ -1759,7 +1754,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// override hashcode 
+		/// override hashcode
 		/// </summary>
 		/// <returns></returns>
 		public override int GetHashCode()
@@ -1781,7 +1776,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Check if two BigIntegers are equal 
+		/// Check if two BigIntegers are equal
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -1926,7 +1921,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Whether equal to a long 
+		/// Whether equal to a long
 		/// </summary>
 		/// <param name="nn"></param>
 		/// <returns></returns>
@@ -1947,7 +1942,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Compare to a long 
+		/// Compare to a long
 		/// </summary>
 		/// <param name="nn"></param>
 		/// <returns></returns>
@@ -1966,7 +1961,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Whether equal to a unsigned long 
+		/// Whether equal to a unsigned long
 		/// </summary>
 		/// <param name="uu"></param>
 		/// <returns></returns>
@@ -1990,7 +1985,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Compare to a unsigned long 
+		/// Compare to a unsigned long
 		/// </summary>
 		/// <param name="uu"></param>
 		/// <returns></returns>
@@ -2011,7 +2006,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Whether equal to a double 
+		/// Whether equal to a double
 		/// </summary>
 		/// <param name="dbl"></param>
 		/// <returns></returns>
@@ -2147,7 +2142,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Compare integer fractions 
+		/// Compare integer fractions
 		/// </summary>
 		/// <param name="bnNum1"></param>
 		/// <param name="bnDen1"></param>
@@ -2323,7 +2318,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert to strings 
+		/// convert to strings
 		/// </summary>
 		/// <returns></returns>
 		public override string ToString()
@@ -2371,8 +2366,9 @@ namespace Microsoft.SolverFoundation.Common
 			return new string(array2, num8, num7 - num8);
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// conver to a string in hex 
+		/// conver to a string in hex
 		/// </summary>
 		/// <returns></returns>
 		public string ToHexString()
@@ -2397,5 +2393,6 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return stringBuilder.ToString();
 		}
+#endif
 	}
 }

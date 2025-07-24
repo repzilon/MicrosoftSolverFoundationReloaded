@@ -1,7 +1,8 @@
 using System;
-using System.Diagnostics;
 using System.Globalization;
+#if !EARSLIM
 using System.Text;
+#endif
 using Microsoft.SolverFoundation.Properties;
 
 namespace Microsoft.SolverFoundation.Common
@@ -24,24 +25,6 @@ namespace Microsoft.SolverFoundation.Common
 	[CLSCompliant(true)]
 	public struct Rational : IComparable, IComparable<Rational>, IEquatable<Rational>, IComparable<BigInteger>, IEquatable<BigInteger>, IComparable<int>, IEquatable<int>, IComparable<uint>, IEquatable<uint>, IComparable<long>, IEquatable<long>, IComparable<ulong>, IEquatable<ulong>, IComparable<double>, IEquatable<double>
 	{
-		private const int kcbitUint = 32;
-
-		private const int knumMinSpec = -1;
-
-		private const int knumNegInf = -1;
-
-		private const int knumZero = 0;
-
-		private const int knumPosInf = 1;
-
-		private const int knumUnsInf = 2;
-
-		private const int knumNaN = 3;
-
-		private const int knumMaxSpec = 3;
-
-		private const int kordZero = 3;
-
 		private uint[] _bitsNum;
 
 		private uint[] _bitsDen;
@@ -51,27 +34,28 @@ namespace Microsoft.SolverFoundation.Common
 		private int _signDen;
 
 		/// <summary>
-		/// Negative Infinity 
+		/// Negative Infinity
 		/// </summary>
 		public static readonly Rational NegativeInfinity = new Rational(-1, 0);
 
 		/// <summary>
-		/// zero 
+		/// zero
 		/// </summary>
 		public static readonly Rational Zero = new Rational(0, 0);
 
+#if !EARSLIM
 		/// <summary>
-		/// one 
+		/// one
 		/// </summary>
 		public static readonly Rational One = new Rational(1, 1);
-
+#endif
 		/// <summary>
-		/// Positive Infinity 
+		/// Positive Infinity
 		/// </summary>
 		public static readonly Rational PositiveInfinity = new Rational(1, 0);
 
 		/// <summary>
-		/// not a number 
+		/// not a number
 		/// </summary>
 		public static readonly Rational Indeterminate = new Rational(3, 0);
 
@@ -102,8 +86,9 @@ namespace Microsoft.SolverFoundation.Common
 			}
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// zero test 
+		/// zero test
 		/// </summary>
 		public bool IsZero
 		{
@@ -115,9 +100,10 @@ namespace Microsoft.SolverFoundation.Common
 				return false;
 			}
 		}
+#endif
 
 		/// <summary>
-		/// one test 
+		/// one test
 		/// </summary>
 		public bool IsOne
 		{
@@ -130,8 +116,9 @@ namespace Microsoft.SolverFoundation.Common
 			}
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// Check if a finite number 
+		/// Check if a finite number
 		/// </summary>
 		public bool IsFinite
 		{
@@ -173,7 +160,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Check if signed inifinite 
+		/// Check if signed inifinite
 		/// </summary>
 		public bool IsSignedInfinity
 		{
@@ -187,7 +174,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Check if unsigned infinite 
+		/// Check if unsigned infinite
 		/// </summary>
 		public bool IsUnsignedInfinity
 		{
@@ -227,9 +214,10 @@ namespace Microsoft.SolverFoundation.Common
 				return false;
 			}
 		}
+#endif
 
 		/// <summary>
-		/// Check if signed 
+		/// Check if signed
 		/// </summary>
 		public bool HasSign
 		{
@@ -242,10 +230,12 @@ namespace Microsoft.SolverFoundation.Common
 			}
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// bit count 
+		/// bit count
 		/// </summary>
 		public int BitCount => BigInteger.GetBitCount(_signNum, _bitsNum) + BigInteger.GetBitCount(_signDen, _bitsDen);
+#endif
 
 		/// <summary>
 		/// sign: +1 positive, -1 negative
@@ -253,7 +243,7 @@ namespace Microsoft.SolverFoundation.Common
 		public int Sign => (_signNum >> 31) - (-_signNum >> 31);
 
 		/// <summary>
-		/// Return numerator 
+		/// Return numerator
 		/// </summary>
 		public BigInteger Numerator => new BigInteger(_signNum, _bitsNum);
 
@@ -263,7 +253,7 @@ namespace Microsoft.SolverFoundation.Common
 		public BigInteger Denominator => new BigInteger(_signDen, _bitsDen);
 
 		/// <summary>
-		/// Return absolute value 
+		/// Return absolute value
 		/// </summary>
 		public Rational AbsoluteValue
 		{
@@ -282,11 +272,6 @@ namespace Microsoft.SolverFoundation.Common
 			return (5170 >> num2) & 0xF;
 		}
 
-		[Conditional("DEBUG")]
-		private void AssertValid(bool fFull)
-		{
-		}
-
 		private Rational(BigInteger bnNum, BigInteger bnDen)
 		{
 			_signNum = bnNum._Sign;
@@ -295,17 +280,19 @@ namespace Microsoft.SolverFoundation.Common
 			_bitsDen = bnDen._Bits;
 		}
 
-		private Rational(int sign, ref BigRegister regNum, ref BigRegister regDen)
-		{
-			regNum.GetIntegerParts(sign, out _signNum, out _bitsNum);
-			regDen.GetIntegerParts(1, out _signDen, out _bitsDen);
-		}
-
+#if !EARSLIM
 		private Rational(int sign, ref BigRegister regNum, int signDen, uint[] bitsDen)
 		{
 			regNum.GetIntegerParts(sign, out _signNum, out _bitsNum);
 			_signDen = signDen;
 			_bitsDen = bitsDen;
+		}
+#endif
+
+		private Rational(int sign, ref BigRegister regNum, ref BigRegister regDen)
+		{
+			regNum.GetIntegerParts(sign, out _signNum, out _bitsNum);
+			regDen.GetIntegerParts(1, out _signDen, out _bitsDen);
 		}
 
 		private Rational(int signNum, uint[] bitsNum, int signDen, uint[] bitsDen)
@@ -316,6 +303,7 @@ namespace Microsoft.SolverFoundation.Common
 			_bitsDen = bitsDen;
 		}
 
+#if !EARSLIM
 		/// <summary>Convert a value to a Rational.
 		/// </summary>
 		/// <param name="obj">The value.</param>
@@ -348,7 +336,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Make a Rational from two BigInteger 
+		/// Make a Rational from two BigInteger
 		/// </summary>
 		/// <param name="bnNum">nominator</param>
 		/// <param name="bnDen">denominator</param>
@@ -372,7 +360,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Check if an integer 
+		/// Check if an integer
 		/// </summary>
 		/// <returns></returns>
 		public bool IsInteger()
@@ -384,7 +372,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// If an interger. clone it 
+		/// If an interger. clone it
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -433,7 +421,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Return the floor 
+		/// Return the floor
 		/// </summary>
 		/// <returns></returns>
 		public Rational GetFloor()
@@ -454,7 +442,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Return the residual of the floor 
+		/// Return the residual of the floor
 		/// </summary>
 		/// <returns></returns>
 		public Rational GetFloorResidual()
@@ -473,7 +461,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Return the ceiling 
+		/// Return the ceiling
 		/// </summary>
 		/// <returns></returns>
 		public Rational GetCeiling()
@@ -494,7 +482,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Return the ceiling residual 
+		/// Return the ceiling residual
 		/// </summary>
 		/// <returns></returns>
 		public Rational GetCeilingResidual()
@@ -511,6 +499,7 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return new Rational(-1, ref regNum, _signDen, _bitsDen);
 		}
+#endif
 
 		/// <summary>
 		/// convert from an int
@@ -540,7 +529,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// convert from a long 
+		/// convert from a long
 		/// </summary>
 		/// <param name="nn"></param>
 		/// <returns></returns>
@@ -746,8 +735,9 @@ namespace Microsoft.SolverFoundation.Common
 			return rat.Numerator / rat.Denominator;
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// Return as a signed double 
+		/// Return as a signed double
 		/// </summary>
 		/// <returns></returns>
 		public double GetSignedDouble()
@@ -758,9 +748,10 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return num;
 		}
+#endif
 
 		/// <summary>
-		/// inplace negate 
+		/// inplace negate
 		/// </summary>
 		/// <param name="num"></param>
 		public static void Negate(ref Rational num)
@@ -771,7 +762,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// negate 
+		/// negate
 		/// </summary>
 		/// <param name="rat"></param>
 		/// <returns></returns>
@@ -864,8 +855,9 @@ namespace Microsoft.SolverFoundation.Common
 			return rat1 + rat2;
 		}
 
+#if !EARSLIM
 		/// <summary>
-		/// invert the sign 
+		/// invert the sign
 		/// </summary>
 		/// <returns></returns>
 		public Rational Invert()
@@ -887,6 +879,7 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return new Rational(_signDen, _bitsDen, _signNum, _bitsNum);
 		}
+#endif
 
 		/// <summary>
 		/// Times two Rationals
@@ -1015,6 +1008,7 @@ namespace Microsoft.SolverFoundation.Common
 			return new Rational(signDst, ref reg, ref reg3);
 		}
 
+#if !EARSLIM
 		/// <summary>
 		/// Optimize the common operation: ratAdd + ratMul1 * ratMul2.
 		/// </summary>
@@ -1170,6 +1164,7 @@ namespace Microsoft.SolverFoundation.Common
 			ratRes = Indeterminate;
 			return false;
 		}
+#endif
 
 		/// <summary>
 		/// Compare two Rationals
@@ -2163,7 +2158,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Return hashcode 
+		/// Return hashcode
 		/// </summary>
 		/// <returns></returns>
 		public override int GetHashCode()
@@ -2219,7 +2214,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// equal check 
+		/// equal check
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -2235,7 +2230,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare 
+		/// compare
 		/// </summary>
 		/// <param name="bn"></param>
 		/// <returns></returns>
@@ -2255,7 +2250,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// equal check 
+		/// equal check
 		/// </summary>
 		/// <param name="n"></param>
 		/// <returns></returns>
@@ -2271,7 +2266,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// Compares the current number with another number (int, uint, double, long, ulong, Rational, BigInteger) and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object. 
+		/// Compares the current number with another number (int, uint, double, long, ulong, Rational, BigInteger) and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
 		/// </summary>
 		/// <param name="obj">a number object</param>
 		/// <returns></returns>
@@ -2302,7 +2297,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare 
+		/// compare
 		/// </summary>
 		/// <param name="n"></param>
 		/// <returns></returns>
@@ -2312,7 +2307,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// equal check 
+		/// equal check
 		/// </summary>
 		/// <param name="u"></param>
 		/// <returns></returns>
@@ -2329,7 +2324,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare 
+		/// compare
 		/// </summary>
 		/// <param name="u"></param>
 		/// <returns></returns>
@@ -2340,7 +2335,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// equal check 
+		/// equal check
 		/// </summary>
 		/// <param name="nn"></param>
 		/// <returns></returns>
@@ -2356,7 +2351,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare 
+		/// compare
 		/// </summary>
 		/// <param name="nn"></param>
 		/// <returns></returns>
@@ -2376,7 +2371,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// eqaul check 
+		/// eqaul check
 		/// </summary>
 		/// <param name="uu"></param>
 		/// <returns></returns>
@@ -2393,7 +2388,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare 
+		/// compare
 		/// </summary>
 		/// <param name="uu"></param>
 		/// <returns></returns>
@@ -2417,7 +2412,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// equal check 
+		/// equal check
 		/// </summary>
 		/// <param name="dbl"></param>
 		/// <returns></returns>
@@ -2460,7 +2455,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// compare to 
+		/// compare to
 		/// </summary>
 		/// <param name="dbl"></param>
 		/// <returns></returns>
@@ -2539,7 +2534,7 @@ namespace Microsoft.SolverFoundation.Common
 		}
 
 		/// <summary>
-		/// conver to a string 
+		/// conver to a string
 		/// </summary>
 		/// <returns></returns>
 		public override string ToString()
@@ -2564,6 +2559,7 @@ namespace Microsoft.SolverFoundation.Common
 			return string.Format(CultureInfo.InvariantCulture, "{0}/{1}", new object[2] { Numerator, Denominator });
 		}
 
+#if !EARSLIM
 		/// <summary>
 		/// Append to a string
 		/// </summary>
@@ -2704,5 +2700,6 @@ namespace Microsoft.SolverFoundation.Common
 				exp++;
 			}
 		}
+#endif
 	}
 }

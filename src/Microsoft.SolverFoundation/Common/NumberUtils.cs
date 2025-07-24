@@ -1,4 +1,6 @@
+#if !EARSLIM
 using System;
+#endif
 using System.Runtime.InteropServices;
 
 namespace Microsoft.SolverFoundation.Common
@@ -6,7 +8,11 @@ namespace Microsoft.SolverFoundation.Common
 	internal static class NumberUtils
 	{
 		[StructLayout(LayoutKind.Explicit)]
+#if EARSLIM
+		private struct DoubleUlong
+#else
 		internal struct DoubleUlong
+#endif
 		{
 			[FieldOffset(0)]
 			public double dbl;
@@ -15,6 +21,7 @@ namespace Microsoft.SolverFoundation.Common
 			public ulong uu;
 		}
 
+#if !EARSLIM
 		public static bool Is32Bit => IntPtr.Size == 4;
 
 		public static bool IsFinite(double dbl)
@@ -24,6 +31,7 @@ namespace Microsoft.SolverFoundation.Common
 			doubleUlong.dbl = dbl;
 			return ((int)(doubleUlong.uu >> 52) & 0x7FF) < 2047;
 		}
+#endif
 
 		public static void GetDoubleParts(double dbl, out int sign, out int exp, out ulong man, out bool fFinite)
 		{
@@ -78,6 +86,7 @@ namespace Microsoft.SolverFoundation.Common
 			return doubleUlong.dbl;
 		}
 
+#if !EARSLIM
 		public static void NormalizeExponent(ref double dbl, ref int exp)
 		{
 			DoubleUlong doubleUlong = default(DoubleUlong);
@@ -116,5 +125,6 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return doubleUlong.dbl;
 		}
+#endif
 	}
 }

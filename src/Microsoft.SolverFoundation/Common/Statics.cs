@@ -1,14 +1,15 @@
+#if !EARSLIM
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+#endif
 
 namespace Microsoft.SolverFoundation.Common
 {
 	internal static class Statics
 	{
-		private const int kcbitUint = 32;
-
+#if !EARSLIM
 		public static bool IsInteger(double num)
 		{
 			double num2 = num - Math.Floor(num);
@@ -56,6 +57,7 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return num2;
 		}
+#endif
 
 		public static void Swap<T>(ref T a, ref T b)
 		{
@@ -191,6 +193,7 @@ namespace Microsoft.SolverFoundation.Common
 			return ((uint)a ^ num) - num;
 		}
 
+#if !EARSLIM
 		public static ulong Abs(long a)
 		{
 			ulong num = (ulong)(a >> 63);
@@ -497,8 +500,14 @@ namespace Microsoft.SolverFoundation.Common
 				}
 			}
 		}
+#endif
 
-		public static uint CombineHash(uint u1, uint u2)
+#if EARSLIM
+		private
+#else
+		public
+#endif
+		static uint CombineHash(uint u1, uint u2)
 		{
 			return ((u1 << 7) | (u1 >> 25)) ^ u2;
 		}
@@ -508,6 +517,7 @@ namespace Microsoft.SolverFoundation.Common
 			return (int)CombineHash((uint)n1, (uint)n2);
 		}
 
+#if !EARSLIM
 		/// <summary>
 		/// Hash the characters in a string. This MUST produce the same result
 		/// as HashStrBldr produces for the same characters.
@@ -551,6 +561,7 @@ namespace Microsoft.SolverFoundation.Common
 			ulong num = (ulong)u * 2146538777uL;
 			return (uint)((int)num + (int)(num >> 32));
 		}
+#endif
 
 		public static int CbitHighZero(uint u)
 		{
@@ -624,6 +635,7 @@ namespace Microsoft.SolverFoundation.Common
 			return CbitLowZero((uint)uu);
 		}
 
+#if !EARSLIM
 		public static int Cbit(uint u)
 		{
 			u = (u & 0x55555555) + ((u >> 1) & 0x55555555);
@@ -731,5 +743,6 @@ namespace Microsoft.SolverFoundation.Common
 			}
 			return stringBuilder.ToString();
 		}
+#endif
 	}
 }
