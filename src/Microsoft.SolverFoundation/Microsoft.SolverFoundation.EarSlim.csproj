@@ -1,18 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '17.0' ">
     <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <NoWarn>NETSDK1138</NoWarn>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' != '17.0' ">
+    <TargetFrameworks>net40;net46;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
     <PackageId>Repzilon.SolverFoundation</PackageId>
     <Version>1.0.6</Version>
     <Authors>Ralf Kornelius, repzilon@users.noreply.githib.com</Authors>
-    <Description>.NET Framework 4.6 and .NET Standard 2.0 compatible port of Microsoft Solver Foundation Express Edition</Description>
+    <Description>.NET Framework 4.0 and .NET Standard 2.0 compatible port of Microsoft Solver Foundation Express Edition</Description>
     <PackageTags>Microsoft, solver, SolverFoundation, solve, constraint-solver, optimization</PackageTags>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/repzilon/MicrosoftSolverFoundationReloaded</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -36,6 +45,10 @@
     <None Remove="Rewrite\**" />
     <None Remove="Services\**" />
     <None Remove="Solvers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AsyncLocal.cs" />
   </ItemGroup>
 
   <ItemGroup>
